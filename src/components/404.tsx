@@ -8,7 +8,7 @@ const MeddonFont = Meddon({
 });
 
 const FuturaBookFont = localFont({
-    src: "../public/FuturaBook.otf",
+    src: "../../public/FuturaBook.otf",
     display: "swap",
 });
 

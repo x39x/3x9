@@ -5,7 +5,7 @@ import Typed from "typed.js";
 import localFont from "next/font/local";
 
 const FuturaBlod = localFont({
-    src: "../public/FuturaBold.otf",
+    src: "../../public/FuturaBold.otf",
     display: "swap",
 });
 const poems = [

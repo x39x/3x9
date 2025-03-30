@@ -10,7 +10,7 @@ type LinkProps = {
 };
 
 const FuturaBlod = localFont({
-    src: "../public/FuturaBold.otf",
+    src: "../../../public/FuturaBold.otf",
     display: "swap",
 });
 
