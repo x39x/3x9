@@ -20,7 +20,7 @@ const HamburgerMenu = (props: Props) => (
                     links={[
                         { href: "/", text: "Home" },
                         { href: "/blog", text: "Blog" },
-                        { href: "/now", text: "Wiki" },
+                        { href: "/wiki", text: "Wiki" },
                         { href: "/about", text: "About" },
                     ]}
                 />
