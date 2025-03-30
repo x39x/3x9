@@ -1,5 +1,4 @@
 import React from "react";
-import Img from "./Img";
 import MDXCodeBlock from "./MDXCodeBlock";
 import MDXTaskList from "./MDXTaskList";
 import MDXImage from "./MDXImage";
@@ -82,7 +81,6 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         pre: (props) => <MDXCodeBlock className="" {...props} />,
 
         img: (props) => <MDXImage id={id || ""} {...props} />,
-        Img,
     };
 };
 
