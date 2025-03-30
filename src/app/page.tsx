@@ -7,13 +7,7 @@ export default function Home() {
     return (
         <ContentContainer>
             <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-9rem)] ">
-                <Image
-                    src={src}
-                    alt="Avatar"
-                    width={300}
-                    height={500}
-                    objectFit="cover"
-                />
+                <Image src={src} alt="Avatar" width={300} height={500} />
                 <TypedText />
             </div>
         </ContentContainer>

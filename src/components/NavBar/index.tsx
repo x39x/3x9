@@ -30,13 +30,13 @@ export default function NavBar() {
         <header
             className={`sticky top-0 z-50 flex justify-center items-center h-14 w-full ${pathname == "/about" ? "bg-transparent" : "bg-white/75 dark:bg-[#141414]/75 backdrop-blur-xl"}`}
         >
-            <div className="flex justify-between items-center w-full lg:max-w-[55rem] md:max-w-[43rem] text-[0.9rem]">
+            <div className="flex justify-between items-center w-full lg:max-w-[55rem] md:max-w-[43rem] text-[0.9rem] font-medium">
                 <div className="flex items-center pl-6 space-x-8 ">
-                    <Link prefetch={false} href={"/"} className="font-medium">
+                    <Link prefetch={false} href={"/"}>
                         Home
                     </Link>
                 </div>
-                <div className="flex items-center justify-center space-x-8 pr-6">
+                <div className="flex items-center justify-center space-x-8 pr-6 ">
                     <NavLinks
                         links={[
                             { href: "/blog", text: "Blog" },

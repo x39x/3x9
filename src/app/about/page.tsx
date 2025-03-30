@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 const FuturaBold = localFont({
-    src: "../../../public/FuturaBold",
+    src: "../../../public/FuturaBold.otf",
     display: "swap",
 });
 
