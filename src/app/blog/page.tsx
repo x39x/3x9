@@ -31,9 +31,7 @@ export default async function PostList() {
                 return (
                     <div key={post.id} className="mb-18 ">
                         <Link prefetch={false} href={`/blog/${post.slug}`}>
-                            <div className="text-[1.1em] hover:underline decoration-1 ">
-                                {post.title}
-                            </div>
+                            <div className="text-[1.1em] ">{post.title}</div>
                         </Link>
                         <div
                             className={`mt-3 text-[#808080] text-[0.8em] ${meddon.className}`}
