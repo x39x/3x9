@@ -3,7 +3,7 @@ import TypedText from "@/components/TypedText";
 import Image from "next/image";
 
 export default function Home() {
-    const src = "/bg.webp";
+    const src = "/home.webp";
     return (
         <ContentContainer>
             <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-9rem)] ">

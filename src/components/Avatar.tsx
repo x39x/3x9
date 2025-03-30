@@ -6,7 +6,7 @@ type AvatarProps = {
 };
 
 const Avatar: React.FC<AvatarProps> = ({ size = 50 }) => {
-    const src = "/miku1.png";
+    const src = "/avatar.png";
     return (
         <div
             className="rounded-full overflow-hidden bg-transparent backdrop-blur-lg"

@@ -15,7 +15,7 @@ export default function About() {
         <ContentContainer>
             <div className="absolute inset-0 -z-10">
                 <Image
-                    src="/bg.jpg"
+                    src="/about.jpg"
                     alt="Background"
                     fill={true}
                     style={{ objectFit: "cover" }}

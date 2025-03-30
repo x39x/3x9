@@ -20,7 +20,7 @@ const NotFound: React.FC = () => {
                 alt="404 Not Found"
                 width={500}
                 height={500}
-                className="lg:w-[38%] md:w-[40%] w-[65%]"
+                className="lg:w-[34%] md:w-[40%] w-[65%]"
             />
             <h1
                 className={`mt-4 text-[1.2em] ${FuturaBookFont.className.trim()}`}

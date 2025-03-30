@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 export function getCoverUrl(id: string): string {
-    const defaultImg = "/default_bg.jpeg";
+    const defaultImg = "/default_cover.jpg";
     const extensions = ["jpg", "png", "jpeg"];
     const imagePathBase = path.join(process.cwd(), ...id.split("-"), "cover");
 
