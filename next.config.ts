@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
     images: {
         loader: "custom",
-        loaderFile: "./lib/imageLoader.ts", // custom img loader
+        loaderFile: "./src/lib/image_loader.ts", // custom img loader
     },
 };
 
