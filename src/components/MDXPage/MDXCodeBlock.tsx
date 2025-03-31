@@ -24,15 +24,18 @@ export default function MDXCodeBlock({
     };
 
     return (
-        <pre
-            ref={preRef}
-            {...props}
-            className="relative px-8 pb-2 pt-5 my-8 rounded-md  shadow-md  dark:shadow-black/80 overflow-x-auto"
-        >
+        <div className="relative">
+            <pre
+                ref={preRef}
+                {...props}
+                className="px-8 pb-2 pt-5 my-8 rounded-md shadow-md dark:shadow-black/80 overflow-x-auto"
+            >
+                <div className="mt-5">{children}</div>
+            </pre>
             <button
                 disabled={isCopied}
                 onClick={handleClickCopy}
-                className="absolute right-4 -mt-2 cursor-pointer "
+                className="absolute right-4 top-5 cursor-pointer"
             >
                 {isCopied ? (
                     <Check
@@ -42,11 +45,10 @@ export default function MDXCodeBlock({
                 ) : (
                     <Code
                         size={15}
-                        className=" stroke-[2] text-gray-500 dark:text-[#999999]"
+                        className="stroke-[2] text-gray-500 dark:text-[#999999]"
                     />
                 )}
             </button>
-            <div className="mt-5">{children}</div>
-        </pre>
+        </div>
     );
 }

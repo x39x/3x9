@@ -8,6 +8,7 @@ keywords: markdown nextjs neovim nvim
 
 Finally, Ives continued to revise his idea for years. In fact, he improved so many aspects of the process he filed a second patent. This is a critical point and is often overlooked. It can be easy to fall in love with the initial version of your idea, but great ideas always evolve.
 
+
 # 标题
 
 # 忽然想起采莲
@@ -95,28 +96,6 @@ $$
 
 
 
-# 代码块
-```rust
-fn collatz_steps(n: u32) -> Option<u32> {
-    if n == 0 {
-            return None;
-    }
-// rust lang
-    let mut steps = 0;
-    let mut current = n;
-    while current != 1 {
-            if current % 2 == 0 {
-                    current /= 2;
-            } else {
-                    current = (3 * current + 1) / 2;
-            }
-            steps += 1;
-    }
-    Some(steps)
-}
-```
-
-`中文`
 
 # 4.表格
 | foo | bar | hah |
