@@ -1,32 +1,29 @@
 import Image from "next/image";
 import React from "react";
 import { format } from "date-fns";
-import { getCoverUrl } from "@/lib/get_cover_url";
 
 type Props = {
-    id: string;
-    title: string;
     date: Date;
-    update_date: Date;
-    reading_time: string;
+    updated_date: Date;
+    title: string;
+    cover_url: string;
     word_count: string;
+    reading_time: string;
 };
 
 const MDXCover: React.FC<Props> = ({
-    id,
+    date = new Date().getTime(),
+    updated_date,
     title = "Tille Not Found",
+    cover_url,
     reading_time = "N/A",
     word_count = "N/A",
-    date = new Date().getTime(),
-    update_date,
 }) => {
-    const img_src: string = getCoverUrl(id);
-
     return (
         <div className="mt-4 ">
             <div className="overflow-hidden relative w-full rounded-md h-39 md:h-69 lg:h-80">
                 <Image
-                    src={img_src}
+                    src={cover_url}
                     alt={title + "Page Cover"}
                     style={{ objectFit: "cover" }}
                     fill
@@ -45,12 +42,12 @@ const MDXCover: React.FC<Props> = ({
                         •
                     </span>
                     {word_count} words
-                    {update_date && (
+                    {updated_date && (
                         <>
                             <span className="mx-2 text-xl text-gray-500 select-none">
                                 •
                             </span>
-                            {"Updated " + format(update_date, "MMMM do yyyy")}
+                            {"Updated " + format(updated_date, "MMMM do yyyy")}
                         </>
                     )}
                 </span>

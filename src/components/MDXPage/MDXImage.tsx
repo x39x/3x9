@@ -11,7 +11,7 @@ interface CustomImageProps {
 
 const MDXImage: React.FC<CustomImageProps> = ({ id, src, alt = "" }) => {
     const img_src = src.startsWith("./")
-        ? `/api/39img/${id}${src.replace("./", "-")}`
+        ? `/39img/${id}${src.replace("./", "-")}`
         : src;
     return (
         <Image

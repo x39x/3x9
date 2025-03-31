@@ -29,6 +29,5 @@ export default async function Page({ params }: BlogPageProps) {
     const { slug } = await params;
     const posts = await getPostdata("blog");
     const post = posts.find((post) => post.slug === slug);
-
     return <MDXPage post={post as any} />;
 }

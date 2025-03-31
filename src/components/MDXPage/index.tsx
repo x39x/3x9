@@ -29,10 +29,10 @@ const MDXPage = ({ post }: { post: Post }) => {
         <>
             <ContentContainer>
                 <MDXCover
-                    id={id}
-                    title={title}
                     date={metadata.date}
-                    update_date={metadata.updated}
+                    updated_date={metadata.updated}
+                    title={title}
+                    cover_url={metadata.cover_url}
                     reading_time={metadata.reading_time}
                     word_count={metadata.word_count}
                 />
