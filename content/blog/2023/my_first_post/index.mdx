@@ -1,0 +1,52 @@
+---
+title: "如何用GitHub Pages + hugo搭建个人博客"
+date: 2023-10-04T11:29:32+08:00
+description: "如何用GitHub Pages + hugo搭建个人博客"
+slug: "create-a-wesite-using-githubpages-and-hugo"
+keywords: create-wesite-githubpages-hugo
+updated: 2025-3-31
+---
+
+
+博客已经迁移到 nextjs + cloudflare Pages
+
+GitHub Pages + Hugo 请参考[这篇文章](https://miawithcode.com/blog/how-to-build-a-personal-blog-using-github-pages-and-hugo)
+
+---
+## 使用Makefile实现自动发布Hugo博客
+
+在 bolg 仓库下新建一个 Makefile 文件，拷贝下面的代码进去，每次写完在 blog 仓库下执行 make 即可
+
+```makefile
+MSG := "BLOG_TIME:"
+MSG += $(shell date)
+
+all:
+	@hugo && \
+	if git add --all && git commit -m "$(MSG)"; then \
+		git push && echo "\033[32mBlog Repo Success!\033[0m";\
+	else \
+		echo "\033[31mNothing need commit in Blog Repo\033[0m"; \
+	fi
+	@cd ./public/ && \
+	if git add --all && git commit -m "$(MSG)"; then \
+		git push && echo "\033[32mPublic Repo Success!\033[0m"; \
+	else \
+		echo "\033[31mNothing need commit in Public Repo\033[0m"; \
+	fi
+
+.PHONY: all
+```
+### 代码实现
+定义一个`MSG`变量，从Shell中获取当天日期添加到`MSG`中，当作 commit
+信息；然后在伪目标`all`中添加命令，先执行`hugo`，生成 public 文件，接着是两个`if`，检测 Blog 和 public 仓库之下有没有需要添加的更改，
+如果有就 add 、commit、然后推送到远程息，如果没有则停止
+
+## 其他
+
+1. [hugo基本用法](https://www.cnblogs.com/chenxuhua/p/hugo-blog-chinese-user-guide.html)
+2. [firebase](https://n9o.xyz/posts/202310-blowfish-tutorial/#firebase-hosting-mergeyml)部署，可以提供一些交互性功能
+3. [配色参考](http://zhongguose.com/#anyuzi),中国风配色网站
+4. 博客主题[Blowfish](https://blowfish.page/)适配移动端
+5. [Godaddy域名绑定以及配置DNS](https://io-oi.me/tech/custom-domains-on-github-pages/)
+6. 生成不同分辨率的[网站图标](https://ibrights.github.io/post/blog20210527/)
