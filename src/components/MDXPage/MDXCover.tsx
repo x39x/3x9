@@ -26,8 +26,9 @@ const MDXCover: React.FC<Props> = ({
                     src={cover_url}
                     alt={title + "Page Cover"}
                     style={{ objectFit: "cover" }}
-                    fill
                     priority
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
             <div className="mt-5 mb-11">

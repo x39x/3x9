@@ -18,6 +18,7 @@ export default function About() {
                     src="/about.jpg"
                     alt="Background"
                     fill={true}
+                    sizes="100vw"
                     style={{ objectFit: "cover" }}
                 />
             </div>

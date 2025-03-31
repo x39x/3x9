@@ -9,7 +9,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="zh">
             <body className="bg-white dark:bg-[#141414] text-black dark:text-[#F5F5F7] min-h-screen">
                 <div className="flex flex-col min-h-screen">
                     <NavBar />
