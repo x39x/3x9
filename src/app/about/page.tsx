@@ -15,7 +15,7 @@ export default function About() {
         <ContentContainer>
             <div className="absolute inset-0 -z-10">
                 <Image
-                    src="/about.jpg"
+                    src="/about.jpeg"
                     alt="Background"
                     fill={true}
                     sizes="100vw"
