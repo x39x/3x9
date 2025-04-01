@@ -4,3 +4,6 @@ Allow: /
 
 # Host
 Host: https://x39x.cc
+
+# Sitemaps
+Sitemap: https://x39x.cc/sitemap.xml
