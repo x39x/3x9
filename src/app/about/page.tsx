@@ -1,6 +1,5 @@
 import ContentContainer from "@/components/ContentContainer";
 import Avatar from "@/components/Avatar";
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -14,12 +13,10 @@ export default function About() {
     return (
         <ContentContainer>
             <div className="absolute inset-0 -z-10">
-                <Image
+                <img
                     src="/about.jpeg"
                     alt="Background"
-                    fill={true}
-                    sizes="100vw"
-                    style={{ objectFit: "cover" }}
+                    className="w-full h-full object-cover"
                 />
             </div>
 
