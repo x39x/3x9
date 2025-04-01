@@ -4,6 +4,7 @@
         "private": true,
         "scripts": {
                 "build": "next build",
+                "copyimg": "node src/lib/copy_img.mjs",
                 "postbuild": "next-sitemap && node src/lib/copy_img.mjs",
                 "dev": "next dev",
                 "start": "next start",
