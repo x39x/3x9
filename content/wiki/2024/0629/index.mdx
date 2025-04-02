@@ -31,11 +31,13 @@ Rime 每个平台的客户端实现都不同
 brew install --cask squirrel
 ```
 
-安装完成后可以在系统设置 Keyboard `->` Input Sources `->`点击➕号 `->` Simplified Chinese 找到 Squirrel
+安装完成后可以在系统设置 Keyboard `->` Input Sources `->` 点击`➕`  `->` Simplified Chinese 找到 Squirrel
 
 ![](./mac_ime.png)
 
-添加 Squirrel 后就可以使用 Squirrel 自带的明月拼音（全拼）打字了，但 Squirrel 默认配置和词库都不足以支持日常使用，自己维护一套词库➕配置又非常耗时费力，推荐使用开源配置框架[雾凇拼音](https://dvel.me/posts/rime-ice/)
+添加 Squirrel 后就可以使用 Squirrel 内置的明月拼音（全拼）打字了，
+但 Squirrel 默认配置和词库都不足以支持日常使用，自己维护一套词库➕配置又非常耗时费力，
+推荐使用开源配置框架[雾凇拼音](https://dvel.me/posts/rime-ice/)
 
 ## 配置 Squirrel
 自定义配置文件位置
@@ -51,8 +53,7 @@ git clone --depth=1 https://github.com/iDvel/rime-ice.git Rime
 ```
 配置文件结构如下
 
-```
-.
+```yaml
 ├── default.yaml                # 一些全局设置
 
 ├── rime_ice.schema.yaml        # 全拼方案
@@ -165,7 +166,7 @@ fi
 ![](./wechat_dark.png)
 
 配置
-```
+```yaml
   preset_color_schemes:
     macos_light:
       name: "MacOS Light"

@@ -38,9 +38,9 @@ all:
 .PHONY: all
 ```
 ### 代码实现
-定义一个`MSG`变量，从Shell中获取当天日期添加到`MSG`中，当作 commit
-信息；然后在伪目标`all`中添加命令，先执行`hugo`，生成 public 文件，接着是两个`if`，检测 Blog 和 public 仓库之下有没有需要添加的更改，
-如果有就 add 、commit、然后推送到远程息，如果没有则停止
+定义一个`MSG`变量，从Shell中获取当天日期添加到`MSG`作为commit；
+然后执行`hugo`，生成 public 文件，接着判断 Blog 和 public 仓库之下有没有需要添加的更改，
+如果有就 add 、commit、然后推送到 `remote`，如果没有则停止
 
 ## 其他
 
