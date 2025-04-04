@@ -14,16 +14,18 @@ const HamburgerMenu = (props: Props) => (
                     <X size={20} />
                 </button>
             </div>
-            <div className="flex flex-col space-y-10 justify-center items-center min-h-[calc(100vh)] text-2xl font-medium bg-white/75 dark:bg-[#141414]/75 backdrop-blur-xl z-100">
-                <HamburgerMenuLink
-                    setIsOpen={props.setIsOpen}
-                    links={[
-                        { href: "/", text: "Home" },
-                        { href: "/blog", text: "Blog" },
-                        { href: "/wiki", text: "Wiki" },
-                        { href: "/about", text: "About" },
-                    ]}
-                />
+            <div className="flex flex-col justify-center items-center min-h-[calc(100vh)] bg-white/75 dark:bg-[#141414]/75 backdrop-blur-xl z-100">
+                <div className="flex flex-col space-y-10 justify-center items-center mb-13 text-2xl font-medium  bg-red-500">
+                    <HamburgerMenuLink
+                        setIsOpen={props.setIsOpen}
+                        links={[
+                            { href: "/", text: "Home" },
+                            { href: "/blog", text: "Blog" },
+                            { href: "/wiki", text: "Wiki" },
+                            { href: "/about", text: "About" },
+                        ]}
+                    />
+                </div>
             </div>
         </div>
     </RemoveScroll>
