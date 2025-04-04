@@ -1,5 +1,7 @@
+"use client";
 import ContentContainer from "@/components/ContentContainer";
 import Avatar from "@/components/Avatar";
+import { RemoveScroll } from "react-remove-scroll";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -12,8 +14,8 @@ const FuturaBold = localFont({
 
 export default function About() {
     return (
-        <>
-            <div className="absolute inset-0 -z-20">
+        <RemoveScroll>
+            <div className="absolute inset-0 -z-20 h-screen w-screen">
                 <Image
                     src="/about.jpeg"
                     alt="Background"
@@ -38,11 +40,11 @@ export default function About() {
                     </Link>
                 </div>
             </ContentContainer>
-        </>
+        </RemoveScroll>
     );
 }
 
-export const metadata: Metadata = {
-    title: "About Matsu",
-    description: "About Matsu",
-};
+// export const metadata: Metadata = {
+//     title: "About Matsu",
+//     description: "About Matsu",
+// };
