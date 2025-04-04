@@ -1,5 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
+import Image from "next/image";
 
 type Props = {
     date: Date;
@@ -21,11 +22,13 @@ const MDXCover: React.FC<Props> = ({
     return (
         <div className="mt-4 ">
             <div className="overflow-hidden relative w-full rounded h-50 md:h-69 lg:h-80">
-                <img
+                <Image
                     src={cover_url}
-                    alt={title + " Page Cover"}
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: "center" }}
+                    alt={title + "Page Cover"}
+                    style={{ objectFit: "cover" }}
+                    priority
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
             <div className="mt-5 mb-11">

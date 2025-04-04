@@ -1,6 +1,7 @@
 import ContentContainer from "@/components/ContentContainer";
 import Avatar from "@/components/Avatar";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -11,28 +12,33 @@ const FuturaBold = localFont({
 
 export default function About() {
     return (
-        <ContentContainer>
-            <div className="absolute inset-0 -z-10">
-                <img
+        <>
+            <div className="absolute inset-0 -z-20">
+                <Image
                     src="/about.jpeg"
                     alt="Background"
-                    className="w-full h-full object-cover"
+                    fill={true}
+                    sizes="100vw"
+                    style={{ objectFit: "cover" }}
+                    priority
                 />
             </div>
 
-            {/* blur */}
             <div className="absolute inset-0  backdrop-blur-lg -z-10"></div>
+            <ContentContainer>
+                {/* blur */}
 
-            <div className="flex flex-col justify-center items-center space-y-3 mt-20 text-white">
-                <Avatar size={150} />
-                <Link
-                    href="https://github.com/x39x"
-                    className={` ml-3 text-5xl  hover:underline underline-offset-9 decoration-3  ${FuturaBold.className.trim()}`}
-                >
-                    Matsu
-                </Link>
-            </div>
-        </ContentContainer>
+                <div className="flex flex-col justify-center items-center space-y-3 mt-20 text-white">
+                    <Avatar size={150} />
+                    <Link
+                        href="https://github.com/x39x"
+                        className={` ml-3 text-5xl  hover:underline underline-offset-9 decoration-3  ${FuturaBold.className.trim()}`}
+                    >
+                        Matsu
+                    </Link>
+                </div>
+            </ContentContainer>
+        </>
     );
 }
 
