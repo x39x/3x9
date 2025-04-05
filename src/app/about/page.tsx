@@ -4,7 +4,7 @@ import Avatar from "@/components/Avatar";
 import { RemoveScroll } from "react-remove-scroll";
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 const FuturaBold = localFont({
