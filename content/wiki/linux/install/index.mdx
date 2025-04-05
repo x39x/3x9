@@ -27,18 +27,15 @@ diskutil unmountDisk /dev/disk2
 
 4. 将 ISO 文件写入 U 盘（将 `path_to_your_iso` 替换为你的 ISO 文件路径）：
 ```bash
-sudo dd if=/path_to_your_iso of=/dev/disk2 bs=1m
+sudo dd if=path_to_iso.iso of=/dev/disk3 bs=4M status=progress && sync
 ```
 - `if=` 表示输入文件（你的 ISO 文件路径）。
 - `of=` 表示输出设备（U 盘设备路径）。
-- `bs=1m` 设置块大小为 1MB，可以加快写入速度。
+- `bs=1m` 设置块大小为 4MB
+- `status=progress` 显示复制过程进度，方便查看写入情况
+- `sync` 强制把写入的数据从内存刷到磁盘，确保数据安全，防止缓存没写完就拔出 U 盘
 
-5. 输入管理员密码并等待写入完成。写入时间取决于 U 盘的速度，完成后会返回提示。
 
-6. 运行以下命令同步缓冲区，确保写入完成：
-```bash
-sync
-```
 
 7. 完成后，安全弹出 U 盘：
 ```bash
@@ -72,3 +69,5 @@ Eg: 8g+128g
 | **SWAP 分区**        | swap     | 10GB | `swap`      | 虚拟内存，支持内存溢出或休眠，一般为内存的1～2倍，支持休眠功能需不小于内存 |
 | **根分区 `/`**       | ext4     | 40GB | `/`         | 存放系统文件，支持应用和软件安装。                                                           |
 | **用户数据 `/home`** | ext4     | 60GB | `/home`     | 存放用户数据和配置文件，适用于日常使用。                                                     |
+
+[Debian分区](https://www.yitu.xyz/2022/04/05/%E6%89%8B%E5%8A%A8%E5%88%86%E5%8C%BAdebian-boot%E3%80%81-swap%E3%80%81root%E3%80%81-home%E3%80%81-tmp%E3%80%81-srv%E3%80%81-var/)
