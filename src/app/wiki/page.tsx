@@ -44,7 +44,7 @@ export default async function PostList() {
                 <div key={tag} className="mb-10">
                     <h2 className="text-2xl font-bold mb-6">{tag}</h2>
                     {posts.map((post) => (
-                        <div key={post.id} className="mb-10">
+                        <div key={post.id} className="mb-10 ">
                             <Link prefetch={false} href={`/wiki/${post.slug}`}>
                                 <div className="text-[1.1em]">{post.title}</div>
                             </Link>
@@ -55,6 +55,8 @@ export default async function PostList() {
                             </div>
                         </div>
                     ))}
+
+                    <div className="my-20"></div>
                 </div>
             ))}
         </ContentContainer>
