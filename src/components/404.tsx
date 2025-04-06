@@ -14,7 +14,7 @@ const FuturaBookFont = localFont({
 
 const NotFound: React.FC = () => {
     return (
-        <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-13rem)]">
+        <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-10rem)]">
             <Image
                 src="/404.png"
                 alt="404 Not Found"
