@@ -5,7 +5,7 @@ date: 2025-04-05
 tag: Linux
 ---
 
-# 定时任务
+定时任务
 
 ## 创建一个定时器：
 
@@ -109,10 +109,6 @@ systemctl list-units --all | grep <name>
 
 #  启动模式
 
-### 列出系统中所有的`target`
-```bash 
-systemctl list-units --type=target --all
-```
 
 ### 检查当前的默认启动目标
 ```bash
@@ -137,11 +133,17 @@ sudo systemctl set-default multi-user.target
 sudo systemctl start graphical.target
 ```
 
+
+
+
+
+
 # Tips
 ### 重新加载 unit 文件
 ```bash
 systemctl daemon-reload	
 ```
+
 
 ### 重启 systemd 进程
 很少用，一般系统升级才需要）
@@ -153,6 +155,12 @@ systemctl daemon-reexec
 ### 列出激活的 target
 ```bash
 systemctl list-units --type=target
+```
+
+
+### 列出系统中所有的`target`
+```bash 
+systemctl list-units --type=target --all
 ```
 
 

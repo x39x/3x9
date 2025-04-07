@@ -13,7 +13,9 @@ interface MDXOptions {
 const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
     const { id } = options;
     return {
-        h1: (props) => <h1 className="my-9 text-4xl font-medium" {...props} />,
+        h1: (props) => (
+            <h1 className="mt-17 mb-9 text-4xl font-medium" {...props} />
+        ),
         h2: (props) => <h2 className="my-4 text-2xl font-medium" {...props} />,
         h3: (props) => <h3 className="my-4 font-bold" {...props} />,
         h4: (props) => <h4 className="my-2 text-sm font-bold" {...props} />,
