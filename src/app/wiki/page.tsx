@@ -1,14 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { format } from "date-fns";
-import { Meddon } from "next/font/google";
 import { getPostdata, PostData } from "@/lib/get_post";
 import ContentContainer from "@/components/ContentContainer";
 
-const meddon = Meddon({
-    weight: "400",
-    subsets: ["latin"],
-});
+import { Jost } from "next/font/google";
+const JostFont = Jost({ subsets: ["latin"] });
 
 export default async function PostList() {
     const posts: PostData[] = await getPostdata("wiki");
@@ -49,7 +46,7 @@ export default async function PostList() {
                                 <div className="text-[1.1em]">{post.title}</div>
                             </Link>
                             <div
-                                className={`mt-1 text-[#808080] text-[0.8em] ${meddon.className}`}
+                                className={`mt-1 text-[#808080] text-[0.8em] ${JostFont.className}`}
                             >
                                 {format(post.metadata.date, "MMMM do yyyy")}
                             </div>

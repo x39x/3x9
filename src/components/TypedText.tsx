@@ -1,21 +1,16 @@
 "use client";
-//TODO: remove client
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import localFont from "next/font/local";
-
 const FuturaBlod = localFont({
     src: "../../public/FuturaBold.otf",
     display: "swap",
 });
 const poems = [
-    ["醒亦念卿，梦亦念卿", "Vivamus, atque amemus"],
-    ["Difficile est longum subito deponere amorem"],
-    ["dies irae dies illa me necabis"],
+    ["Vivamus, atque amemus", "atque amemus"],
     [
-        "Vivamus, mea Lesbia, atque amemus",
-        "rumoresque senum severiorum",
-        "omnes unius aestimemus assis",
+        "Difficile est longum subito deponere amorem",
+        "dies irae dies illa me necabis",
     ],
 ];
 
