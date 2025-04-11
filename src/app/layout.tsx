@@ -13,7 +13,7 @@ export default function RootLayout({
             <head>
                 <meta
                     httpEquiv="Speculation-Rules"
-                    content='{"destination": "/cdn-cgi/speculation.json"}'
+                    content="/speculationrules.json"
                 />
             </head>
             <body className="bg-white dark:bg-[#141414] text-black dark:text-[#F5F5F7] min-h-screen">
