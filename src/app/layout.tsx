@@ -10,6 +10,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="zh">
+            <head>
+                <meta
+                    httpEquiv="Speculation-Rules"
+                    content='{"destination": "/cdn-cgi/speculation.json"}'
+                />
+            </head>
             <body className="bg-white dark:bg-[#141414] text-black dark:text-[#F5F5F7] min-h-screen">
                 <div className="flex flex-col min-h-screen">
                     <NavBar />

@@ -1,0 +1,26 @@
+{
+    "source": "document",
+    "rules": [
+        {
+            "action": "prefetch",
+            "condition": {
+                "url": "https://x39x.cc/blog",
+                "when": "instant"
+            }
+        },
+        {
+            "action": "prefetch",
+            "condition": {
+                "url": "https://x39x.cc/wiki",
+                "when": "instant"
+            }
+        },
+        {
+            "action": "prefetch",
+            "condition": {
+                "url": "https://x39x.cc/about",
+                "when": "instant"
+            }
+        }
+    ]
+}
