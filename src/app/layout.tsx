@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import NavBar from "@/components/NavBar";
 import "@/app/globals.css";
-import "katex/dist/katex.min.css";
 
 export default function RootLayout({
     children,
