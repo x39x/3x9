@@ -43,13 +43,28 @@ export default async function PostList() {
                     {posts.map((post) => (
                         <div key={post.id} className="mb-10 ">
                             <Link prefetch={false} href={`/wiki/${post.slug}`}>
-                                <div className="text-[1.1em]">{post.title}</div>
+                                <div className="flex justify-between items-start text-[0.95em]">
+                                    <div className="flex items-baseline gap-3 min-w-0">
+                                        <span
+                                            className={`text-[#808080] w-[120px] shrink-0 ${JostFont.className}`}
+                                        >
+                                            {format(
+                                                post.metadata.date,
+                                                "MMMM do yyyy",
+                                            )}
+                                        </span>
+                                        <span className="text-[1em] truncate">
+                                            {post.title}
+                                        </span>
+                                    </div>
+                                    <div
+                                        className={`hidden sm:block text-[#808080] text-[0.8em] ${JostFont.className}`}
+                                    >
+                                        {post.metadata.word_count} words ·{" "}
+                                        {post.metadata.reading_time}
+                                    </div>
+                                </div>
                             </Link>
-                            <div
-                                className={`mt-1 text-[#808080] text-[0.8em] ${JostFont.className}`}
-                            >
-                                {format(post.metadata.date, "MMMM do yyyy")}
-                            </div>
                         </div>
                     ))}
 
