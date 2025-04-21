@@ -22,4 +22,8 @@ export default function RootLayout({
 export const metadata: Metadata = {
     title: "Matsu's blog",
     description: "Matsu's blog",
+    other: {
+        //  Pinterest
+        "p:domain_verify": "5acdddf64c4ffe8885542f6ba917e409",
+    },
 };
