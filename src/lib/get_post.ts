@@ -4,7 +4,7 @@ import grayMatter from "gray-matter";
 import readingTime from "reading-time";
 
 function getCoverUrl(dir: string, id: string): string {
-    const defaultImgUrl = "/default_cover.jpg";
+    const defaultImgUrl = "/default_cover.jpeg";
     const extensions = ["jpg", "png", "jpeg"];
     const imagePathBase = dir + path.sep + "cover";
 
