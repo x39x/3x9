@@ -66,14 +66,14 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         tr: (props) => <tr className="" {...props} />,
         th: (props) => (
             <th
-                className="font-bold text-center py-7 whitespace-nowrap"
+                className="font-bold py-7 pl-6 text-left whitespace-nowrap "
                 {...props}
             />
         ),
 
         td: (props) => (
             <td
-                className="py-6 text-center border-t border-gray-200 dark:border-[#292929] "
+                className="py-6 pl-6  border-t border-gray-200 dark:border-[#292929] "
                 {...props}
             />
         ),
