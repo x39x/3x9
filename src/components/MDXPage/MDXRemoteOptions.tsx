@@ -2,7 +2,6 @@ import remarkGfm from "remark-gfm"; //NOTE: https://github.com/vercel/next.js/is
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
-import "katex/dist/katex.min.css";
 
 const options = {
     parseFrontmatter: true,
