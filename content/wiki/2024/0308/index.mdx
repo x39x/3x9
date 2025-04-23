@@ -1,98 +1,202 @@
 ---
-title : "MacOS新机配置"
-date : 2024-03-08T14:01:08+08:00
-summary: "MacOS配置流程"
-description: "MacOS个人配置、App推荐"
 slug: "mac-config"
+date: 2024-03-08
+updated: 2025-04-23
+title: "MacOS 新机开发环境配置"
+description: "MacOS 新电脑开发环境配置流程、MacOS个人配置、App推荐"
 ---
 
 最近重装系统，记录一下新系统配置流程
 
-# 代理 & Homebrew
-代理工具推荐 v2raya/Clash，V2raya 需要通过Homebrew安装:(,
-所以记得备份一个Clash的安装包或者从App Store安装手机版的Shadowrocket，给终端配置好代理之后执行
+大部分软件都需要从需要通过Homebrew安装，鉴于糟糕的网络情况:(
+需要在 iCloud 备份一个 Clash 安装包或通过外区 App Store 安装 Shadowrocket，
+
+### Turn on iCloud Drive Sync
+
+ `->` System Settings `->` Apple Account `->` iCloud `->` Drive.
+turned on `Sync this Mac` and `Desktop & Documents Folders`
+
+![](./icloud.png)
+
+打开 iCloud 等待 Clash 安装包同步，顺便修改鼠标速度，方便后续操作
+
+安装完成后给终端配置代理，安装 Homebrew
+
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-给brew添加软件源（字体和v2raya)
+
+# 命令行配置
+
+同步配置文件
+
 ```sh
-brew tap v2raya/v2raya
-brew tap homebrew/cask-fonts
+git clone https://github.com/x39x/config ~/.dotfile
+cd ~/.dotfile && ./install
 ```
+
+常用工具
+
+```txt
+alacritty ghostty font-iosevka-term-nerd-font
+zoxide tree yazi fd ripgrep fzf
+bat difftastic neovim fish tldr
+typst tmux cmake
+```
+
+编程环境配置
+
+```txt
+node@lts uv golang rust
+```
+
+- 参考: [Rust 安装与环境变量配置](/wiki/rust-install-config)
+- 参考: [Mac Node 环境配置](/wiki/mac-node-env)
+- 参考: [Python 虚拟环境配置](/wiki/python-venv)
+- 参考: [Goalng 常用命令与环境配置](/wiki/go-command-config)
+
 # App
-### Fliqlo，简约风 Screen Saver
-![](./sc.png)
 
+### 常用
+
+```txt
+raycast hammerspoon karabiner‐elements
+wechat qq discord steam
+google-chrome arc chatgpt
+skim visual‐studio‐code keycastr
 ```
-brew install --cask fliqlo
-```
-
-### Bob：翻译软件，支持 OCR 翻译
-![](./bob.png)
-
-通过App Store（¥30）安装，也可以在[GitHub](https://github.com/ripperhe/Bob)下载社区版（已不再维护）
-
-
-
-### 全局搜索、脚本、改键
-```sh
-brew install --cask raycast hammerspoon karabiner‐elements
-```
-
 
 ### 解压和压缩
-```sh
-brew install --cask maczip the‐unarchiver
-```
 
+```txt
+maczip the‐unarchiver
+```
 
 ### 多媒体
-```sh
-brew insatll --cask iina xld
-```
-- **IINA：** 一款开源的视频播放器，部分视频格式默认的 QuickTime Player 不支持，
 
-- **XLD：** 音频转码小工具，有搭建本地音乐库的打算，纯 flac 格式太耗空间，一般会转为较小的 m4a 格式
-
-
-### Typora & Downie 4
-
-Markdown 编辑器 & 视频下载（bilibili&YouTube），但是都付费:(
-
-# 命令行工具
-### Basic Tools
-```sh
-brew install ripgrep fd difftastic fzf zoxide tree bat tmux cmake typst
+```txt
+iina xld fliqlo
 ```
 
-### 开发环境
-```sh
-# editor & terminal
-brew install --cask visual‐studio‐code alacritty 
-# rust
-curl ‐‐proto '=https' ‐‐tlsv1.2 ‐sSf https://sh.rustup.rs | sh
-# golang
-brew install golang
-```
+![](./sc.png)
+
+- **Fliqlo：** 简约风 Screen Saver
+- **IINA：** 一款开源的视频播放器
+- **XLD：** 音频转码小工具
+
+### Downie 4
+
+视频下载（bilibili&YouTube），付费:(
+
+# App Store
+
+### Bob：翻译软件，支持 OCR 翻译
+
+![](./bob.png)
+
+### Craft Doc：笔记
+
+![](./craft.png)
 
 # 系统设置
-### 更改截图默认储存位置
-同时按下 Command - Shift - 5 会弹出截屏选取框和相关设定， 点击下方的“选项”按钮，选择其他位置
 
-### 加快切屏速度
-```sh
-defaults write com.apple.dock workspaces‐edge‐delay 0;killall Dock
-# 恢复默认
-defaults delete com.apple.dock workspaces‐edge‐delay;killall Dock
-```
+### Finder 设置
+
+1. choose Finder `->` Settings `->` Advancedion
+
+- [x] Show all filename extensions
+
+* [ ] Show warning before changing an extension
+* [ ] Show warning before removing from iCloud Drive
+
+2. 更改 New window 默认打开文件
+
+choose Finder `->` Settings `->` General `->` New Finder windows show: Downloads
+
+3. 调整 sidebar 显示文件夹
 
 ### 关闭桌面切换动画
+
 系统设置 –> 辅助功能 –> 显示 –> 减弱用户界面的动态效果:打开
 
-###  Finder 设置
-显示文件后缀, choose Finder > Settings > Advancedi > “Show all filename extensions”
+### 关闭触发角
 
-更改 New window 默认打开文件 choose Finder > Settings > General
-### 将 Desktop&Documents 加入 iCloud Drive
-Apple menu  > System Settings > Click Apple ID > iCloud > iCloud Drive. Below iCloud Drive, check that Sync this Mac is turned on. Turn on Desktop & Documents Folders.
-![](./icloud.png)
+系统设置 –> Desktop & Dock –> 最下方 –> Hot Corners
+
+### Keyboard
+
+- 系统设置 `->` Keyboard`->` 关闭dictation快捷键
+- 系统设置 `->` Keyboard Shortcuts `->` 修改 Screenshot 快捷键
+- 系统设置 `->` Keyboard Shortcuts `->` 修改 Mission Control 快捷键
+- Keyboard Press and hold
+
+```bash
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+```
+
+### 加快切屏速度
+
+```sh
+defaults write com.apple.dock workspaces‐edge‐delay 0;killall Dock
+defaults delete com.apple.dock workspaces‐edge‐delay;killall Dock # 恢复默认
+```
+
+### 更改截图默认储存位置
+
+同时按下 Command - Shift - 5 会弹出截屏选取框和相关设定，点击下方的“选项”按钮，选择其他位置
+
+### 账号与安全
+
+打开 find my(开启位置服务)、登陆 google账号、验证常用邮箱
+
+# 其他
+
+Homebrew 安装后需配置环境变量
+
+```bash
+# add bellow to shell profile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+### basic usage
+
+```bash
+# 新增软件源
+brew tap homebrew/cask-fonts
+# 管理版本
+brew unlink python@3.8
+brew link python@3.9
+```
+
+### 切换国内镜像
+
+```bash
+export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
+```
+
+详细可参考[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+
+### Brew bundle
+
+```sh
+# 执行brew bundle dump备份命令
+brew bundle dump --describe --force --file="~/.dotfile/Brewfile"
+# 批量安装软件
+brew bundle --file="~/.dotfile/Brewfile"
+```
+
+# Tips
+
+### Mac 签名 app
+
+```bash
+sudo xattr -rd com.apple.quarantine /Applications/x.app
+```
+
+### Emoj Shortcuts
+
+Control + Command + Space
