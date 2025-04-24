@@ -1,0 +1,33 @@
+---
+title: 终端模拟器推荐及配置
+slug: terminal-emulator
+date: 2025-04-25
+---
+
+Kitty是Calibre作者Kovid Goyal开发的一款GPU加速的Terminal。
+
+[图标](https://sw.kovidgoyal.net/kitty/faq/#i-do-not-like-the-kitty-icon)
+
+## 字体
+
+[中文 Unicode Point 参考](https://stackoverflow.com/questions/1366068/whats-the-complete-range-for-chinese-characters-in-unicode)
+
+```yaml
+# 中文
+hide_window_decorations titlebar-only
+macos_option_as_alt yes
+clear_all_shortcuts yes
+font_family IosevkaTerm Nerd Font Mono
+symbol_map U+4E00-U+9FFF,U+3400-U+4DBF PingFang SC Light
+```
+
+## SSH
+
+终端类型为xterm-kitty时，需要将terminfo复制到ssh远端。
+
+[参考](https://sw.kovidgoyal.net/kitty/faq/#i-get-errors-about-the-terminal-being-unknown-or-opening-the-terminal-failing-or-functional-keys-like-arrow-keys-don-t-work)
+
+```
+kitten ssh myserver
+alias s="kitten ssh"
+```

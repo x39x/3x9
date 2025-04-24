@@ -1,0 +1,37 @@
+---
+title: Firfox 配置 | 让你的 Firefox 更好用
+slug: firefox-config
+date: 2025-04-25
+---
+
+# Firefox
+
+#### don't exit on escap
+
+1. In the URL bar enter `about:config`
+2. Agree to the security risks
+3. Search for the entry `browser.fullscreen.exit_on_escape`
+4. Double click on `true` to change it to `false`
+5. You're done! Enjoy :-)
+
+#### Firefox Homepage background
+
+1. Locate your profile folder in `about:profiles` (Root Directory)
+2. create a folder there called `chrome` and
+3. put `userContent.css` in it
+4. Add your desired `image-background.png` file to the same folder. In Firefox go to `about:config`, change `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` and restart.
+
+#### Remove Firefox View
+
+1. Hold down the control key while you click the Firefox View Firefox View icon icon.
+2. Select Remove from Toolbar. (You can also choose Pin to Overflow Menu.)
+
+#### disable the tab animation
+
+1. about:config
+2. add `ui.prefersReducedMotion` number set its value to 1
+
+#### Disable Qucik Search
+
+1. about:config
+2. set `accessibility.typeaheadfind.manual` to false
