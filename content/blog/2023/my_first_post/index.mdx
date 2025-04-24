@@ -7,12 +7,12 @@ keywords: create-wesite-githubpages-hugo
 updated: 2025-3-31
 ---
 
-
-博客已经迁移到 nextjs + cloudflare Pages
+此博客已经迁移到 nextjs + cloudflare Pages
 
 GitHub Pages + Hugo 请参考[这篇文章](https://miawithcode.com/blog/how-to-build-a-personal-blog-using-github-pages-and-hugo)
 
 ---
+
 ## 使用Makefile实现自动发布Hugo博客
 
 在 bolg 仓库下新建一个 Makefile 文件，拷贝下面的代码进去，每次写完在 blog 仓库下执行 make 即可
@@ -37,16 +37,18 @@ all:
 
 .PHONY: all
 ```
+
 ### 代码实现
+
 定义一个`MSG`变量，从Shell中获取当天日期添加到`MSG`作为commit；
 然后执行`hugo`，生成 public 文件，接着判断 Blog 和 public 仓库之下有没有需要添加的更改，
 如果有就 add 、commit、然后推送到 `remote`，如果没有则停止
 
 ## 其他
 
-1. [hugo基本用法](https://www.cnblogs.com/chenxuhua/p/hugo-blog-chinese-user-guide.html)
-2. [firebase](https://n9o.xyz/posts/202310-blowfish-tutorial/#firebase-hosting-mergeyml)部署，可以提供一些交互性功能
-3. [配色参考](http://zhongguose.com/#anyuzi),中国风配色网站
-4. 博客主题[Blowfish](https://blowfish.page/)适配移动端
-5. [Godaddy域名绑定以及配置DNS](https://io-oi.me/tech/custom-domains-on-github-pages/)
-6. 生成不同分辨率的[网站图标](https://ibrights.github.io/post/blog20210527/)
+- [Hugo 基本用法](https://www.cnblogs.com/chenxuhua/p/hugo-blog-chinese-user-guide.html)
+- [firebase ](https://n9o.xyz/posts/202310-blowfish-tutorial/#firebase-hosting-mergeyml)部署，可以提供一些交互性功能
+- [配色参考：](http://zhongguose.com/#anyuzi)中国风配色网站
+- Hugo主题：[Blowfish](https://blowfish.page/)
+- [Godaddy 域名绑定以及配置 DNS](https://io-oi.me/tech/custom-domains-on-github-pages/)
+- 生成不同分辨率的[网站图标](https://ibrights.github.io/post/blog20210527/)
