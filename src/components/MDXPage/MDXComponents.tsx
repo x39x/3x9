@@ -16,7 +16,9 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         h1: (props) => (
             <h1 className="mt-17 mb-9 text-4xl font-medium" {...props} />
         ),
-        h2: (props) => <h2 className="my-4 text-2xl font-medium" {...props} />,
+        h2: (props) => (
+            <h2 className="mt-12 mb-8 text-2xl font-medium" {...props} />
+        ),
         h3: (props) => <h3 className="my-4 font-bold" {...props} />,
         h4: (props) => <h4 className="my-2 text-sm font-bold" {...props} />,
         h5: (props) => <h5 className="my-2 text-sm font-bold" {...props} />,
