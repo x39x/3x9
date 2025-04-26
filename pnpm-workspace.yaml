@@ -1,2 +1,3 @@
 onlyBuiltDependencies:
-  - sharp
+    - sharp
+useNodeVersion: 22.15.0
