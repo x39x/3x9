@@ -201,6 +201,14 @@ brew bundle --file="~/.dotfile/Brewfile"
 sudo xattr -rd com.apple.quarantine /Applications/x.app
 ```
 
+### 允许安装任何来源
+
+```sh
+su -i # ?
+sudo spctl --master-disable # 关闭
+sudo spctl --master-enable  # 开启
+```
+
 ### Emoj Shortcuts
 
 Control + Command + Space
