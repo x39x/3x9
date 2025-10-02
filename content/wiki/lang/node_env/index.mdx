@@ -57,7 +57,7 @@ useNodeVersion: 23.11.0
 
 ```json
 "scripts": {
-  "version": "node -v",
+  "nodeversion": "node -v",
   "dev": "node dev.js"
 }
 ```
@@ -65,7 +65,7 @@ useNodeVersion: 23.11.0
 执行以下命令时将使用 `.npmrc` 指定的 Node：
 
 ```bash
-pnpm version   # 输出 23.11.0
+pnpm nodeversion   # 输出 23.11.0
 pnpm dev       # 运行时使用 23.11.0
 ```
 

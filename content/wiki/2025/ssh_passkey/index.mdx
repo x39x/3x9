@@ -89,6 +89,12 @@ ssh-agent 是一个后台程序，用于管理 SSH 密钥对。当你使用 SSH 
 
 ssh-add 是用来向 ssh-agent 添加或移除密钥的命令。你可以通过它将私钥添加到 ssh-agent 中，这样就可以在后续的 SSH 会话中自动使用这些密钥。
 
+```sh
+# 需在 Shell 中加载 ssh-agent
+eval "$(ssh-agent -c)" # csh fish
+eval "$(ssh-agent -s)" # sh bash
+```
+
 添加到 agent 的密钥只在当前登录会话中有效，一旦你关闭终端、注销、重启，SSH Agent 进程就会结束，密钥就会被清除，用于在同一会话下的多次连接，避免重复输入私钥密码
 
 ```bash

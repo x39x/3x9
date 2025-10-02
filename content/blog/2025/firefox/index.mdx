@@ -6,32 +6,72 @@ date: 2025-04-25
 
 # Firefox
 
-#### don't exit on escap
-
-1. In the URL bar enter `about:config`
-2. Agree to the security risks
-3. Search for the entry `browser.fullscreen.exit_on_escape`
-4. Double click on `true` to change it to `false`
-5. You're done! Enjoy :-)
-
-#### Firefox Homepage background
+### Firefox Homepage background
 
 1. Locate your profile folder in `about:profiles` (Profile: default-release,Root Directory)
 2. create a folder there called `chrome` and
 3. put `userContent.css` in it
 4. Add your desired `image-background.png` file to the same folder. In Firefox go to `about:config`, change `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` and restart.
 
-#### Remove Firefox View
+### Remove Firefox View
 
-1. Hold down the control key while you click the Firefox View Firefox View icon icon.
+1. Hold down the control key while you click the Firefox View Firefox View icon.
 2. Select Remove from Toolbar. (You can also choose Pin to Overflow Menu.)
 
-#### disable the tab animation
+### about:config
+
+1. disable the tab animation
+
+add `ui.prefersReducedMotion` number set its value to 1
+
+2. Disable Qucik Search
+
+set `accessibility.typeaheadfind.manual` to false
+
+3. don't exit on escap
+
+set `browser.fullscreen.exit_on_escape` to `false`
+
+### Setting
+
+- General
+
+    1. Always check if Firefox is your default browser
+    2. Ask before quitting with CMD Q
+
+- Search
+
+    1. Show trending search suggestions
+    2. Address Bar ,close all
+
+### 修改 Accel Key
+
+[参考](https://increaseyourgeek.wordpress.com/2010/01/28/osx-style-keyboard-shortcuts-for-firefox-on-pc)
+
+1. about:config -> set ui.key.accelKey
+2. ui.key.menuAccessKey : 显示顶部菜单（Linux/win）
+
+```sh
+0 => 禁用
+17 => Ctrl键
+18 => Alt/Option
+91 => win/cmd
+224 => Meta（Mac上的命令键??）
+```
+
+> Mac使用Control作为“generalAccessKey”，它作为“chromeAccessKey”和“contentAccessKey”发挥着双重作用，
+
+### Firefox 远程调试（自定义 CSS 调试）
+
+- 启用远程调试：
 
 1. about:config
-2. add `ui.prefersReducedMotion` number set its value to 1
+2. devtools.chrome.enabled 设置为 true
+3. devtools.debugger.remote-enabled 设置为 true
+4. 重启 Firefox
 
-#### Disable Qucik Search
+- 快捷键：
 
-1. about:config
-2. set `accessibility.typeaheadfind.manual` to false
+macOS: Cmd + Option + Shift + I
+
+Windows / Linux: Ctrl + Shift + Alt + I
