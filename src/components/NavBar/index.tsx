@@ -40,7 +40,7 @@ export default function NavBar() {
                     <NavLinks
                         links={[
                             { href: "/blog", text: "Blog" },
-                            { href: "/wiki", text: "Wiki" },
+                            { href: "https://wiki.x39x.cc", text: "Wiki" },
                             { href: "/about", text: "About" },
                         ]}
                     />
