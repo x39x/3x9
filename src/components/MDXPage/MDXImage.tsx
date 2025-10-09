@@ -9,7 +9,7 @@ interface CustomImageProps {
     height?: number;
 }
 
-const MDXImage: React.FC<CustomImageProps> = ({ id, src, alt = "" }) => {
+const MDXImage = ({ id, src, alt = "" }: CustomImageProps) => {
     const img_src = src.startsWith("./")
         ? `/39img/${id}${src.replace("./", "-")}`
         : src;

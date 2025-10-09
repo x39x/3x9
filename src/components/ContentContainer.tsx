@@ -5,10 +5,7 @@ interface ContainerProps {
     className?: string;
 }
 
-const ContentContainer: React.FC<ContainerProps> = ({
-    children,
-    className,
-}) => {
+const ContentContainer = ({ children, className }: ContainerProps) => {
     return (
         <div className="flex justify-center container mx-auto">
             <div

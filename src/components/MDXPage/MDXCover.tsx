@@ -13,14 +13,14 @@ type Props = {
     reading_time: string;
 };
 
-const MDXCover: React.FC<Props> = ({
-    date = new Date().getTime(),
+const MDXCover = ({
+    date = new Date(),
     updated_date,
     title = "Tille Not Found",
     cover_url,
     reading_time = "N/A",
     word_count = "N/A",
-}) => {
+}: Props) => {
     return (
         <div className="mt-4 ">
             <div className="overflow-hidden relative w-full rounded h-50 md:h-69 lg:h-80">

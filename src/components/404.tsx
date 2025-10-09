@@ -12,7 +12,7 @@ const FuturaBookFont = localFont({
     display: "swap",
 });
 
-const NotFound: React.FC = () => {
+const NotFound = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-10rem)]">
             <Image

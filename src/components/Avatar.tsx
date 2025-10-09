@@ -5,7 +5,7 @@ type AvatarProps = {
     size?: number;
 };
 
-const Avatar: React.FC<AvatarProps> = ({ size = 50 }) => {
+const Avatar = ({ size = 50 }: AvatarProps) => {
     const src = "/avatar.png";
     return (
         <div
