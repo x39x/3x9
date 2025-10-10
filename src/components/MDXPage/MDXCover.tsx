@@ -2,7 +2,10 @@ import React from "react";
 import { format } from "date-fns";
 import Image from "next/image";
 import { Jost } from "next/font/google";
-const JostFont = Jost({ subsets: ["latin"] });
+const JostFont = Jost({
+    subsets: ["latin"],
+    fallback: ["system-ui", "Arial", "sans-serif"],
+});
 
 type Props = {
     date: Date;
@@ -35,22 +38,23 @@ const MDXCover = ({
             </div>
             <div className="mt-5 mb-11">
                 <div className="text-4xl font-bold">{title}</div>
-                <span //className=""
+                <span
                     className={`mt-1 space-x-2 text-sm text-[#808080] ${JostFont.className}`}
                 >
                     {format(date, "MMMM do yyyy")}
+                    {/* dot: • · */}
                     <span className="mx-2 text-xl text-gray-500 select-none">
-                        •
+                        ·
                     </span>
                     {reading_time}
                     <span className="mx-2 text-xl text-gray-500 select-none">
-                        •
+                        ·
                     </span>
                     {word_count} words
                     {updated_date && (
                         <>
                             <span className="mx-2 text-xl text-gray-500 select-none">
-                                •
+                                ·
                             </span>
                             {"Updated " + format(updated_date, "MMMM do yyyy")}
                         </>

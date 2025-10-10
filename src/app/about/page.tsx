@@ -16,7 +16,8 @@ export default function About() {
         <RemoveScroll>
             <div className="absolute inset-0 -z-20 h-screen w-screen">
                 <Image
-                    src="/about.jpeg"
+                    // src="/about.jpeg"
+                    src="https://image.baidu.com/search/down?url=https://tvax2.sinaimg.cn/large/008IpWfqgy1i66i1dla7nj335s1s0ajb.jpg"
                     alt="Background"
                     fill={true}
                     sizes="100vw"
