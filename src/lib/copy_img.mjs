@@ -39,7 +39,7 @@ import path from "path";
 import { globSync } from "glob";
 
 const contentDir = path.resolve(process.cwd(), "content");
-const imgDir = path.resolve(process.cwd(), "content");
+const imgDir = path.resolve(process.cwd(), "public", "39img");
 const mapFile = path.resolve(imgDir, "imgMap.json");
 
 fs.ensureDirSync(imgDir);
