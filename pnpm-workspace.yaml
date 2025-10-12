@@ -1,6 +1,6 @@
 ignoredBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - unrs-resolver
+    - "@tailwindcss/oxide"
+    - unrs-resolver
 onlyBuiltDependencies:
-  - sharp
-useNodeVersion: 22.15.1
+    - sharp
+useNodeVersion: 22.20.0

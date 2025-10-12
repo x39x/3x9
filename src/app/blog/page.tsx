@@ -3,8 +3,8 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { getPostdata } from "@/lib/get_post";
 import ContentContainer from "@/components/ContentContainer";
-
 import { Jost } from "next/font/google";
+
 const JostFont = Jost({ subsets: ["latin"] });
 
 export default async function PostList() {
@@ -28,10 +28,12 @@ export default async function PostList() {
                 return (
                     <div key={post.id} className="mb-18 ">
                         <Link prefetch={false} href={`/blog/${post.slug}`}>
-                            <div className="text-[1.1em] ">{post.title}</div>
+                            <div className="tracking-wide text-justify font-hans">
+                                {post.title}
+                            </div>
                         </Link>
                         <div
-                            className={`mt-3 text-[#808080] text-[0.8em] ${JostFont.className}`}
+                            className={`mt-3 text-[#808080] text-[0.8em] tracking-wide ${JostFont.className}`}
                         >
                             {format(post.metadata.date, "MMMM do yyyy")}
                         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import ContentContainer from "@/components/ContentContainer";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { MDXRemote } from "next-mdx-remote-client/rsc";
+
 import createMDXComponets from "./MDXComponents";
 import options from "./MDXRemoteOptions";
 import NotFound from "@/components/404";

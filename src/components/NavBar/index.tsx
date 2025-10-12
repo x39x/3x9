@@ -66,6 +66,7 @@ export default function NavBar() {
                 <div className="flex items-center justify-center space-x-8 pr-6 ">
                     <NavLinks
                         links={[
+                            { href: "/thoughts", text: "Thoughts" },
                             { href: "/blog", text: "Blog" },
                             { href: "https://wiki.x39x.cc", text: "Wiki" },
                             { href: "/about", text: "About" },

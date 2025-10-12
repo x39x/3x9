@@ -1,4 +1,4 @@
-// const imageLoader = ({ src }) => src;
+import imageMap from "@/../imgMap.json";
 
 type ImageLoaderProps = {
     src: string;
@@ -11,7 +11,11 @@ const imageLoader = ({
     width = 500,
     quality = 75,
 }: ImageLoaderProps): string => {
-    return `${src}?w=${width}&q=${quality}`;
+    const imgId = src.replace(/^\/39img\//, "");
+    const mapped = (imageMap as Record<string, string>)[imgId];
+
+    // 存在图床链接，直接返回，否则附加参数
+    return mapped ?? `${src}?w=${width}&q=${quality}`;
 };
 
 export default imageLoader;

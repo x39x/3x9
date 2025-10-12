@@ -1,8 +1,8 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import { Meddon } from "next/font/google";
+import { Stalemate } from "next/font/google";
 
-const MeddonFont = Meddon({
+const StalemateFont = Stalemate({
     weight: "400",
     subsets: ["latin"],
 });
@@ -27,7 +27,9 @@ const NotFound = () => {
             >
                 4 0 4
             </h1>
-            <h1 className={`mt-2 text-[1.1em] ${MeddonFont.className.trim()}`}>
+            <h1
+                className={`mt-2 text-[2.4em] tracking-wider ${StalemateFont.className.trim()}`}
+            >
                 Page not found
             </h1>
         </div>

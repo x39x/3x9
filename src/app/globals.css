@@ -2,15 +2,22 @@
 @tailwind utilities;
 @custom-variant dark (&:where(.dark, .dark *));
 
+@layer components {
+    .font-hans {
+        font-family:
+            "PingFang SC", "Microsoft YaHei", "Heiti SC", "STHeiti",
+            "Noto Sans SC", "WenQuanYi Micro Hei", sans-serif;
+    }
+}
 
 code[data-theme],
 code[data-theme] span {
-  color: var(--shiki-light);
-  background-color: var(--shiki-light-bg);
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
 }
 
 html.dark code[data-theme],
 html.dark code[data-theme] span {
-  color: var(--shiki-dark);
-  background-color: var(--shiki-dark-bg);
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
 }
