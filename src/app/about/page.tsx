@@ -4,6 +4,7 @@ import Avatar from "@/components/Avatar";
 import Link from "next/link";
 import Image from "next/image";
 import localFont from "next/font/local";
+import { RemoveScroll } from "react-remove-scroll";
 
 const FuturaBold = localFont({
     src: "../../../public/FuturaBold.otf",
@@ -12,7 +13,7 @@ const FuturaBold = localFont({
 
 export default function About() {
     return (
-        <>
+        <RemoveScroll>
             <div className="absolute inset-0 -z-20 h-screen w-screen">
                 <Image
                     src="https://img.x39x.cc/large/008IpWfqgy1i68w2wa0q8j335s1s0k0m.jpg"
@@ -42,6 +43,6 @@ export default function About() {
                     </Link>
                 </div>
             </ContentContainer>
-        </>
+        </RemoveScroll>
     );
 }
