@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+    // 静态导出
     output: "export",
     experimental: {
         mdxRs: true, // 启用Rust实现的MDX编译器
