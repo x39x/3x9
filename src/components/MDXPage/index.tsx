@@ -37,7 +37,7 @@ const MDXPage = ({ post }: { post: Post }) => {
                     reading_time={metadata.reading_time}
                     word_count={metadata.word_count}
                 />
-                <article>
+                <article className="text-autospace">
                     <MDXRemote
                         source={content}
                         components={MDXComponents}

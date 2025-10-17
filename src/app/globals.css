@@ -8,6 +8,10 @@
             "PingFang SC", "Microsoft YaHei", "Heiti SC", "STHeiti",
             "Noto Sans SC", "WenQuanYi Micro Hei", sans-serif;
     }
+    /* 中英文自动添加空格 */
+    .text-autospace {
+        text-autospace: normal;
+    }
 }
 
 code[data-theme],
