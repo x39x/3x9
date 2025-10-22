@@ -4,6 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "build:svelteconfig": "esbuild next-sitemap.config.ts --outfile=next-sitemap.config.js",
         "build": "next build",
         "copyimg": "node src/lib/copy_img.ts",
         "nodeversion": "node -v",
@@ -39,6 +40,7 @@
         "@types/node": "^20.19.21",
         "@types/react": "^19.2.2",
         "@types/react-dom": "^19.2.1",
+        "esbuild": "^0.25.11",
         "eslint": "^9.37.0",
         "eslint-config-next": "15.2.4",
         "fs-extra": "^11.3.2",
