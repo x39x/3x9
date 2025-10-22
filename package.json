@@ -4,11 +4,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build:svelteconfig": "esbuild next-sitemap.config.ts --outfile=next-sitemap.config.js",
-        "build": "next build",
-        "copyimg": "node src/lib/copy_img.ts",
-        "nodeversion": "node -v",
-        "postbuild": "next-sitemap",
+        "build": "esbuild next-sitemap.config.ts --outfile=next-sitemap.config.js && node src/lib/copy_img.ts && next build && next-sitemap",
+        "push": "node src/lib/push.ts",
+        "nodev": "node -v",
         "dev": "node src/lib/copy_img.ts && next dev",
         "start": "next start",
         "lint": "next lint"
