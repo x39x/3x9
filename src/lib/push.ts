@@ -14,6 +14,8 @@ try {
 } catch (error: any) {
     if (error.message.includes("nothing to commit")) {
         console.log("\x1b[31mNothing changed\x1b[0m");
+        // push
+        execSync(`git push`, { stdio: "inherit" });
     } else {
         console.error("\x1b[31mError:\x1b[0m", error.message);
     }
