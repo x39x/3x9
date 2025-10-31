@@ -1,4 +1,4 @@
-import remarkGfm from "remark-gfm"; //NOTE: https://github.com/vercel/next.js/issues/71819#issuecomment-2496155399
+import remarkGfm from "remark-gfm"; //ISSUE: https://github.com/vercel/next.js/issues/71819#issuecomment-2496155399
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
