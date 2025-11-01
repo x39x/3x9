@@ -12,43 +12,38 @@ interface NavLinksProps {
 }
 
 const NavLinks = ({ links }: NavLinksProps) => {
-    return (
-        <>
-            {links.map((link) => {
-                // 判断是否是外部链接（以 http:// 或 https:// 开头）
-                const isExternal =
-                    link.href.startsWith("http://") ||
-                    link.href.startsWith("https://");
+    return links.map((link) => {
+        // 判断是否是外部链接（以 http:// 或 https:// 开头）
+        const isExternal =
+            link.href.startsWith("http://") || link.href.startsWith("https://");
 
-                if (isExternal) {
-                    // 外部链接
-                    return (
-                        <a
-                            key={link.href}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hidden sm:block"
-                        >
-                            {link.text}
-                        </a>
-                    );
-                } else {
-                    // 站内链接：使用 Next.js <Link>
-                    return (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            prefetch={true}
-                            className="hidden sm:block"
-                        >
-                            {link.text}
-                        </Link>
-                    );
-                }
-            })}
-        </>
-    );
+        if (isExternal) {
+            // 外部链接
+            return (
+                <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden sm:block"
+                >
+                    {link.text}
+                </a>
+            );
+        } else {
+            // 站内链接：使用 Next.js <Link>
+            return (
+                <Link
+                    key={link.href}
+                    href={link.href}
+                    prefetch={true}
+                    className="hidden sm:block"
+                >
+                    {link.text}
+                </Link>
+            );
+        }
+    });
 };
 
 export default function NavBar() {

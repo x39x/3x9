@@ -4,6 +4,7 @@ import { format } from "date-fns";
 import { getPostdata } from "@/lib/get_post";
 import ContentContainer from "@/components/ContentContainer";
 import { Jost } from "next/font/google";
+import type { Metadata } from "next";
 
 const JostFont = Jost({ subsets: ["latin"] });
 
@@ -43,3 +44,7 @@ export default async function PostList() {
         </ContentContainer>
     );
 }
+
+export const metadata: Metadata = {
+    title: "松TvT | Matsu's blog",
+};

@@ -2,7 +2,7 @@ import React from "react";
 
 interface ContainerProps {
     children: React.ReactNode;
-    className?: string; // ? 这是干什么的😅
+    className?: string;
 }
 
 const ContentContainer = ({ children, className }: ContainerProps) => {

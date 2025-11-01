@@ -14,7 +14,7 @@ const HamburgerMenu = (props: Props) => (
                     <X size={20} />
                 </button>
             </div>
-            <div className="flex flex-col justify-center items-center min-h-[calc(100vh)] bg-white/75 dark:bg-[#141414]/75 backdrop-blur-xl z-100">
+            <div className="flex flex-col justify-center items-center min-h-[calc(100vh)] bg-white/15 dark:bg-[#141414]/15 backdrop-blur-xl z-100">
                 <div className="flex flex-col space-y-10 justify-center items-center mb-13 text-2xl font-medium">
                     <HamburgerMenuLink
                         setIsOpen={props.setIsOpen}
