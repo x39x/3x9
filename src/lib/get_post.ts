@@ -20,8 +20,9 @@ function getCoverUrl(dir: string, id: string): string {
 
 export type PostData = {
     id: string;
-    slug?: string;
-    title?: string;
+    slug: string;
+    title: string;
+    date: string;
     content: string;
     metadata: { [key: string]: any };
 };
@@ -32,7 +33,7 @@ async function getPostFromDir(dir: string): Promise<PostData | null> {
     const index_path = path.join(dir, "index.mdx");
     if (!fs.existsSync(index_path)) return null;
 
-    // read index.md and process it with grayMatter
+    // read index.mdx and process it with grayMatter
     const fileContents = await fs.promises.readFile(index_path, "utf8");
     const { data, content } = grayMatter(fileContents);
 
@@ -50,9 +51,10 @@ async function getPostFromDir(dir: string): Promise<PostData | null> {
 
     return {
         id: post_id,
+        title: data.title || "untitled",
+        slug: data.slug || post_id,
+        date: data.date || "2039-03-09",
         metadata: data,
-        title: data.title,
-        slug: data.slug,
         content,
     };
 }
