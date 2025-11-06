@@ -6,7 +6,7 @@ import { globSync } from "glob";
 
 const contentDir = path.resolve(process.cwd(), "content");
 const imgDir = path.resolve(process.cwd(), "public", "39img");
-const mapFile = path.resolve(process.cwd(), "imgMap.json");
+const mapFile = path.resolve(process.cwd(), "content", "imgMap.json");
 
 fs.ensureDirSync(imgDir);
 fs.ensureFileSync(mapFile);
@@ -50,7 +50,7 @@ function saveMapping(mapping: ImageMapping): void {
 
 // === 获取所有图片文件 ===
 function getImageFiles(): string[] {
-    return globSync("**/*.{png,jpg,jpeg}", {
+    return globSync("**/*.{png,jpg,jpeg,webp}", {
         cwd: contentDir,
         nodir: true,
         ignore: "**/node_modules/**",
