@@ -1,4 +1,3 @@
-import React from "react";
 import { getPostdata } from "@/lib/get_post";
 import MDXPage from "@/components/MDXPage";
 

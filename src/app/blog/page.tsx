@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 import { getPostdata } from "@/lib/get_post";
@@ -19,9 +18,7 @@ export default async function PostList() {
         );
     }
     const sorted_posts = posts.sort(
-        (a, b) =>
-            new Date(b.metadata.date).getTime() -
-            new Date(a.metadata.date).getTime(),
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
     return (
         <ContentContainer className="mb-15 mt-11">
@@ -29,21 +26,21 @@ export default async function PostList() {
                 return (
                     <div
                         key={post.id}
-                        className="mb-18 flex group cursor-pointer hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-200"
+                        className="mb-21 md:flex group cursor-pointer hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-200"
                     >
                         <Link
                             prefetch={false}
                             href={`/blog/${post.slug}`}
                             className="flex-1"
                         >
-                            <div className="tracking-wide text-sm font-medium content-center">
+                            <div className="tracking-wide text-sm content-center ">
                                 {post.title}
                             </div>
                         </Link>
                         <div
-                            className={`text-xs text-[#808080] tracking-wide ${JostFont.className} content-center ml-auto`}
+                            className={`text-xs text-[#808080] tracking-wide ${JostFont.className} content-center ml-auto md:mt-0 mt-3`}
                         >
-                            {format(post.metadata.date, "MMMM do yyyy")}
+                            {format(post.date, "MMMM do yyyy")}
                         </div>
                     </div>
                 );
