@@ -3,11 +3,14 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "esbuild next-sitemap.config.ts --outfile=next-sitemap.config.js && node src/lib/copy_img.ts && next build && next-sitemap",
+        "copy_img": "node src/lib/copy_img.ts",
+        "build_sitemap": "esbuild next-sitemap.config.ts --outfile=next-sitemap.config.js ",
+        "build_pre": "pnpm run build_sitemap && pnpm run copy_img",
+        "dev": "pnpm run copy_img && next dev",
+        "start": "next start",
+        "build": "pnpm run build_pre && next build && next-sitemap",
         "push": "node src/lib/push.ts",
         "nodev": "node -v",
-        "dev": "node src/lib/copy_img.ts && next dev",
-        "start": "next start",
         "lint": "next lint"
     },
     "dependencies": {
@@ -22,7 +25,7 @@
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.1",
-        "@tailwindcss/postcss": "^4.1.16",
+        "@tailwindcss/postcss": "^4.1.17",
         "@types/fs-extra": "^11.0.4",
         "@types/mdx": "^2.0.13",
         "@types/node": "^20.19.24",
@@ -30,7 +33,7 @@
         "@types/react-dom": "^19.2.2",
         "autoprefixer": "^10.4.21",
         "esbuild": "^0.25.12",
-        "eslint": "^9.39.0",
+        "eslint": "^9.39.1",
         "eslint-config-next": "15.2.4",
         "fs-extra": "^11.3.2",
         "glob": "^11.0.3",
@@ -47,9 +50,9 @@
         "rehype-slug": "^6.0.0",
         "remark-gfm": "^4.0.1",
         "remark-math": "^6.0.0",
-        "shiki": "^3.14.0",
+        "shiki": "^3.15.0",
         "tailwind-scrollbar-hide": "^4.0.0",
-        "tailwindcss": "^4.1.16",
+        "tailwindcss": "^4.1.17",
         "typescript": "^5.9.3"
     },
     "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
