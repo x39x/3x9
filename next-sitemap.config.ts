@@ -4,7 +4,7 @@ const config: IConfig = {
     siteUrl: "https://x39x.cc",
     generateRobotsTxt: true,
     generateIndexSitemap: false,
-    exclude: ["/39img/*"],
+    exclude: ["/39img/*", "/favicon/*"],
     outDir: "out",
 };
 
