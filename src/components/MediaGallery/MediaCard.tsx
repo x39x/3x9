@@ -1,0 +1,65 @@
+import Link from "next/link";
+import Image from "next/image";
+import RatingStars from "@/components/MediaGallery/Rating";
+
+export interface MediaCardProps {
+    href: string;
+    title: string;
+    comment: string;
+    rating: number;
+    date: string;
+    imgSrc: string;
+}
+
+const MediaCard = ({
+    href,
+    title,
+    comment,
+    rating,
+    date,
+    imgSrc,
+}: MediaCardProps) => {
+    return (
+        <div className="relative shrink-0 w-[139px] h-[213px]">
+            <Link href={href}>
+                <div className="relative shrink-0 w-[139px] h-[213px] group/card">
+                    {/* 悬浮遮罩层 */}
+                    <div
+                        className="text-white text-xs flex flex-col justify-between  text-justify absolute z-10 rounded-xl bg-black/40 backdrop-blur-0 opacity-0 transition-all duration-300 group-hover/card:opacity-100 group-hover/card:backdrop-blur-md"
+                        style={{ width: 139, height: 213 }}
+                    >
+                        <div className="w-28 m-auto mt-3 leading-6 max-h-36 overflow-hidden">
+                            「 {comment ? comment : "暂无评价 >_<"} 」
+                        </div>
+
+                        <div>
+                            <RatingStars rating={rating} />
+                            <div className="w-28 m-auto mb-3">{date}</div>
+                        </div>
+                    </div>
+
+                    {/* 图片层 */}
+                    <div
+                        className="relative overflow-hidden rounded-xl"
+                        style={{ width: 139, height: 213 }}
+                    >
+                        <Image
+                            src={imgSrc}
+                            alt={title}
+                            fill
+                            className="transform transition-transform duration-300 group-hover/card:scale-105"
+                            style={{ objectFit: "cover" }}
+                        />
+                    </div>
+                </div>
+            </Link>
+
+            {/* 标题 */}
+            <div className="text-xs mt-3 text-center font-bold truncate w-31 m-auto">
+                {title}
+            </div>
+        </div>
+    );
+};
+
+export default MediaCard;
