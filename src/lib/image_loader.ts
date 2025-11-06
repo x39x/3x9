@@ -1,4 +1,4 @@
-import imageMap from "@/../imgMap.json";
+import imageMap from "@/../content/imgMap.json";
 
 type ImageLoaderProps = {
     src: string;
