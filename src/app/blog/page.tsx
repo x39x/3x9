@@ -27,14 +27,21 @@ export default async function PostList() {
         <ContentContainer className="mb-15 mt-11">
             {sorted_posts.map((post) => {
                 return (
-                    <div key={post.id} className="mb-18 ">
-                        <Link prefetch={false} href={`/blog/${post.slug}`}>
-                            <div className="tracking-wide text-justify font-hans">
+                    <div
+                        key={post.id}
+                        className="mb-18 flex group cursor-pointer hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-200"
+                    >
+                        <Link
+                            prefetch={false}
+                            href={`/blog/${post.slug}`}
+                            className="flex-1"
+                        >
+                            <div className="tracking-wide text-sm font-medium content-center">
                                 {post.title}
                             </div>
                         </Link>
                         <div
-                            className={`mt-3 text-[#808080] text-[0.8em] tracking-wide ${JostFont.className}`}
+                            className={`text-xs text-[#808080] tracking-wide ${JostFont.className} content-center ml-auto`}
                         >
                             {format(post.metadata.date, "MMMM do yyyy")}
                         </div>

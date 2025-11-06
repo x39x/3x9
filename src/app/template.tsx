@@ -6,11 +6,6 @@ import { usePathname } from "next/navigation";
 export default function Template({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
 
-    // /about 不应用动画
-    if (pathname === "/about") {
-        return <>{children}</>;
-    }
-
     return (
         <motion.div
             key={pathname}
