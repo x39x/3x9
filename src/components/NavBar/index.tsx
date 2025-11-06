@@ -52,7 +52,7 @@ export default function NavBar() {
         <header
             className={`sticky top-0 z-50 flex justify-center items-center h-14 w-full ${pathname == "/about" ? "bg-transparent" : "bg-white/75 dark:bg-[#141414]/75 backdrop-blur-xl"}`}
         >
-            <div className="flex justify-between items-center w-full lg:max-w-[55rem] md:max-w-[43rem] text-[0.9rem] font-medium">
+            <div className="flex justify-between items-center w-full lg:max-w-220 md:max-w-173 text-[0.9rem] font-medium">
                 <div className="flex items-center pl-6 space-x-8 ">
                     <Link prefetch={false} href={"/"}>
                         Home
@@ -61,7 +61,7 @@ export default function NavBar() {
                 <div className="flex items-center justify-center space-x-8 pr-6 ">
                     <NavLinks
                         links={[
-                            { href: "/thoughts", text: "Thoughts" },
+                            { href: "/misc", text: "Misc" },
                             { href: "/blog", text: "Blog" },
                             { href: "https://wiki.x39x.cc", text: "Wiki" },
                             { href: "/about", text: "About" },

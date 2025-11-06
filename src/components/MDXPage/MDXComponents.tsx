@@ -1,8 +1,10 @@
-import React from "react";
 import MDXCodeBlock from "./MDXCodeBlock";
 import MDXTaskList from "./MDXTaskList";
 import MDXImage from "./MDXImage";
 import Link from "next/link";
+import Image from "next/image";
+import CheckTag from "@/components/CheckTag";
+import BgmCard from "@/components/MediaGallery/BangumiCard";
 
 import type { MDXComponents } from "mdx/types";
 
@@ -13,12 +15,25 @@ interface MDXOptions {
 const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
     const { id } = options;
     return {
-        h1: (props) => (
-            <h1 className="mt-17 mb-9 text-4xl font-medium" {...props} />
-        ),
-        h2: (props) => (
-            <h2 className="mt-12 mb-8 text-2xl font-medium" {...props} />
-        ),
+        h1: (props) => {
+            const id = props.id;
+            return (
+                <h1
+                    id={id}
+                    className="group mt-17 mb-9 text-4xl font-medium scroll-mt-24"
+                >
+                    {id && <Link href={`#${id}`}>{props.children}</Link>}
+                </h1>
+            );
+        },
+        h2: (props) => {
+            const id = props.id;
+            return (
+                <h1 id={id} className="mt-12 mb-8 text-2xl font-medium">
+                    {id && <Link href={`#${id}`}>{props.children}</Link>}
+                </h1>
+            );
+        },
         h3: (props) => <h3 className="my-4 font-bold" {...props} />,
         h4: (props) => <h4 className="my-2 text-sm font-bold" {...props} />,
         h5: (props) => <h5 className="my-2 text-sm font-bold" {...props} />,
@@ -89,6 +104,9 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         pre: (props) => <MDXCodeBlock className="" {...props} />,
 
         img: (props) => <MDXImage id={id || ""} {...props} />,
+        Image,
+        BgmCard: (props) => <BgmCard id={id || ""} {...props} />,
+        CheckTag,
     };
 };
 

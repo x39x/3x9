@@ -2,6 +2,7 @@ import remarkGfm from "remark-gfm"; //ISSUE: https://github.com/vercel/next.js/i
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeSlug from "rehype-slug";
 
 const options = {
     parseFrontmatter: true,
@@ -9,6 +10,7 @@ const options = {
         remarkPlugins: [remarkGfm, remarkMath],
         rehypePlugins: [
             rehypeKatex,
+            rehypeSlug,
             [
                 rehypePrettyCode,
                 {

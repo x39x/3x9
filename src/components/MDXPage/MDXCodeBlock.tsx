@@ -40,12 +40,12 @@ export default function MDXCodeBlock({
                 {isCopied ? (
                     <Check
                         size={15}
-                        className="stroke-[2] text-gray-500 dark:text-[#999999]"
+                        className="stroke-2 text-gray-500 dark:text-[#999999]"
                     />
                 ) : (
                     <Code
                         size={15}
-                        className="stroke-[2] text-gray-500 dark:text-[#999999]"
+                        className="stroke-2 text-gray-500 dark:text-[#999999]"
                     />
                 )}
             </button>

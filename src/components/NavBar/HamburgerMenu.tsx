@@ -20,8 +20,8 @@ const HamburgerMenu = (props: Props) => (
                         setIsOpen={props.setIsOpen}
                         links={[
                             { href: "/", text: "Home" },
+                            { href: "/misc", text: "Misc" },
                             { href: "/blog", text: "Blog" },
-                            { href: "/thoughts", text: "Thoughts" },
                             { href: "https://wiki.x39x.cc", text: "Wiki" },
                             { href: "/about", text: "About" },
                         ]}

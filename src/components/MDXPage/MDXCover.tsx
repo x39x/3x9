@@ -1,4 +1,3 @@
-import React from "react";
 import { format } from "date-fns";
 import Image from "next/image";
 import { Jost } from "next/font/google";

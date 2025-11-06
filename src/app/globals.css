@@ -1,7 +1,20 @@
 @import "tailwindcss";
-@import 'tailwind-scrollbar-hide/v4';
+@import "tailwind-scrollbar-hide/v4";
 @tailwind utilities;
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* 从右边滑动进入 */
+@keyframes slide-in-right {
+    from {
+        /* 变化大小 */
+        transform: translateX(20%); 
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 @layer components {
     .font-hans {
@@ -12,6 +25,12 @@
     /* 中英混排 */
     .text-autospace {
         text-autospace: normal;
+    }
+}
+
+@layer utilities {
+    .animate-slide-in-right {
+        animation: slide-in-right 0.4s ease-out forwards;
     }
 }
 
