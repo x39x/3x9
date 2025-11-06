@@ -3,12 +3,13 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "copy_img": "node src/lib/copy_img.ts",
         "build_sitemap": "esbuild next-sitemap.config.ts --outfile=next-sitemap.config.js ",
-        "build_pre": "pnpm run build_sitemap && pnpm run copy_img",
+        "copy_img": "node src/lib/copy_img.ts",
+        "get_bangumi": "node src/lib/get_bangumi_subject.ts",
+        "build_pre": "pnpm run build_sitemap && pnpm run copy_img && pnpm run get_bangumi",
+        "build": "pnpm run build_pre && next build && next-sitemap",
         "dev": "pnpm run copy_img && next dev",
         "start": "next start",
-        "build": "pnpm run build_pre && next build && next-sitemap",
         "push": "node src/lib/push.ts",
         "nodev": "node -v",
         "lint": "next lint"
