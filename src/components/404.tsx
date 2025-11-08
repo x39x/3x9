@@ -1,15 +1,9 @@
 import Image from "next/image";
-import localFont from "next/font/local";
-import { Stalemate } from "next/font/google";
-
-const StalemateFont = Stalemate({
-    weight: "400",
+import { Josefin_Sans } from "next/font/google";
+const Josefin_Font = Josefin_Sans({
+    weight: "300",
     subsets: ["latin"],
-});
-
-const FuturaBookFont = localFont({
-    src: "../../public/FuturaBook.otf",
-    display: "swap",
+    style: "italic",
 });
 
 const NotFound = () => {
@@ -22,15 +16,8 @@ const NotFound = () => {
                 height={500}
                 className="lg:w-[34%] md:w-[40%] w-[65%]"
             />
-            <h1
-                className={`mt-4 text-[1.2em] ${FuturaBookFont.className.trim()}`}
-            >
-                4 0 4
-            </h1>
-            <h1
-                className={`mt-2 text-[2.4em] tracking-wider ${StalemateFont.className.trim()}`}
-            >
-                Page not found
+            <h1 className={`mt-9 text-sm ${Josefin_Font.className.trim()}`}>
+                Not found
             </h1>
         </div>
     );

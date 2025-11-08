@@ -4,9 +4,10 @@ import Avatar from "@/components/Avatar";
 import Link from "next/link";
 import localFont from "next/font/local";
 import { RemoveScroll } from "react-remove-scroll";
+import clsx from "clsx";
 
-const FuturaBold = localFont({
-    src: "../../public/FuturaBold.otf",
+const Futura = localFont({
+    src: "../../public/FuturaMedium.otf",
     display: "swap",
 });
 
@@ -20,7 +21,12 @@ const AboutBody = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://github.com/x39x"
-                        className={` ml-3 text-5xl  hover:underline underline-offset-9 decoration-3  ${FuturaBold.className.trim()}`}
+                        className={clsx(
+                            "ml-3 text-5xl",
+                            "hover:underline underline-offset-9 decoration-4",
+                            "transition-all duration-300",
+                            Futura.className.trim(),
+                        )}
                     >
                         Matsu
                     </Link>

@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 
 interface MediaWideCardProps {
@@ -25,7 +26,15 @@ const MediaWideCard = ({
         <div className="h-58 flex items-end my-5">
             <div className="w-full h-44 rounded-sm flex relative group shadow-md dark:shadow-black/80">
                 {/* 封面图 */}
-                <div className="absolute left-0 -top-19 m-5 overflow-hidden rounded-xs w-[139px] h-[213px] shadow-2xl dark:shadow-black/80 transition-transform duration-300 group-hover:-rotate-3">
+                <div
+                    className={clsx(
+                        "absolute left-0 -top-19 w-[139px] h-[213px] ",
+                        "m-5 overflow-hidden rounded-xs",
+                        "shadow-2xl dark:shadow-black/80 ",
+                        "transition-transform duration-300 group-hover:-rotate-3",
+                        "group-hover:-rotate-3",
+                    )}
+                >
                     <Image
                         src={coverImage}
                         alt={title}

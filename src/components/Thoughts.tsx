@@ -1,6 +1,7 @@
 import data from "@/lib/thoughts";
 import { format } from "date-fns";
 import { Tangerine } from "next/font/google";
+import clsx from "clsx";
 
 const TangerineFont = Tangerine({
     weight: "400",
@@ -20,7 +21,10 @@ const Thoughts = () => (
                         {item.thoughts}
                     </div>
                     <div
-                        className={`text-[#808080] text-right text-[1.2em] mt-3 tracking-wide ${TangerineFont.className.trim()}`}
+                        className={clsx(
+                            "text-[#808080] text-right text-[1.2em] mt-3 tracking-wide",
+                            TangerineFont.className.trim(),
+                        )}
                     >
                         {format(new Date(item.date), "MMMM do yyyy")}
                     </div>

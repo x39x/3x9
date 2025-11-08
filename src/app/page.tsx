@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <RemoveScroll>
             <ContentContainer>
-                <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-9rem)] mt-5 lg:mt-0">
+                <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-9rem)] mt-5 lg:mt-3">
                     <Image
                         src={src}
                         alt="Avatar"

@@ -3,74 +3,104 @@ import Link from "next/link";
 import ThemeToggle from "./ToogleTheme";
 import Hamburger from "./Hamburger";
 import { usePathname } from "next/navigation";
+import { Josefin_Sans } from "next/font/google";
+import clsx from "clsx";
+
+const Josefin_Font = Josefin_Sans({
+    weight: "400",
+    subsets: ["latin"],
+});
+
+interface NavLink {
+    href: string;
+    text: string;
+}
 
 interface NavLinksProps {
-    links: {
-        href: string;
-        text: string;
-    }[];
+    links: NavLink[];
 }
 
 const NavLinks = ({ links }: NavLinksProps) => {
-    return links.map((link) => {
-        // 判断是否是外部链接（以 http:// 或 https:// 开头）
-        const isExternal =
-            link.href.startsWith("http://") || link.href.startsWith("https://");
-
-        if (isExternal) {
-            // 外部链接
-            return (
-                <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden sm:block"
-                >
-                    {link.text}
-                </a>
-            );
-        } else {
-            // 站内链接：使用 Next.js <Link>
-            return (
-                <Link
-                    key={link.href}
-                    href={link.href}
-                    prefetch={true}
-                    className="hidden sm:block"
-                >
-                    {link.text}
-                </Link>
-            );
-        }
-    });
+    const pathname = `/${usePathname()?.split("/")[1] || ""}`;
+    const isAbout = pathname === "/about";
+    return (
+        <>
+            {links.map(({ href, text }) => {
+                const isExternal = /^https?:\/\//.test(href);
+                const baseClasses = clsx(
+                    "hidden sm:block transition-transform duration-300",
+                    !isAbout &&
+                    "hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-300",
+                );
+                return isExternal ? (
+                    <a
+                        key={href}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={baseClasses}
+                    >
+                        {text}
+                    </a>
+                ) : (
+                    <Link
+                        key={href}
+                        href={href}
+                        prefetch
+                        className={baseClasses}
+                    >
+                        {text}
+                    </Link>
+                );
+            })}
+        </>
+    );
 };
 
 export default function NavBar() {
-    const pathname = `/${usePathname()?.split("/")[1]}`;
+    const navLinks: NavLink[] = [
+        { href: "/misc", text: "Misc" },
+        { href: "/blog", text: "Blog" },
+        { href: "https://wiki.x39x.cc", text: "Wiki" },
+        { href: "/about", text: "About" },
+    ];
+    const pathname = `/${usePathname()?.split("/")[1] || ""}`;
+    const isAbout = pathname === "/about";
+
     return (
         <header
-            className={`sticky top-0 z-50 flex justify-center items-center h-14 w-full ${pathname == "/about" ? "bg-transparent" : "bg-white/75 dark:bg-[#141414]/75 backdrop-blur-xl"}`}
+            className={clsx(
+                "sticky top-0 z-50 flex justify-center items-center h-14 w-full backdrop-blur-xl",
+                isAbout ? "bg-transparent" : "bg-white/75 dark:bg-[#141414]/75",
+            )}
         >
-            <div className="flex justify-between items-center w-full lg:max-w-220 md:max-w-173 text-[0.9rem] font-medium">
-                <div className="flex items-center pl-6 space-x-8 ">
-                    <Link prefetch={false} href={"/"}>
+            <nav
+                className={`flex justify-between items-center w-full lg:max-w-220 md:max-w-173 text-[0.9rem] ${Josefin_Font.className}`}
+            >
+                {/* Home */}
+                <div className="flex items-center pl-6 space-x-8">
+                    <Link
+                        href="/"
+                        prefetch={false}
+                        className={clsx(
+                            "transition-colors duration-300",
+                            !isAbout &&
+                            "hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-300",
+                        )}
+                    >
                         Home
                     </Link>
                 </div>
-                <div className="flex items-center justify-center space-x-8 pr-6 ">
-                    <NavLinks
-                        links={[
-                            { href: "/misc", text: "Misc" },
-                            { href: "/blog", text: "Blog" },
-                            { href: "https://wiki.x39x.cc", text: "Wiki" },
-                            { href: "/about", text: "About" },
-                        ]}
-                    />
+
+                {/* 导航 + 主题切换 */}
+                <div className="flex items-center justify-center  space-x-8 pr-6">
+                    <NavLinks links={navLinks} />
                     <ThemeToggle />
                 </div>
+
+                {/* 移动端菜单 */}
                 <Hamburger />
-            </div>
+            </nav>
         </header>
     );
 }

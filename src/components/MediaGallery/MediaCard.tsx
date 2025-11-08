@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import RatingStars from "@/components/MediaGallery/Rating";
+import clsx from "clsx";
 
 export interface MediaCardProps {
     href: string;
@@ -25,10 +26,17 @@ const MediaCard = ({
                 <div className="relative shrink-0 w-[139px] h-[213px] group/card">
                     {/* 悬浮遮罩层 */}
                     <div
-                        className="text-white text-xs flex flex-col justify-between  text-justify absolute z-10 rounded-xl bg-black/40 backdrop-blur-0 opacity-0 transition-all duration-300 group-hover/card:opacity-100 group-hover/card:backdrop-blur-md"
+                        className={clsx(
+                            "bg-black/40",
+                            "text-white text-xs",
+                            "flex flex-col justify-between absolute z-10 rounded-xl",
+                            "opacity-0 group-hover/card:opacity-100",
+                            "backdrop-blur-none group-hover/card:backdrop-blur-md",
+                            "transition-all duration-300",
+                        )}
                         style={{ width: 139, height: 213 }}
                     >
-                        <div className="w-28 m-auto mt-3 leading-6 max-h-36 overflow-hidden">
+                        <div className="w-28 m-auto mt-3 leading-5 max-h-36 overflow-hidden text-justify">
                             「 {comment ? comment : "暂无评价 >_<"} 」
                         </div>
 

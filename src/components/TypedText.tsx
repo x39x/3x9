@@ -1,11 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
-import localFont from "next/font/local";
-const FuturaBlod = localFont({
-    src: "../../public/FuturaMedium.otf",
-    display: "swap",
+import { Josefin_Sans } from "next/font/google";
+
+const Josefin_Font = Josefin_Sans({
+    weight: "400",
+    subsets: ["latin"],
+    style: "italic",
 });
+
 const poems = [
     ["Vivamus, atque amemus", "atque amemus"],
     [
@@ -38,13 +41,13 @@ export default function TypedText() {
 
     return (
         <div className="flex flex-col items-center justify-center w-full text-center mt-6">
-            <h1 className={`${FuturaBlod.className}`}>
+            <h1 className={`${Josefin_Font.className}`}>
                 <span ref={typedRef1}>
                     {/* w-zero 'Space' 占位符 */}
                     {"\u200b"}
                 </span>
             </h1>
-            <h1 className={`mt-3 text-[1.1em] ${FuturaBlod.className}`}>
+            <h1 className={`mt-3 text-[1em] ${Josefin_Font.className}`}>
                 Odi et amo. Quare id faciam, nescio. Sed fieri sentio et
                 excrucior
             </h1>

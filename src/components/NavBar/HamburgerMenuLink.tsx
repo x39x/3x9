@@ -1,6 +1,13 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import localFont from "next/font/local";
+import clsx from "clsx";
+import { Josefin_Sans } from "next/font/google";
+
+const Josefin_Font = Josefin_Sans({
+    weight: "400",
+    subsets: ["latin"],
+});
+
 type LinkProps = {
     setIsOpen: (isOpen: boolean) => void;
     links: {
@@ -8,11 +15,6 @@ type LinkProps = {
         text: string;
     }[];
 };
-
-const FuturaBlod = localFont({
-    src: "../../../public/FuturaBold.otf",
-    display: "swap",
-});
 
 const HamburgerMenuLink = (props: LinkProps) => {
     const pathname = `/${usePathname()?.split("/")[1]}`;
@@ -26,7 +28,12 @@ const HamburgerMenuLink = (props: LinkProps) => {
         <Link
             key={link.href}
             href={link.href}
-            className={`${FuturaBlod.className.trim()} text-lg ${link.href == pathname ? "underline underline-offset-5 decoration-3" : ""}`}
+            className={clsx(
+                Josefin_Font.className.trim(),
+                "text-lg",
+                link.href == pathname &&
+                "underline underline-offset-5 decoration-3",
+            )}
             onClick={() => handleLinkClick(link.href, pathname)}
         >
             {link.text}

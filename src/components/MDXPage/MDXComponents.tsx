@@ -49,7 +49,7 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         strong: (props) => <strong className="font-bold" {...props} />,
         a: (props) => (
             <Link
-                className="hover:underline underline-offset-4 decoration-2 text-[#0066cc] dark:text-[#2897FF] "
+                className="hover:underline underline-offset-4 decoration-2 text-[#0066cc] dark:text-[#2897FF]  transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 {...props}

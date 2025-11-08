@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import MediaCard, { MediaCardProps } from "./MediaCard";
+import clsx from "clsx";
 
 interface MediaCarouselProps {
     data: MediaCardProps[];
@@ -54,11 +55,23 @@ const MediaCarousel = ({ data }: MediaCarouselProps) => {
 
             {/* 滑动后左侧淡白渐变*/}
             {showLeftFade && (
-                <div className="pointer-events-none absolute left-0 top-0 h-full w-13 bg-linear-to-r from-white  dark:from-[#141414] to-transparent transition-opacity duration-300" />
+                <div
+                    className={clsx(
+                        "pointer-events-none absolute left-0 top-0 h-full w-13",
+                        "bg-linear-to-r from-white  dark:from-[#141414] to-transparent",
+                        "transition-opacity duration-300",
+                    )}
+                />
             )}
             {/* 右侧淡白渐变，仅在未滑到最右时显示 */}
             {showRightFade && (
-                <div className="pointer-events-none absolute right-0 top-0 h-full w-15 bg-linear-to-l from-white dark:from-[#141414] to-transparent transition-opacity duration-300" />
+                <div
+                    className={clsx(
+                        "pointer-events-none absolute right-0 top-0 h-full w-15",
+                        "bg-linear-to-l from-white dark:from-[#141414] to-transparent",
+                        "transition-opacity duration-300",
+                    )}
+                />
             )}
         </div>
     );
