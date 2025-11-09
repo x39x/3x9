@@ -32,18 +32,18 @@ const Footer = () => (
             <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="mailto:matsu3x9@icloud.com"
-                className="hover:underline"
-            >
-                Email
-            </Link>
-            <Link
-                target="_blank"
-                rel="noopener noreferrer"
                 href="https://github.com/x39x"
                 className="hover:underline"
             >
                 Github
+            </Link>
+            <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:matsu3x9@icloud.com"
+                className="hover:underline"
+            >
+                Email
             </Link>
         </div>
     </footer>

@@ -10,11 +10,11 @@ import type { MDXComponents } from "mdx/types";
 import clsx from "clsx";
 
 interface MDXOptions {
-    id?: string;
+    page_id?: string;
 }
 
 const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
-    const { id } = options;
+    const { page_id } = options;
     return {
         h1: (props) => {
             const id = props.id;
@@ -52,7 +52,8 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
             <Link
                 className={clsx(
                     "hover:underline underline-offset-4 decoration-2",
-                    "text-[#0066cc] dark:text-[#2897FF]  transition-colors duration-300",
+                    "text-[#0066cc] dark:text-[#2897FF]",
+                    "hover:transition-colors hover:duration-300",
                 )}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -107,9 +108,9 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         ),
         pre: (props) => <MDXCodeBlock className="" {...props} />,
 
-        img: (props) => <MDXImage id={id || ""} {...props} />,
+        img: (props) => <MDXImage id={page_id || ""} {...props} />,
         Image,
-        BgmCard: (props) => <BgmCard id={id || ""} {...props} />,
+        BgmCard: (props) => <BgmCard id={page_id || ""} {...props} />,
         JostDate,
     };
 };

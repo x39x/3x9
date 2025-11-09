@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import RatingStars from "@/components/MediaGallery/Rating";
+import { format } from "date-fns";
 import clsx from "clsx";
 
 export interface MediaCardProps {
@@ -29,7 +30,7 @@ const MediaCard = ({
                         className={clsx(
                             "bg-black/40",
                             "text-white text-xs",
-                            "flex flex-col justify-between absolute z-10 rounded-xl",
+                            "flex flex-col justify-between absolute z-10 rounded-sm",
                             "opacity-0 group-hover/card:opacity-100",
                             "backdrop-blur-none group-hover/card:backdrop-blur-md",
                             "transition-all duration-300",
@@ -42,13 +43,15 @@ const MediaCard = ({
 
                         <div>
                             <RatingStars rating={rating} />
-                            <div className="w-28 m-auto mb-3">{date}</div>
+                            <div className="w-28 m-auto mb-3">
+                                {format(new Date(date), "yyyy年M月dd日")}
+                            </div>
                         </div>
                     </div>
 
                     {/* 图片层 */}
                     <div
-                        className="relative overflow-hidden rounded-xl"
+                        className="relative overflow-hidden rounded"
                         style={{ width: 139, height: 213 }}
                     >
                         <Image

@@ -1,5 +1,5 @@
 import { getPostdata } from "@/lib/get_post";
-import AnimeMDXPage from "@/components/MDXPage/AnimeMDXPage";
+import AnimeMDXPage from "@/components/AnimeMDXPage";
 
 type MiscellaneousPageProps = {
     params: Promise<{ slug: string }>;

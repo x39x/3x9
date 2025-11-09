@@ -21,14 +21,22 @@ interface TagItem {
     count: number;
     total_cont?: number;
 }
+interface BangumiImages {
+    small?: string;
+    grid?: string;
+    large?: string;
+    medium?: string;
+    common?: string;
+}
 
 interface BgmSubject {
-    date?: string;
-    summary?: string;
-    name?: string;
-    name_cn?: string;
-    rating?: { score?: number };
-    tags?: TagItem[];
+    date: string;
+    summary: string;
+    name: string;
+    name_cn: string;
+    images: BangumiImages;
+    rating: { score?: number };
+    tags: TagItem[];
 }
 
 interface SavedData {
@@ -37,6 +45,7 @@ interface SavedData {
         summary?: string;
         name?: string;
         name_cn?: string;
+        images?: { size: string };
         score?: number;
         tags?: { name: string; count: number }[];
     };
@@ -151,6 +160,7 @@ async function fetchBgm(id: number) {
                 .trim(),
             name: json.name,
             name_cn: json.name_cn,
+            images: json.images,
             score: json.rating?.score,
             tags: filterTags(json.tags || []),
         };
@@ -195,13 +205,13 @@ for (const id of Object.keys(saved)) {
 
 // 逐个抓取
 for (const id of ids) {
-    console.log(`fetch ID: ${id}: ${idsObj[id] || ""}`);
+    console.log("fetch ID:", id, idsObj[id] || "");
     const data = await fetchBgm(id);
     if (data) {
         saved[id] = { ...(saved[id] || {}), ...data };
-        console.log(`saved ${idsObj[id] || ""}`);
+        console.log("saved", data.name_cn, "\n");
     } else {
-        console.log(`skip ${id}`);
+        console.log("skip ", id);
     }
     await sleep(800);
 }

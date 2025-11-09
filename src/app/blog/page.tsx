@@ -29,7 +29,8 @@ export default async function PostList() {
                         key={post.id}
                         className={clsx(
                             "mb-21 md:flex group cursor-pointer",
-                            "hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-300",
+                            "hover:text-[#0066CC]  dark:hover:text-[#2997FF]",
+                            "hover:transition-colors hover:duration-300",
                         )}
                     >
                         <Link

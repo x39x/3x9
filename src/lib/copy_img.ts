@@ -3,6 +3,7 @@
 import fs from "fs-extra";
 import path from "path";
 import { globSync } from "glob";
+import { ImageMapping } from "@/interfaces";
 
 const contentDir = path.resolve(process.cwd(), "content");
 const imgDir = path.resolve(process.cwd(), "public", "39img");
@@ -10,9 +11,6 @@ const mapFile = path.resolve(process.cwd(), "content", "imgMap.json");
 
 fs.ensureDirSync(imgDir);
 fs.ensureFileSync(mapFile);
-interface ImageMapping {
-    [key: string]: string;
-}
 
 // === 加载或初始化映射 ===
 function loadMapping(): ImageMapping {

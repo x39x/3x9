@@ -24,23 +24,41 @@ const MediaCarousel = ({ data }: MediaCarouselProps) => {
             setShowRightFade(!atRightEnd);
         };
 
-        // 初始化时判断一次
         handleScroll();
 
+        const handleWheel = (e: WheelEvent) => {
+            // 触控板 or Shift+滚轮
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey) return;
+
+            // 转换垂直滚动为横向滚动
+            e.preventDefault();
+            el.scrollTo({
+                left: el.scrollLeft + e.deltaY * 3.9, // 乘数控制速度
+                behavior: "smooth",
+            });
+        };
+
         el.addEventListener("scroll", handleScroll);
+        el.addEventListener("wheel", handleWheel, { passive: false });
         window.addEventListener("resize", handleScroll);
 
         return () => {
             el.removeEventListener("scroll", handleScroll);
+            el.removeEventListener("wheel", handleWheel);
             window.removeEventListener("resize", handleScroll);
         };
     }, []);
-
     return (
         <div className="relative group w-full px-3">
             <div
                 ref={scrollRef}
-                className="flex gap-5 w-full overflow-x-auto scrollbar-hide scroll-smooth h-61"
+                className="flex gap-5 w-full h-61 overflow-x-auto scrollbar-hide scroll-smooth overscroll-contain"
+                style={{
+                    scrollBehavior: "smooth", // 平滑滚动
+                    scrollSnapType: "x mandatory", // 自动贴合
+                    WebkitOverflowScrolling: "touch", // iOS 弹性滚动
+                    overscrollBehaviorX: "contain", // 防止父级滚动
+                }}
             >
                 {[...data]
                     .sort(

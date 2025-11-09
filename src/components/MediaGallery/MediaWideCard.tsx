@@ -63,7 +63,7 @@ const MediaWideCard = ({
                     {/* 放送时间 */}
                     <div className="text-xs truncate flex font">
                         <div className="font-medium">{datePrefix}</div>
-                        <div>{format(airDate, "MMMM do yyyy")}</div>
+                        <div>{format(airDate, "yyyy-M-d")}</div>
                     </div>
                 </div>
             </div>

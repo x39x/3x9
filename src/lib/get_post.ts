@@ -6,7 +6,7 @@ import readingTime from "reading-time";
 // 获取文章背景图片
 function getCoverUrl(dir: string, id: string): string {
     const defaultImgUrl = "/39img/content-default_cover.jpeg";
-    const extensions = ["jpg", "png", "jpeg"];
+    const extensions = ["jpg", "png", "jpeg", "webp"];
     const imagePathBase = dir + path.sep + "cover";
     // 可能会有不同的后缀
     for (const ext of extensions) {
@@ -22,6 +22,7 @@ export type PostData = {
     id: string;
     slug: string;
     title: string;
+    cover_url: string;
     date: string;
     content: string;
     metadata: { [key: string]: any };
@@ -47,7 +48,7 @@ async function getPostFromDir(dir: string): Promise<PostData | null> {
     // 文章 cover 图路径
     const cover_url = getCoverUrl(dir, post_id);
     // 合并
-    Object.assign(data, { reading_time, word_count, cover_url });
+    Object.assign(data, { reading_time, word_count });
 
     return {
         id: post_id,
@@ -56,6 +57,7 @@ async function getPostFromDir(dir: string): Promise<PostData | null> {
         date: data.date || "2039-03-09",
         metadata: data,
         content,
+        cover_url,
     };
 }
 
@@ -79,8 +81,8 @@ async function getAllPosts(dir: string): Promise<PostData[]> {
     return posts;
 }
 
-export async function getPostdata(dir: string): Promise<PostData[]> {
-    const directory = path.join(process.cwd(), "content", dir);
+export async function getPostdata(...dir: string[]): Promise<PostData[]> {
+    const directory = path.join(process.cwd(), "content", ...dir);
     const posts = await getAllPosts(directory);
     return posts;
 }

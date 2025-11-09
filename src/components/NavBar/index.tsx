@@ -30,7 +30,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
                 const baseClasses = clsx(
                     "hidden sm:block transition-transform duration-300",
                     !isAbout &&
-                    "hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-300",
+                    "hover:text-[#0066CC]  dark:hover:text-[#2997FF] hover:transition-colors hover:duration-300",
                 );
                 return isExternal ? (
                     <a
@@ -83,9 +83,9 @@ export default function NavBar() {
                         href="/"
                         prefetch={false}
                         className={clsx(
-                            "transition-colors duration-300",
+                            "hover:transition-colors hover:duration-300",
                             !isAbout &&
-                            "hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-300",
+                            "hover:text-[#0066CC]  dark:hover:text-[#2997FF]",
                         )}
                     >
                         Home

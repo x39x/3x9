@@ -1,11 +1,13 @@
 import ContentContainer from "@/components/ContentContainer";
-import MediaCarousel from "@/components/MediaGallery/MediaCarousel";
+import AnimeCarousel from "@/components/MediaGallery/AnimeCarousel";
 import Thoughts from "@/components/Thoughts";
-import rencentlyAnime from "@/../content/misc/data/recently_anime.json";
 
+import Link from "next/link";
 import { Josefin_Sans } from "next/font/google";
-
+import clsx from "clsx";
 const Josefin_Font = Josefin_Sans({ weight: "400", subsets: ["latin"] });
+
+// 标题
 const Head = ({
     children,
     className,
@@ -14,7 +16,11 @@ const Head = ({
     className?: string;
 }) => (
     <div
-        className={`text-2xl font-medium ${Josefin_Font.className.trim()} ${className?.trim() || ""}`}
+        className={clsx(
+            "text-2xl font-medium",
+            className?.trim(),
+            Josefin_Font.className.trim(),
+        )}
     >
         {children}
     </div>
@@ -26,8 +32,10 @@ export default function Misc() {
             <Head className="mb-5">Now</Head>
             <div className="text-sm ml-4">混吃等死ing</div>
 
-            <Head className="mb-9 mt-20">Recently Watched</Head>
-            <MediaCarousel data={rencentlyAnime} />
+            <Link href="/anime" className="cursor-pointer">
+                <Head className="mb-9 mt-20">Recently Watched</Head>
+            </Link>
+            <AnimeCarousel />
 
             <Head className="mb-9 mt-23">Thoughts</Head>
             <Thoughts />
