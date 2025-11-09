@@ -45,14 +45,14 @@ const MDXPage = ({ post }: { post: Post }) => {
                     />
                 </article>
             </ContentContainer>
-            <div className="relative max-w-184 w-full px-12 md:px-22 lg:px-0 m-auto mt-18 mb-15 ">
-                <hr className="border-t border-[#CECECF] dark:border-[#2E2E2E]" />
-                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-[#141414] px-2 text-[0.7rem] text-gray-500">
-                    end
-                </span>
-            </div>
         </>
     );
 };
 
 export default MDXPage;
+//<div className="relative max-w-184 w-full px-12 md:px-22 lg:px-0 m-auto mt-18 mb-15 ">
+//   <hr className="border-t border-[#CECECF] dark:border-[#2E2E2E]" />
+//  <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-[#141414] px-2 text-[0.7rem] text-gray-500">
+//     end
+//      </span>
+// </div>

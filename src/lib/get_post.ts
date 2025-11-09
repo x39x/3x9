@@ -52,7 +52,7 @@ async function getPostFromDir(dir: string): Promise<PostData | null> {
     return {
         id: post_id,
         title: data.title || "untitled",
-        slug: data.slug || post_id,
+        slug: encodeURIComponent(data.slug || post_id),
         date: data.date || "2039-03-09",
         metadata: data,
         content,

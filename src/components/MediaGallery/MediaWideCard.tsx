@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
+import { format } from "date-fns";
 
 interface MediaWideCardProps {
     descPrefix?: string;
@@ -62,7 +63,7 @@ const MediaWideCard = ({
                     {/* 放送时间 */}
                     <div className="text-xs truncate flex font">
                         <div className="font-medium">{datePrefix}</div>
-                        <div>{airDate}</div>
+                        <div>{format(airDate, "MMMM do yyyy")}</div>
                     </div>
                 </div>
             </div>

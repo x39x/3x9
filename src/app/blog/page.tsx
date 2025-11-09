@@ -44,7 +44,7 @@ export default async function PostList() {
                         <div
                             className={clsx(
                                 "content-center ml-auto md:mt-0 mt-3",
-                                "text-xs text-[#808080] tracking-wide ",
+                                "text-xs tracking-wide text-[#6E6E73] dark:text-[#868686]",
                                 JostFont.className,
                             )}
                         >

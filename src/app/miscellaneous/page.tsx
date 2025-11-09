@@ -4,6 +4,7 @@ import { getPostdata } from "@/lib/get_post";
 import ContentContainer from "@/components/ContentContainer";
 import { Jost } from "next/font/google";
 import type { Metadata } from "next";
+import clsx from "clsx";
 
 const JostFont = Jost({ subsets: ["latin"] });
 
@@ -26,7 +27,10 @@ export default async function PostList() {
                 return (
                     <div
                         key={post.id}
-                        className="mb-21 md:flex group cursor-pointer hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-200"
+                        className={clsx(
+                            "mb-21 md:flex group cursor-pointer",
+                            " hover:text-[#0066CC]  dark:hover:text-[#2997FF] transition-colors duration-200",
+                        )}
                     >
                         <Link
                             prefetch={false}
@@ -38,7 +42,11 @@ export default async function PostList() {
                             </div>
                         </Link>
                         <div
-                            className={`text-xs text-[#808080] tracking-wide ${JostFont.className} content-center ml-auto md:mt-0 mt-3`}
+                            className={clsx(
+                                "text-xs tracking-wide text-[#6E6E73] dark:text-[#868686]",
+                                "content-center ml-auto md:mt-0 mt-3",
+                                JostFont.className,
+                            )}
                         >
                             {format(post.date, "MMMM do yyyy")}
                         </div>

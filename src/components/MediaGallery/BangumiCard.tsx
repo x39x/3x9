@@ -36,6 +36,8 @@ const BgmCard: React.FC<BgmCardProps> = ({
     if (!data) {
         data = dataMap["2045"];
     }
+
+    // 直接在MDX文件中使用时处理本地图片
     const img_src = imgSrc.startsWith("./")
         ? `/39img/${id}${imgSrc.replace("./", "-")}`
         : imgSrc;

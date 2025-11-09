@@ -1,5 +1,5 @@
 import { getPostdata } from "@/lib/get_post";
-import MDXPage from "@/components/MDXPage";
+import AnimeMDXPage from "@/components/MDXPage/AnimeMDXPage";
 
 type MiscellaneousPageProps = {
     params: Promise<{ slug: string }>;
@@ -28,5 +28,5 @@ export default async function Page({ params }: MiscellaneousPageProps) {
     const { slug } = await params;
     const posts = await getPostdata("misc");
     const post = posts.find((post) => post.slug === slug);
-    return <MDXPage post={post as any} />;
+    return <AnimeMDXPage post={post as any} />;
 }

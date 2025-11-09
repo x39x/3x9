@@ -7,7 +7,6 @@ import BgmCard from "@/components/MediaGallery/BangumiCard";
 import JostDate from "@/components/JostDate";
 
 import type { MDXComponents } from "mdx/types";
-import clsx from "clsx";
 
 interface MDXOptions {
     id?: string;
@@ -40,7 +39,7 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         h5: (props) => <h5 className="my-2 text-sm font-bold" {...props} />,
         h6: (props) => <h6 className="my-2 text-sm font-bold" {...props} />,
 
-        p: (props) => <p className="text-justify leading-8 my-8" {...props} />,
+        p: (props) => <p className="text-justify leading-8 my-7" {...props} />,
         hr: (props) => (
             <hr
                 className="border-t my-20 border-[#D2D2D7] dark:border-[#2E2E2E]"
@@ -50,10 +49,7 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
         strong: (props) => <strong className="font-bold" {...props} />,
         a: (props) => (
             <Link
-                className={clsx(
-                    "hover:underline underline-offset-4 decoration-2",
-                    "text-[#0066cc] dark:text-[#2897FF]  transition-colors duration-300",
-                )}
+                className="hover:underline underline-offset-4 decoration-2 text-[#0066cc] dark:text-[#2897FF]  transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 {...props}

@@ -26,10 +26,10 @@ export default function Misc() {
             <Head className="mb-5">Now</Head>
             <div className="text-sm ml-4">混吃等死ing</div>
 
-            <Head className="mb-7 mt-20">Recently Watched</Head>
+            <Head className="mb-9 mt-20">Recently Watched</Head>
             <MediaCarousel data={rencentlyAnime} />
 
-            <Head className="mb-9 mt-20">Thoughts</Head>
+            <Head className="mb-9 mt-23">Thoughts</Head>
             <Thoughts />
         </ContentContainer>
     );

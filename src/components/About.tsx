@@ -24,7 +24,6 @@ const AboutBody = () => {
                         className={clsx(
                             "ml-3 text-5xl",
                             "hover:underline underline-offset-9 decoration-4",
-                            "transition-all duration-300",
                             Futura.className.trim(),
                         )}
                     >

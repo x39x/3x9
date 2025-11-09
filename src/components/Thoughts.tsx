@@ -22,7 +22,7 @@ const Thoughts = () => (
                     </div>
                     <div
                         className={clsx(
-                            "text-[#808080] text-right text-[1.2em] mt-3 tracking-wide",
+                            "text-right text-[1.2em] mt-3 tracking-wide text-[#6E6E73] dark:text-[#868686]",
                             TangerineFont.className.trim(),
                         )}
                     >
