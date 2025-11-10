@@ -1,17 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import RatingStars from "@/components/MediaGallery/Rating";
 import { format } from "date-fns";
 import clsx from "clsx";
 
-export interface MediaCardProps {
-    href: string;
-    title: string;
-    comment: string;
-    rating: number;
-    date: string;
-    imgSrc: string;
-}
+import RatingStars from "@/components/MediaGallery/Rating";
+import { MediaCardProps } from "@/type/media_gallery";
 
 const MediaCard = ({
     href,

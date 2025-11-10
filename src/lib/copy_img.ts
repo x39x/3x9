@@ -3,7 +3,7 @@
 import fs from "fs-extra";
 import path from "path";
 import { globSync } from "glob";
-import { ImageMapping } from "@/interfaces";
+import { ImageMappingJSON } from "@/type/base";
 
 const contentDir = path.resolve(process.cwd(), "content");
 const imgDir = path.resolve(process.cwd(), "public", "39img");
@@ -13,7 +13,7 @@ fs.ensureDirSync(imgDir);
 fs.ensureFileSync(mapFile);
 
 // === 加载或初始化映射 ===
-function loadMapping(): ImageMapping {
+function loadMapping(): ImageMappingJSON {
     try {
         const data = fs.readFileSync(mapFile, "utf-8");
         return data ? JSON.parse(data) : {};
@@ -23,9 +23,9 @@ function loadMapping(): ImageMapping {
 }
 
 // === 保存映射（自动清理+排序）===
-function saveMapping(mapping: ImageMapping): void {
+function saveMapping(mapping: ImageMappingJSON): void {
     // 清理无效 key（没有对应图片）
-    const cleaned: ImageMapping = {};
+    const cleaned: ImageMappingJSON = {};
     for (const [key, value] of Object.entries(mapping)) {
         const imgPath = path.join(process.cwd(), key.replace(/-/g, "/"));
         if (fs.existsSync(imgPath)) {
@@ -38,7 +38,7 @@ function saveMapping(mapping: ImageMapping): void {
     // 按 key 排序
     const sorted = Object.keys(cleaned)
         .sort((a, b) => a.localeCompare(b))
-        .reduce<ImageMapping>((acc, key) => {
+        .reduce<ImageMappingJSON>((acc, key) => {
             acc[key] = cleaned[key];
             return acc;
         }, {});

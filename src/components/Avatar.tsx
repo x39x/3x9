@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-type AvatarProps = {
-    size?: number;
-};
-
-const Avatar = ({ size = 50 }: AvatarProps) => {
+const Avatar = ({ size = 50 }: { size?: number }) => {
     const src = "/avatar.png";
     return (
         <div

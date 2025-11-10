@@ -1,13 +1,11 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import MediaCard, { MediaCardProps } from "./MediaCard";
 import clsx from "clsx";
 
-interface MediaCarouselProps {
-    data: MediaCardProps[];
-}
+import { MediaCardProps } from "@/type/media_gallery";
+import MediaCard from "./MediaCard";
 
-const MediaCarousel = ({ data }: MediaCarouselProps) => {
+const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [showRightFade, setShowRightFade] = useState(false);
     const [showLeftFade, setShowLeftFade] = useState(false);

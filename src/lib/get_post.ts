@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import grayMatter from "gray-matter";
 import readingTime from "reading-time";
+import { PostData } from "@/type/base";
 
 // 获取文章背景图片
 function getCoverUrl(dir: string, id: string): string {
@@ -17,16 +18,6 @@ function getCoverUrl(dir: string, id: string): string {
     }
     return defaultImgUrl;
 }
-
-export type PostData = {
-    id: string;
-    slug: string;
-    title: string;
-    cover_url: string;
-    date: string;
-    content: string;
-    metadata: { [key: string]: any };
-};
 
 // 获取文章、添加属性
 async function getPostFromDir(dir: string): Promise<PostData | null> {

@@ -1,11 +1,12 @@
 import { StarIcon } from "lucide-react";
 
-interface RatingStarsProps {
-    rating: number; // 1 ~ 5
+const RatingStars = ({
+    rating,
+    size = 13,
+}: {
+    rating: number;
     size?: number;
-}
-
-const RatingStars = ({ rating, size = 13 }: RatingStarsProps) => {
+}) => {
     return (
         <div className="flex w-28 m-auto mb-2">
             {Array.from({ length: 5 }, (_, i) => {

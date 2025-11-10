@@ -2,21 +2,14 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
 import { Josefin_Sans } from "next/font/google";
+import { HamburgerMenuLinkProps } from "@/type/base";
 
 const Josefin_Font = Josefin_Sans({
     weight: "400",
     subsets: ["latin"],
 });
 
-type LinkProps = {
-    setIsOpen: (isOpen: boolean) => void;
-    links: {
-        href: string;
-        text: string;
-    }[];
-};
-
-const HamburgerMenuLink = (props: LinkProps) => {
+const HamburgerMenuLink = (props: HamburgerMenuLinkProps) => {
     const pathname = `/${usePathname()?.split("/")[1]}`;
     const handleLinkClick = (href: string, pathname: string) => {
         if (pathname === href) {

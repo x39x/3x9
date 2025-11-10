@@ -1,10 +1,7 @@
 import clsx from "clsx";
-interface ContainerProps {
-    children: React.ReactNode;
-    className?: string;
-}
+import { ContentContainerProps } from "@/type/base";
 
-const ContentContainer = ({ children, className }: ContainerProps) => {
+const ContentContainer = ({ children, className }: ContentContainerProps) => {
     return (
         <div className="flex justify-center container mx-auto break-all">
             <div

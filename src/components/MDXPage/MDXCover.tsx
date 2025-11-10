@@ -1,28 +1,22 @@
+import clsx from "clsx";
 import { format } from "date-fns";
 import Image from "next/image";
 import { Jost } from "next/font/google";
-import clsx from "clsx";
+
+import { MDXCoverProps } from "@/type/base";
+
 const JostFont = Jost({
     subsets: ["latin"],
 });
 
-type Props = {
-    date: Date;
-    updated_date: Date;
-    title: string;
-    cover_url: string;
-    word_count: string;
-    reading_time: string;
-};
-
 const MDXCover = ({
-    date = new Date(),
-    updated_date,
-    title = "Tille Not Found",
+    date,
+    title,
     cover_url,
+    updated_date,
     reading_time = "N/A",
     word_count = "N/A",
-}: Props) => {
+}: MDXCoverProps) => {
     return (
         <div className="mt-4 ">
             <div className="overflow-hidden relative w-full rounded h-50 md:h-69 lg:h-80">

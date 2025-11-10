@@ -1,10 +1,5 @@
 import imageMap from "@/../content/imgMap.json";
-
-type ImageLoaderProps = {
-    src: string;
-    width?: number;
-    quality?: number;
-};
+import { ImageLoaderProps } from "next/image";
 
 const imageLoader = ({
     src,

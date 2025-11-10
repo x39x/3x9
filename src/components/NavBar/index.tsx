@@ -1,69 +1,26 @@
 "use client";
 import Link from "next/link";
-import ThemeToggle from "./ToogleTheme";
-import Hamburger from "./Hamburger";
 import { usePathname } from "next/navigation";
 import { Josefin_Sans } from "next/font/google";
 import clsx from "clsx";
+
+import ThemeToggle from "./ToogleTheme";
+import Hamburger from "./Hamburger";
+import NavLinks from "./NavLinks";
 
 const Josefin_Font = Josefin_Sans({
     weight: "400",
     subsets: ["latin"],
 });
 
-interface NavLink {
-    href: string;
-    text: string;
-}
+const navLinks = [
+    { href: "/misc", text: "Misc" },
+    { href: "/blog", text: "Blog" },
+    { href: "https://wiki.x39x.cc", text: "Wiki" },
+    { href: "/about", text: "About" },
+];
 
-interface NavLinksProps {
-    links: NavLink[];
-}
-
-const NavLinks = ({ links }: NavLinksProps) => {
-    const pathname = `/${usePathname()?.split("/")[1] || ""}`;
-    const isAbout = pathname === "/about";
-    return (
-        <>
-            {links.map(({ href, text }) => {
-                const isExternal = /^https?:\/\//.test(href);
-                const baseClasses = clsx(
-                    "hidden sm:block transition-transform duration-300",
-                    !isAbout &&
-                    "hover:text-[#0066CC]  dark:hover:text-[#2997FF] hover:transition-colors hover:duration-300",
-                );
-                return isExternal ? (
-                    <a
-                        key={href}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={baseClasses}
-                    >
-                        {text}
-                    </a>
-                ) : (
-                    <Link
-                        key={href}
-                        href={href}
-                        prefetch
-                        className={baseClasses}
-                    >
-                        {text}
-                    </Link>
-                );
-            })}
-        </>
-    );
-};
-
-export default function NavBar() {
-    const navLinks: NavLink[] = [
-        { href: "/misc", text: "Misc" },
-        { href: "/blog", text: "Blog" },
-        { href: "https://wiki.x39x.cc", text: "Wiki" },
-        { href: "/about", text: "About" },
-    ];
+const NavBar = () => {
     const pathname = `/${usePathname()?.split("/")[1] || ""}`;
     const isAbout = pathname === "/about";
 
@@ -75,7 +32,11 @@ export default function NavBar() {
             )}
         >
             <nav
-                className={`flex justify-between items-center w-full lg:max-w-220 md:max-w-173 text-[0.9rem] ${Josefin_Font.className}`}
+                className={clsx(
+                    "flex justify-between items-center",
+                    "w-full lg:max-w-220 md:max-w-173 text-[0.9rem]",
+                    Josefin_Font.className,
+                )}
             >
                 {/* Home */}
                 <div className="flex items-center pl-6 space-x-8">
@@ -103,4 +64,6 @@ export default function NavBar() {
             </nav>
         </header>
     );
-}
+};
+
+export default NavBar;

@@ -1,9 +1,6 @@
 import { getPostdata } from "@/lib/get_post";
 import AnimeMDXPage from "@/components/AnimeMDXPage";
-
-type MiscellaneousPageProps = {
-    params: Promise<{ slug: string }>;
-};
+import { PostPageProps } from "@/type/base";
 
 export async function generateStaticParams() {
     const posts = await getPostdata("misc");
@@ -12,7 +9,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: MiscellaneousPageProps) {
+export async function generateMetadata({ params }: PostPageProps) {
     const { slug } = await params;
     const posts = await getPostdata("misc");
     const post = posts.find((post) => post.slug === slug);
@@ -24,7 +21,7 @@ export async function generateMetadata({ params }: MiscellaneousPageProps) {
     };
 }
 
-export default async function Page({ params }: MiscellaneousPageProps) {
+export default async function Page({ params }: PostPageProps) {
     const { slug } = await params;
     const posts = await getPostdata("misc");
     const post = posts.find((post) => post.slug === slug);

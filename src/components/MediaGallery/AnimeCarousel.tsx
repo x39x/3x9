@@ -1,17 +1,9 @@
-import MediaCarousel from "@/components/MediaGallery/MediaCarousel";
 import { getPostdata } from "@/lib/get_post";
 import bgmdata from "@/../content/misc/data/bangumi_subject.json";
+import MediaCarousel from "@/components/MediaGallery/MediaCarousel";
+import { MediaCardProps } from "@/type/media_gallery";
 
 const posts = await getPostdata("misc", "anime");
-
-interface MediaCardProps {
-    href: string;
-    title: string;
-    comment: string;
-    rating: number;
-    date: string;
-    imgSrc: string;
-}
 
 const animeCardMap: Record<string, MediaCardProps> = {};
 

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { BgmSubjectApi, BgmJSONSaved, BgmTagItem } from "@/type/bangumi";
 
 const IDS_FILE = path.join(
     process.cwd(),
@@ -15,41 +16,6 @@ const DATA_FILE = path.join(
     "data",
     "bangumi_subject.json",
 );
-
-interface TagItem {
-    name: string;
-    count: number;
-    total_cont?: number;
-}
-interface BangumiImages {
-    small?: string;
-    grid?: string;
-    large?: string;
-    medium?: string;
-    common?: string;
-}
-
-interface BgmSubject {
-    date: string;
-    summary: string;
-    name: string;
-    name_cn: string;
-    images: BangumiImages;
-    rating: { score?: number };
-    tags: TagItem[];
-}
-
-interface SavedData {
-    [id: string]: {
-        date?: string;
-        summary?: string;
-        name?: string;
-        name_cn?: string;
-        images?: { size: string };
-        score?: number;
-        tags?: { name: string; count: number }[];
-    };
-}
 
 // 延迟
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -87,7 +53,7 @@ function normalizeName(name: string): string {
         .trim();
 }
 
-function filterTags(tags: TagItem[]): { name: string; count: number }[] {
+function filterTags(tags: BgmTagItem[]): { name: string; count: number }[] {
     if (!Array.isArray(tags)) return [];
 
     // 1️⃣ 过滤无效标签
@@ -109,7 +75,7 @@ function filterTags(tags: TagItem[]): { name: string; count: number }[] {
     });
 
     // 2️⃣ 合并同类标签
-    const mergedMap = new Map<string, TagItem>();
+    const mergedMap = new Map<string, BgmTagItem>();
 
     for (const t of filtered) {
         let name = t.name;
@@ -150,7 +116,7 @@ async function fetchBgm(id: number) {
             return null;
         }
 
-        const json: BgmSubject = await res.json();
+        const json: BgmSubjectApi = await res.json();
 
         const extracted = {
             date: json.date,
@@ -194,7 +160,7 @@ const ids = Object.keys(idsObj).map(Number);
 console.log(`抓取 ${ids.length} 个条目...\n`);
 
 // 读取旧数据
-const saved = loadJson<SavedData>(DATA_FILE) || {};
+const saved = loadJson<BgmJSONSaved>(DATA_FILE) || {};
 
 //  清理掉不在 ids 里的
 for (const id of Object.keys(saved)) {

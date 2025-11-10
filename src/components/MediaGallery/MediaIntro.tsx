@@ -2,27 +2,17 @@ import clsx from "clsx";
 import Image from "next/image";
 import { format } from "date-fns";
 
-interface MediaWideCardProps {
-    descPrefix?: string;
-    datePrefix?: string;
+import { MediaIntroProps } from "@/type/media_gallery";
 
-    title?: string;
-    tags?: string;
-    description?: string;
-    airDate?: string;
-    coverImage?: string;
-}
-
-const MediaWideCard = ({
+const MediaIntro = ({
     descPrefix = "简介：",
     datePrefix = "放送：",
-
-    title = "标题",
-    tags = "no tags",
-    description = "暂无简介o(≧口≦)o",
-    airDate = "待定",
-    coverImage = "/a.jpg",
-}: MediaWideCardProps) => {
+    title,
+    tags,
+    description,
+    airDate,
+    coverImage,
+}: MediaIntroProps) => {
     return (
         <div className="h-58 flex items-end my-5">
             <div className="w-full h-44 rounded-sm flex relative group shadow-md dark:shadow-black/80">
@@ -71,4 +61,4 @@ const MediaWideCard = ({
     );
 };
 
-export default MediaWideCard;
+export default MediaIntro;

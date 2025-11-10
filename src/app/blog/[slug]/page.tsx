@@ -1,9 +1,6 @@
 import { getPostdata } from "@/lib/get_post";
 import MDXPage from "@/components/MDXPage";
-
-type BlogPageProps = {
-    params: Promise<{ slug: string }>;
-};
+import { PostPageProps } from "@/type/base";
 
 export async function generateStaticParams() {
     const posts = await getPostdata("blog");
@@ -12,7 +9,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: BlogPageProps) {
+export async function generateMetadata({ params }: PostPageProps) {
     const { slug } = await params;
     const posts = await getPostdata("blog");
     const post = posts.find((post) => post.slug === slug);
@@ -24,7 +21,7 @@ export async function generateMetadata({ params }: BlogPageProps) {
     };
 }
 
-export default async function Page({ params }: BlogPageProps) {
+export default async function Page({ params }: PostPageProps) {
     const { slug } = await params;
     const posts = await getPostdata("blog");
     const post = posts.find((post) => post.slug === slug);

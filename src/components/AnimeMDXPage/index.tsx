@@ -1,29 +1,20 @@
-import ContentContainer from "@/components/ContentContainer";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
+import { Jost } from "next/font/google";
+import { format } from "date-fns";
+import clsx from "clsx";
 
+import ContentContainer from "@/components/ContentContainer";
 import createMDXComponets from "@/components/MDXPage/MDXComponents";
 import options from "@/components/MDXPage/MDXRemoteOptions";
 import NotFound from "@/components/404";
-import BgmCard from "@/components/MediaGallery/BangumiCard";
+import BgmIntro from "@/components/MediaGallery/BangumiIntro";
+import { PostData } from "@/type/base";
 
-import { format } from "date-fns";
-import { Jost } from "next/font/google";
-import clsx from "clsx";
 const JostFont = Jost({
     subsets: ["latin"],
 });
 
-interface Post {
-    id: string;
-    title: string;
-    content: string;
-    slug: string;
-    cover_url: string;
-    date: string;
-    metadata: any;
-}
-
-const AnimeMDXPage = ({ post }: { post: Post }) => {
+const AnimeMDXPage = ({ post }: { post: PostData }) => {
     if (!post) {
         return (
             <ContentContainer>
@@ -70,7 +61,7 @@ const AnimeMDXPage = ({ post }: { post: Post }) => {
                     )}
                 </span>
             </div>
-            {bgmID && <BgmCard id={id} imgSrc={cover_url} bgmID={bgmID} />}
+            {bgmID && <BgmIntro id={id} cover={cover_url} bgmID={bgmID} />}
 
             <article className="mt-14 text-sm">
                 <MDXRemote

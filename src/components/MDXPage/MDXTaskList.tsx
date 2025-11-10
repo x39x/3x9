@@ -1,8 +1,5 @@
 import React, { ReactNode, ReactElement } from "react";
 import { Circle, CircleCheck } from "lucide-react";
-interface MDXTaskListProps {
-    children: ReactNode;
-}
 
 /**
  * 在 React children 中递归查找 checkbox input 元素
@@ -50,7 +47,7 @@ const extractText = (children: ReactNode): (string | number)[] => {
     return textContent;
 };
 
-export default function MDXTaskList({ children }: MDXTaskListProps) {
+export default function MDXTaskList({ children }: { children: ReactNode }) {
     const checkbox = findCheckbox(children);
     const checked: boolean = !!checkbox?.props?.checked;
     const content = extractText(children);

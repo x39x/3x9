@@ -1,43 +1,12 @@
 import Link from "next/link";
-import MediaWideCard from "@/components/MediaGallery/MediaWideCard";
+
 import bgmdata from "@/../content/misc/data/bangumi_subject.json";
+import MediaIntro from "@/components/MediaGallery/MediaIntro";
+import { BgmIntroProps, BgmSubjectSaved } from "@/type/bangumi";
 
-// Tag 类型
-interface TagItem {
-    name: string;
-    count: number;
-}
+const dataMap = bgmdata as Record<string, BgmSubjectSaved>;
 
-interface BangumiImages {
-    small?: string;
-    grid?: string;
-    large?: string;
-    medium?: string;
-    common?: string;
-}
-
-// Bangumi 数据结构
-
-interface BangumiInfo {
-    date: string;
-    summary: string;
-    name: string;
-    images: BangumiImages;
-    score?: number;
-    tags: TagItem[];
-}
-
-//  bgmdata 的整体类型
-const dataMap = bgmdata as Record<string, BangumiInfo>;
-
-// 组件 props
-interface BgmCardProps {
-    id?: string;
-    bgmID: string;
-    imgSrc?: string;
-}
-
-const BgmCard = ({ id = "", bgmID, imgSrc = "" }: BgmCardProps) => {
+const BgmIntro = ({ id = "", bgmID, cover = "" }: BgmIntroProps) => {
     //TODO: fetch
     let data = dataMap[bgmID];
     if (!data) {
@@ -45,11 +14,11 @@ const BgmCard = ({ id = "", bgmID, imgSrc = "" }: BgmCardProps) => {
     }
 
     let img_src = "";
-    if (imgSrc.startsWith("./")) {
+    if (cover.startsWith("./")) {
         // 直接在MDX文件中使用时处理本地图片
-        img_src = `/39img/${id}${imgSrc.replace("./", "-")}`;
+        img_src = `/39img/${id}${cover.replace("./", "-")}`;
     } else {
-        img_src = imgSrc;
+        img_src = cover;
     }
 
     // 没准备图片从 bangumi 获取
@@ -72,7 +41,7 @@ const BgmCard = ({ id = "", bgmID, imgSrc = "" }: BgmCardProps) => {
             rel="noopener noreferrer"
             href={"https://bgm.tv/subject/" + bgmID}
         >
-            <MediaWideCard
+            <MediaIntro
                 title={data.name}
                 tags={topTags}
                 description={data.summary}
@@ -83,4 +52,4 @@ const BgmCard = ({ id = "", bgmID, imgSrc = "" }: BgmCardProps) => {
     );
 };
 
-export default BgmCard;
+export default BgmIntro;

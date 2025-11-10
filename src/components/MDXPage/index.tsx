@@ -4,18 +4,9 @@ import NotFound from "@/components/404";
 import createMDXComponets from "./MDXComponents";
 import options from "./MDXRemoteOptions";
 import MDXCover from "./MDXCover";
+import { PostData } from "@/type/base";
 
-interface Post {
-    id: string;
-    title: string;
-    slug: string;
-    cover_url: string;
-    date: string;
-    metadata: any;
-    content: string;
-}
-
-const MDXPage = ({ post }: { post: Post }) => {
+const MDXPage = ({ post }: { post: PostData }) => {
     if (!post) {
         return (
             <ContentContainer>

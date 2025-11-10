@@ -1,19 +1,16 @@
-import MDXCodeBlock from "./MDXCodeBlock";
-import MDXTaskList from "./MDXTaskList";
-import MDXImage from "./MDXImage";
 import Link from "next/link";
 import Image from "next/image";
-import BgmCard from "@/components/MediaGallery/BangumiCard";
-import JostDate from "@/components/JostDate";
-
 import type { MDXComponents } from "mdx/types";
 import clsx from "clsx";
 
-interface MDXOptions {
-    page_id?: string;
-}
+import BgmIntro from "@/components/MediaGallery/BangumiIntro";
+import JostDate from "@/components/JostDate";
 
-const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
+import MDXCodeBlock from "./MDXCodeBlock";
+import MDXTaskList from "./MDXTaskList";
+import MDXImage from "./MDXImage";
+
+const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
     const { page_id } = options;
     return {
         h1: (props) => {
@@ -110,7 +107,7 @@ const CreateMDXComponents = (options: MDXOptions = {}): MDXComponents => {
 
         img: (props) => <MDXImage id={page_id || ""} {...props} />,
         Image,
-        BgmCard: (props) => <BgmCard id={page_id || ""} {...props} />,
+        BgmCard: (props) => <BgmIntro id={page_id || ""} {...props} />,
         JostDate,
     };
 };
