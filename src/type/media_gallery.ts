@@ -3,8 +3,8 @@ export type MediaCardProps = {
     title: string;
     comment: string;
     rating: number;
-    date: string;
-    imgSrc: string;
+    date: Date;
+    cover_url: string;
 };
 
 export type MediaIntroProps = {

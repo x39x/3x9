@@ -38,17 +38,25 @@ async function getPostFromDir(dir: string): Promise<PostData | null> {
         .join("-");
     // 文章 cover 图路径
     const cover_url = getCoverUrl(dir, post_id);
-    // 合并
-    Object.assign(data, { reading_time, word_count });
 
     return {
+        // main
         id: post_id,
         title: data.title || "untitled",
         slug: encodeURIComponent(data.slug || post_id),
-        date: data.date || "2039-03-09",
-        metadata: data,
-        content,
+        date: new Date(data.date || "2039-03-09"),
         cover_url,
+        content,
+
+        // other
+        reading_time,
+        word_count,
+        description: data?.description,
+        updated_date: data?.updated,
+
+        //bgmid
+        bgmid: data?.bgmid,
+        rating: data?.rating,
     };
 }
 

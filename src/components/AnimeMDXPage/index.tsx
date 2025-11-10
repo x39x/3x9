@@ -28,12 +28,10 @@ const AnimeMDXPage = ({ post }: { post: PostData }) => {
         content,
         date,
         cover_url,
-        metadata: {
-            updated = "",
-            bgmID = "",
-            reading_time = "N/A",
-            word_count = "N/A",
-        } = {},
+        bgmid = undefined,
+        reading_time = "N/A",
+        word_count = "N/A",
+        updated_date = undefined,
     } = post;
 
     const MDXComponents = createMDXComponets({ page_id: id });
@@ -53,15 +51,15 @@ const AnimeMDXPage = ({ post }: { post: PostData }) => {
                     {reading_time}
                     <span className="mx-2 text-xl select-none">·</span>
                     {word_count} words
-                    {updated && (
+                    {updated_date && (
                         <>
                             <span className="mx-2 text-xl select-none">·</span>
-                            {"Updated " + format(updated, "MMMM do yyyy")}
+                            {"Updated " + format(updated_date, "MMMM do yyyy")}
                         </>
                     )}
                 </span>
             </div>
-            {bgmID && <BgmIntro id={id} cover={cover_url} bgmID={bgmID} />}
+            {bgmid && <BgmIntro id={id} cover_url={cover_url} bgmid={bgmid} />}
 
             <article className="mt-14 text-sm">
                 <MDXRemote

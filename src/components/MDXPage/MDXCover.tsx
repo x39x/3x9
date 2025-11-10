@@ -14,8 +14,8 @@ const MDXCover = ({
     title,
     cover_url,
     updated_date,
+    word_count = 0,
     reading_time = "N/A",
-    word_count = "N/A",
 }: MDXCoverProps) => {
     return (
         <div className="mt-4 ">

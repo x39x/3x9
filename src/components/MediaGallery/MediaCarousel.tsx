@@ -30,9 +30,9 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
 
             // 转换垂直滚动为横向滚动
             e.preventDefault();
-            el.scrollTo({
-                left: el.scrollLeft + e.deltaY * 3.9, // 乘数控制速度
-                behavior: "smooth",
+            el.scrollBy({
+                left: e.deltaY * 3.1, // 控制速度
+                behavior: "auto",
             });
         };
 
@@ -73,7 +73,7 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
             {showLeftFade && (
                 <div
                     className={clsx(
-                        "pointer-events-none absolute left-0 top-0 h-full w-13",
+                        "pointer-events-none absolute left-0 top-0 h-full w-7",
                         "bg-linear-to-r from-white  dark:from-[#141414] to-transparent",
                         "transition-opacity duration-300",
                     )}
@@ -83,7 +83,7 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
             {showRightFade && (
                 <div
                     className={clsx(
-                        "pointer-events-none absolute right-0 top-0 h-full w-15",
+                        "pointer-events-none absolute right-0 top-0 h-full w-9",
                         "bg-linear-to-l from-white dark:from-[#141414] to-transparent",
                         "transition-opacity duration-300",
                     )}

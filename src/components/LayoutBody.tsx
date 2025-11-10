@@ -18,7 +18,7 @@ const LayoutBody = ({ children }: { children: React.ReactNode }) => {
             <div className="flex flex-col min-h-screen">
                 <NavBar />
                 <main className="flex-1">{children}</main>
-                {pathname == "/about" || <Footer />}
+                {!["/about", "/"].includes(pathname) && <Footer />}
             </div>
         </body>
     );

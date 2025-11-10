@@ -12,7 +12,7 @@ const MediaCard = ({
     comment,
     rating,
     date,
-    imgSrc,
+    cover_url,
 }: MediaCardProps) => {
     return (
         <div className="relative shrink-0 w-[139px] h-[213px]">
@@ -48,7 +48,7 @@ const MediaCard = ({
                         style={{ width: 139, height: 213 }}
                     >
                         <Image
-                            src={imgSrc}
+                            src={cover_url}
                             alt={title}
                             fill
                             className="transform transition-transform duration-300 group-hover/card:scale-105"

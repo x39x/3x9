@@ -14,18 +14,27 @@ const MDXPage = ({ post }: { post: PostData }) => {
             </ContentContainer>
         );
     }
-    const { id, title, date, cover_url, content, metadata } = post;
+    const {
+        id,
+        title,
+        date,
+        cover_url,
+        content,
+        updated_date,
+        reading_time,
+        word_count,
+    } = post;
     const MDXComponents = createMDXComponets({ page_id: id });
 
     return (
         <ContentContainer>
             <MDXCover
                 title={title}
-                date={new Date(date)}
+                date={date}
                 cover_url={cover_url}
-                updated_date={metadata.updated}
-                reading_time={metadata.reading_time}
-                word_count={metadata.word_count}
+                word_count={word_count}
+                reading_time={reading_time}
+                updated_date={updated_date}
             />
             <article>
                 <MDXRemote

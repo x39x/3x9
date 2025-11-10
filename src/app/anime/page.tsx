@@ -83,4 +83,12 @@ export default async function PostList() {
 
 export const metadata: Metadata = {
     title: "松TvT | 追番记录",
+    openGraph: {
+        images: ["https://x39x.cc/home.webp"],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        images: ["https://x39x.cc/home.webp"],
+    },
 };

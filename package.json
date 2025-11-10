@@ -5,10 +5,10 @@
     "scripts": {
         "build_sitemap": "esbuild next-sitemap.config.ts --outfile=next-sitemap.config.js ",
         "copy_img": "tsx src/lib/copy_img.ts",
-        "get_bangumi": "tsx src/lib/get_bangumi_subject.ts",
+        "get_bangumi": "tsx src/lib/bangumi_api/subject.ts",
         "build_pre": "pnpm run build_sitemap && pnpm run copy_img",
         "build": "pnpm run build_pre && next build && next-sitemap",
-        "dev": "pnpm run get_bangumi && pnpm run copy_img && next dev",
+        "dev": "pnpm run copy_img && next dev",
         "start": "next start",
         "push": "pnpm run get_bangumi && tsx src/lib/push.ts",
         "nodev": "node -v",

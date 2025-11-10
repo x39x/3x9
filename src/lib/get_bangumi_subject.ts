@@ -53,7 +53,9 @@ function normalizeName(name: string): string {
         .trim();
 }
 
-function filterTags(tags: BgmTagItem[]): { name: string; count: number }[] {
+export function filterTags(
+    tags: BgmTagItem[],
+): { name: string; count: number }[] {
     if (!Array.isArray(tags)) return [];
 
     // 1️⃣ 过滤无效标签
@@ -108,7 +110,7 @@ function filterTags(tags: BgmTagItem[]): { name: string; count: number }[] {
 }
 
 // 请求API
-async function fetchBgm(id: number) {
+export async function fetchBgm(id: string) {
     try {
         const res = await fetch(`https://api.bgm.tv/v0/subjects/${id}`);
         if (!res.ok) {
@@ -156,7 +158,7 @@ if (!idsObj) {
     process.exit(1);
 }
 
-const ids = Object.keys(idsObj).map(Number);
+const ids = Object.keys(idsObj);
 console.log(`抓取 ${ids.length} 个条目...\n`);
 
 // 读取旧数据
@@ -164,7 +166,7 @@ const saved = loadJson<BgmJSONSaved>(DATA_FILE) || {};
 
 //  清理掉不在 ids 里的
 for (const id of Object.keys(saved)) {
-    if (!ids.includes(Number(id))) {
+    if (!ids.includes(id)) {
         delete saved[id];
     }
 }
@@ -172,7 +174,7 @@ for (const id of Object.keys(saved)) {
 // 逐个抓取
 for (const id of ids) {
     console.log("fetch ID:", id, idsObj[id] || "");
-    const data = await fetchBgm(id);
+    const data = await fetchBgm(id.toString());
     if (data) {
         saved[id] = { ...(saved[id] || {}), ...data };
         console.log("saved", data.name_cn, "\n");

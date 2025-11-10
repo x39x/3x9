@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MDXImageProps } from "@/type/base";
 
-const MDXImage = ({ id, src, alt = "" }: MDXImageProps) => {
+const MDXImage = ({ id, src, alt }: MDXImageProps) => {
     const img_src = src.startsWith("./")
         ? `/39img/${id}${src.replace("./", "-")}`
         : src;

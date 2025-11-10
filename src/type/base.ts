@@ -26,13 +26,23 @@ export type HamburgerMenuLinkProps = {
 
 // NOTE: post
 export type PostData = {
+    // main
     id: string;
     slug: string;
     title: string;
     cover_url: string;
-    date: string;
+    date: Date;
     content: string;
-    metadata: { [key: string]: any };
+
+    reading_time: string;
+    word_count: number;
+    description?: string;
+    updated_date?: Date;
+
+    // bangumi id for anime page
+    bgmid?: string;
+    // anime page rating
+    rating?: number;
 };
 
 export type PostPageProps = {
@@ -43,16 +53,16 @@ export type PostPageProps = {
 export type MDXImageProps = {
     id: string;
     src: string;
-    alt?: string;
+    alt: string;
     width?: number;
     height?: number;
 };
 
 export type MDXCoverProps = {
     date: Date;
-    updated_date: Date;
+    updated_date?: Date;
     title: string;
     cover_url: string;
-    word_count: string;
+    word_count: number;
     reading_time: string;
 };

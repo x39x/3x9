@@ -103,11 +103,13 @@ const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
                 {...props}
             />
         ),
-        pre: (props) => <MDXCodeBlock className="" {...props} />,
+        pre: (props) => <MDXCodeBlock {...props} />,
 
-        img: (props) => <MDXImage id={page_id || ""} {...props} />,
+        img: (props) => (
+            <MDXImage id={page_id} alt={props.alt || page_id} {...props} />
+        ),
         Image,
-        BgmCard: (props) => <BgmIntro id={page_id || ""} {...props} />,
+        BgmCard: (props) => <BgmIntro id={page_id} {...props} />,
         JostDate,
     };
 };

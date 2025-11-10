@@ -17,4 +17,12 @@ export default function RootLayout({
 
 export const metadata: Metadata = {
     title: "松TvT",
+    openGraph: {
+        images: ["https://x39x.cc/home.webp"],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        images: ["https://x39x.cc/home.webp"],
+    },
 };

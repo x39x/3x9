@@ -39,6 +39,6 @@ export type BgmJSONSaved = {
 
 export type BgmIntroProps = {
     id: string;
-    bgmID: string;
-    cover: string;
+    bgmid: string;
+    cover_url?: string;
 };

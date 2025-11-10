@@ -6,24 +6,20 @@ import { BgmIntroProps, BgmSubjectSaved } from "@/type/bangumi";
 
 const dataMap = bgmdata as Record<string, BgmSubjectSaved>;
 
-const BgmIntro = ({ id = "", bgmID, cover = "" }: BgmIntroProps) => {
-    //TODO: fetch
-    let data = dataMap[bgmID];
-    if (!data) {
-        data = dataMap["2045"];
-    }
+const BgmIntro = ({ id, bgmid, cover_url = "" }: BgmIntroProps) => {
+    const data = dataMap[bgmid] || dataMap["2045"];
 
-    let img_src = "";
-    if (cover.startsWith("./")) {
+    let img_addr;
+    if (cover_url.startsWith("./")) {
         // 直接在MDX文件中使用时处理本地图片
-        img_src = `/39img/${id}${cover.replace("./", "-")}`;
+        img_addr = `/39img/${id}${cover_url.replace("./", "-")}`;
     } else {
-        img_src = cover;
+        img_addr = cover_url || "";
     }
 
     // 没准备图片从 bangumi 获取
-    if (img_src == "" || img_src == "/39img/content-default_cover.jpeg") {
-        img_src = data.images?.large || data.images?.common || "";
+    if (!img_addr || img_addr === "/39img/content-default_cover.jpeg") {
+        img_addr = data?.images?.large ?? data?.images?.common ?? "";
     }
 
     // 取 count 最高的前 8 个标签
@@ -39,14 +35,14 @@ const BgmIntro = ({ id = "", bgmID, cover = "" }: BgmIntroProps) => {
         <Link
             target="_blank"
             rel="noopener noreferrer"
-            href={"https://bgm.tv/subject/" + bgmID}
+            href={"https://bgm.tv/subject/" + bgmid}
         >
             <MediaIntro
                 title={data.name}
                 tags={topTags}
                 description={data.summary}
                 airDate={data.date}
-                coverImage={img_src}
+                coverImage={img_addr}
             />
         </Link>
     );

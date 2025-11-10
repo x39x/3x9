@@ -7,11 +7,6 @@ const Josefin_Font = Josefin_Sans({
     weight: "400",
     subsets: ["latin"],
 });
-const Josefin_Font_Italic = Josefin_Sans({
-    weight: "400",
-    subsets: ["latin"],
-    style: "italic",
-});
 
 const poems = [
     ["Vivamus, atque amemus", "atque amemus"],
@@ -51,7 +46,7 @@ export default function TypedText() {
                     {"\u200b"}
                 </span>
             </h1>
-            <h1 className={`mt-3 text-[1em] ${Josefin_Font_Italic.className}`}>
+            <h1 className={`mt-3 text-[1em] ${Josefin_Font.className}`}>
                 Odi et amo. Quare id faciam, nescio. Sed fieri sentio et
                 excrucior
             </h1>
