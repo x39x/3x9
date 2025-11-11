@@ -1,7 +1,7 @@
 import LayoutBody from "@/components/LayoutBody";
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import "katex/dist/katex.min.css";
+import "katex/dist/katex.css";
 
 export default function RootLayout({
     children,
