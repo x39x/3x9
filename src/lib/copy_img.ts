@@ -48,7 +48,7 @@ function saveMapping(mapping: ImageMappingJSON): void {
 
 // === 获取所有图片文件 ===
 function getImageFiles(): string[] {
-    return globSync("**/*.{png,jpg,jpeg,webp}", {
+    return globSync("**/*.{png,jpg,jpeg,webp,svg}", {
         cwd: contentDir,
         nodir: true,
         ignore: "**/node_modules/**",
