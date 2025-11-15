@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Josefin_Sans } from "next/font/google";
+import clsx from "clsx";
 const Josefin_Font = Josefin_Sans({
     weight: "400",
     subsets: ["latin"],
@@ -8,15 +9,15 @@ const Josefin_Font = Josefin_Sans({
 
 const NotFound = () => {
     return (
-        <div className="flex flex-col items-center justify-center w-full text-center min-h-[calc(100vh-10rem)] pb-9">
+        <div className="flex flex-col items-center justify-center text-center w-full min-h-[calc(100vh-10rem)]">
             <Image
                 src="/404.png"
-                alt="404 Not Found"
+                alt="404"
                 width={500}
                 height={500}
-                className="w-[39%] md:w-[33%]"
+                className="w-[39%] md:w-[33%] mb-9"
             />
-            <h1 className={`mt-9 text-sm  ${Josefin_Font.className.trim()}`}>
+            <h1 className={`text-sm  ${Josefin_Font.className.trim()}`}>
                 Not found
             </h1>
         </div>

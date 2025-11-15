@@ -12,7 +12,7 @@
         "start": "next start",
         "push": "pnpm run get_bangumi && tsx src/lib/push.ts",
         "nodev": "node -v",
-        "lint": "next lint"
+        "lint": "exec eslint ."
     },
     "dependencies": {
         "clsx": "^2.1.1",
@@ -26,7 +26,6 @@
         "typed.js": "^2.1.0"
     },
     "devDependencies": {
-        "@eslint/eslintrc": "^3.3.1",
         "@tailwindcss/postcss": "^4.1.17",
         "@types/fs-extra": "^11.0.4",
         "@types/mdx": "^2.0.13",
@@ -36,7 +35,7 @@
         "autoprefixer": "^10.4.22",
         "esbuild": "^0.27.0",
         "eslint": "^9.39.1",
-        "eslint-config-next": "16.0.1",
+        "eslint-config-next": "^16.0.3",
         "fs-extra": "^11.3.2",
         "glob": "^11.0.3",
         "gray-matter": "^4.0.3",
