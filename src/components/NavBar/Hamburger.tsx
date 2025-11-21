@@ -11,7 +11,7 @@ const Hamburger = () => {
     // 当 pathname 变化时关闭菜单
     useEffect(() => {
         setIsOpen(false);
-    }, [pathname]); // pathname 是依赖项
+    }, [pathname]);
 
     return (
         <div className="flex absolute right-6 sm:hidden">
