@@ -15,7 +15,7 @@
         "tags": [
             {
                 "name": "后宫",
-                "count": 412
+                "count": 413
             },
             {
                 "name": "卖肉",
@@ -39,11 +39,11 @@
             },
             {
                 "name": "漫改",
-                "count": 89
+                "count": 90
             },
             {
                 "name": "肉",
-                "count": 73
+                "count": 74
             },
             {
                 "name": "肉番",
@@ -63,7 +63,7 @@
             },
             {
                 "name": "战斗",
-                "count": 40
+                "count": 41
             },
             {
                 "name": "SevenArcs",
@@ -79,7 +79,7 @@
             },
             {
                 "name": "奇幻",
-                "count": 13
+                "count": 14
             },
             {
                 "name": "早见沙织",
@@ -92,6 +92,102 @@
             {
                 "name": "ARCS",
                 "count": 7
+            }
+        ]
+    },
+    "1959": {
+        "date": "2004-04-06",
+        "summary": "1986年，一名头部被子弹击中的重伤少年送到西德・杜塞尔多夫医院中。日本外科医生天马忽视院长的命令，以他天才般的手术技术的拯救了那位少年。 实行共产主义的世界为了推倒西德而进行着异常的阴谋。捷克斯洛伐克秘密警察法兰斯·波纳帕达等人，教育孩童们成为送往资本主义各国的战斗员，在这过程中诞生了约翰这个怪物。约翰心中的怪物越变越大，进而开始杀害周遭的人。就像是法兰兹·波纳帕达的绘本《没有名字的怪物》里的主角怪物，附身于人身上而逐渐吃掉身边的人。 数年后、1995年，几年不见的约翰已长成巨大的怪物、一点也不犹豫地杀掉天马的病人。在体内有什么东西爆开了似的天马、因而追缉著怪物约翰。天马医生是否能阻止约翰的杀戮呢？刺激约翰的绘本《没有名字的怪物》到底是什么呢？为什么约翰要一直杀人？故事就在柏林墙倒塌后的德国与捷克展开。",
+        "name": "MONSTER",
+        "name_cn": "怪物",
+        "images": {
+            "small": "https://lain.bgm.tv/r/200/pic/cover/l/e4/dd/1959_W3w23.jpg",
+            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/e4/dd/1959_W3w23.jpg",
+            "large": "https://lain.bgm.tv/pic/cover/l/e4/dd/1959_W3w23.jpg",
+            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/e4/dd/1959_W3w23.jpg",
+            "common": "https://lain.bgm.tv/r/400/pic/cover/l/e4/dd/1959_W3w23.jpg"
+        },
+        "score": 8.2,
+        "tags": [
+            {
+                "name": "浦泽直树",
+                "count": 1102
+            },
+            {
+                "name": "心理",
+                "count": 909
+            },
+            {
+                "name": "MADHouse",
+                "count": 828
+            },
+            {
+                "name": "人性",
+                "count": 678
+            },
+            {
+                "name": "怪物",
+                "count": 582
+            },
+            {
+                "name": "MONSTER",
+                "count": 388
+            },
+            {
+                "name": "漫改",
+                "count": 281
+            },
+            {
+                "name": "悬疑",
+                "count": 273
+            },
+            {
+                "name": "冷战",
+                "count": 266
+            },
+            {
+                "name": "战争",
+                "count": 225
+            },
+            {
+                "name": "德国",
+                "count": 209
+            },
+            {
+                "name": "人的生命是平等的",
+                "count": 140
+            },
+            {
+                "name": "社会主义",
+                "count": 122
+            },
+            {
+                "name": "幻想",
+                "count": 39
+            },
+            {
+                "name": "小岛正幸",
+                "count": 38
+            },
+            {
+                "name": "神作",
+                "count": 32
+            },
+            {
+                "name": "剧情",
+                "count": 31
+            },
+            {
+                "name": "小島正幸",
+                "count": 27
+            },
+            {
+                "name": "长篇",
+                "count": 19
+            },
+            {
+                "name": "动画",
+                "count": 13
             }
         ]
     },
@@ -111,27 +207,27 @@
         "tags": [
             {
                 "name": "搞笑",
-                "count": 1897
+                "count": 1912
             },
             {
                 "name": "J.C.STAFF",
-                "count": 1356
+                "count": 1366
             },
             {
                 "name": "漫改",
-                "count": 1024
+                "count": 1034
             },
             {
                 "name": "肉",
-                "count": 1007
+                "count": 1016
             },
             {
                 "name": "水岛努",
-                "count": 630
+                "count": 633
             },
             {
                 "name": "监狱学园",
-                "count": 568
+                "count": 572
             },
             {
                 "name": "神谷浩史",
@@ -139,19 +235,19 @@
             },
             {
                 "name": "校园",
-                "count": 374
+                "count": 383
             },
             {
                 "name": "花泽香菜",
-                "count": 314
+                "count": 313
             },
             {
                 "name": "燃",
-                "count": 240
+                "count": 243
             },
             {
                 "name": "卖肉",
-                "count": 192
+                "count": 195
             },
             {
                 "name": "横手美智子",
@@ -171,7 +267,7 @@
             },
             {
                 "name": "智斗",
-                "count": 33
+                "count": 34
             },
             {
                 "name": "节操",
@@ -191,6 +287,102 @@
             }
         ]
     },
+    "147068": {
+        "date": "2016-10-08",
+        "summary": "独自居住在东京旧市街的17岁职业将棋棋士——桐山零。 他是个幼时就因为意外失去家人，怀抱着深沉孤独的少年。 出现在这样的他面前的，是明里、日向、桃三姐妹。 与她们的相处后，零开始发生些许改变——。",
+        "name": "3月のライオン",
+        "name_cn": "3月的狮子",
+        "images": {
+            "small": "https://lain.bgm.tv/r/200/pic/cover/l/a7/86/147068_60GJJ.jpg",
+            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/a7/86/147068_60GJJ.jpg",
+            "large": "https://lain.bgm.tv/pic/cover/l/a7/86/147068_60GJJ.jpg",
+            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/a7/86/147068_60GJJ.jpg",
+            "common": "https://lain.bgm.tv/r/400/pic/cover/l/a7/86/147068_60GJJ.jpg"
+        },
+        "score": 8.3,
+        "tags": [
+            {
+                "name": "新房昭之",
+                "count": 3341
+            },
+            {
+                "name": "SHAFT",
+                "count": 2392
+            },
+            {
+                "name": "治愈",
+                "count": 2235
+            },
+            {
+                "name": "漫改",
+                "count": 1562
+            },
+            {
+                "name": "将棋",
+                "count": 1160
+            },
+            {
+                "name": "羽海野千花",
+                "count": 885
+            },
+            {
+                "name": "日常",
+                "count": 632
+            },
+            {
+                "name": "3月的狮子",
+                "count": 582
+            },
+            {
+                "name": "花泽香菜",
+                "count": 327
+            },
+            {
+                "name": "羽海野チカ",
+                "count": 137
+            },
+            {
+                "name": "青春",
+                "count": 100
+            },
+            {
+                "name": "竞技",
+                "count": 63
+            },
+            {
+                "name": "励志",
+                "count": 62
+            },
+            {
+                "name": "成长",
+                "count": 55
+            },
+            {
+                "name": "人生",
+                "count": 36
+            },
+            {
+                "name": "恋爱",
+                "count": 32
+            },
+            {
+                "name": "神作",
+                "count": 32
+            },
+            {
+                "name": "运动",
+                "count": 28
+            },
+            {
+                "name": "沙发套",
+                "count": 26
+            },
+            {
+                "name": "校园",
+                "count": 26
+            }
+        ]
+    },
     "179949": {
         "date": "2017-01-11",
         "summary": "在单身的辛苦OL小林身边突然出现的女仆装束的美少女托尔。 长着角和尾巴的她的身姿正是所谓的龙娘。 在醉酒的小林邀请下说要到家里去的托尔，鬼使神差地开始以小林家女仆的身份工作……！？ “女仆”+“龙”=“女仆龙”有着笨手笨脚的可爱之处！ 龙娘与人类之间基本上很温暖、偶尔有些黑暗的异种族间交流喜剧！！",
@@ -200,47 +392,47 @@
         "tags": [
             {
                 "name": "京阿尼",
-                "count": 5893
+                "count": 5941
             },
             {
                 "name": "日常",
-                "count": 4849
+                "count": 4900
             },
             {
                 "name": "搞笑",
-                "count": 4456
+                "count": 4492
             },
             {
                 "name": "百合",
-                "count": 3822
+                "count": 3855
             },
             {
                 "name": "漫改",
-                "count": 2264
+                "count": 2290
             },
             {
                 "name": "小林家的妹抖龙",
-                "count": 1409
+                "count": 1419
             },
             {
                 "name": "京都动画",
-                "count": 1209
+                "count": 1218
             },
             {
                 "name": "武本康弘",
-                "count": 1162
+                "count": 1167
             },
             {
                 "name": "萌",
-                "count": 627
+                "count": 632
             },
             {
                 "name": "萌系",
-                "count": 416
+                "count": 435
             },
             {
                 "name": "京都",
-                "count": 238
+                "count": 239
             },
             {
                 "name": "萌豚",
@@ -248,15 +440,15 @@
             },
             {
                 "name": "治愈",
-                "count": 175
+                "count": 176
             },
             {
                 "name": "奇幻",
-                "count": 152
+                "count": 156
             },
             {
                 "name": "轻百合",
-                "count": 103
+                "count": 104
             },
             {
                 "name": "京都アニメーション",
@@ -264,15 +456,15 @@
             },
             {
                 "name": "小林家的龙女仆",
-                "count": 67
+                "count": 70
             },
             {
                 "name": "门胁未来",
-                "count": 36
+                "count": 37
             },
             {
                 "name": "废萌",
-                "count": 28
+                "count": 29
             },
             {
                 "name": "女仆",
@@ -287,52 +479,148 @@
             "common": "https://lain.bgm.tv/r/400/pic/cover/l/e9/15/179949_c2j50.jpg"
         }
     },
+    "218708": {
+        "date": "2018-01-02",
+        "summary": "无论何时，我们的第一步总是从好奇心开始。 不曾看过的风景，不曾听过的声音，不曾闻过的味道，不曾摸过的质感，不曾尝过的食物，以及不曾感受过的澎湃。 为了重拾不知何时忘却的记忆碎片和不知何时舍弃的感动的旅途。 在到达终点的时候，我们会想些什么呢？ 40度的咆哮，50度的疯狂，60度的呐喊，跨越荒芜的海源到达原生地域。 在地球的天边，远离文明的南方尽头。 这是向南极（比宇宙更远的地方）进发的四位女孩子的旅行物语。我们通过她们回想起生于明日的光辉！",
+        "name": "宇宙よりも遠い場所",
+        "name_cn": "比宇宙更远的地方",
+        "images": {
+            "small": "https://lain.bgm.tv/r/200/pic/cover/l/16/de/218708_99YjL.jpg",
+            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/16/de/218708_99YjL.jpg",
+            "large": "https://lain.bgm.tv/pic/cover/l/16/de/218708_99YjL.jpg",
+            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/16/de/218708_99YjL.jpg",
+            "common": "https://lain.bgm.tv/r/400/pic/cover/l/16/de/218708_99YjL.jpg"
+        },
+        "score": 8.2,
+        "tags": [
+            {
+                "name": "原创",
+                "count": 3883
+            },
+            {
+                "name": "MADHouse",
+                "count": 3275
+            },
+            {
+                "name": "青春",
+                "count": 3127
+            },
+            {
+                "name": "花田十辉",
+                "count": 1838
+            },
+            {
+                "name": "南极",
+                "count": 1463
+            },
+            {
+                "name": "治愈",
+                "count": 1425
+            },
+            {
+                "name": "百合",
+                "count": 1015
+            },
+            {
+                "name": "励志",
+                "count": 839
+            },
+            {
+                "name": "花泽香菜",
+                "count": 807
+            },
+            {
+                "name": "水濑祈",
+                "count": 606
+            },
+            {
+                "name": "早见沙织",
+                "count": 534
+            },
+            {
+                "name": "井口裕香",
+                "count": 290
+            },
+            {
+                "name": "石塚敦子",
+                "count": 130
+            },
+            {
+                "name": "花田十輝",
+                "count": 114
+            },
+            {
+                "name": "日常",
+                "count": 95
+            },
+            {
+                "name": "轻百合",
+                "count": 66
+            },
+            {
+                "name": "旅行",
+                "count": 65
+            },
+            {
+                "name": "催泪",
+                "count": 63
+            },
+            {
+                "name": "友情",
+                "count": 54
+            },
+            {
+                "name": "いしづかあつこ",
+                "count": 48
+            }
+        ]
+    },
     "235130": {
         "date": "2018-07-13",
         "summary": "北原伊织升入大学后，开始寄住在伊豆的叔父所经营的潜水用具店“Grand Blue”。传入耳中的波涛声、炽烈照射的太阳、开始一起生活的可爱表姐妹……青春的大学生活！ 这样的伊织所面临的却是——除了野球拳以外的猜拳一概不知的强壮男人们！！ 刚一入学就被大学潜水社团“Peek a Boo”所盯上了的伊织，在会长时·田信治和三年级学生·寿龙次郎的怂恿下，不知不觉已经身为社团的一员加入了他们的愚蠢喧嚣中。在大学中认识的虽然长得帅但性格却很遗憾的宅男——今村耕平也加入其中，他们的青春向着越来越奇怪的方向转进。 明明在寄住的地方有着可爱的表姐妹——古手川姐妹，但自己却被妹妹千纱当成垃圾看待，而姐姐奈奈华又是重度妹控，根本无法成为对象。 在可爱的全裸笨蛋们的包围之下，伊织的大学生活究竟会变得如何……。",
         "name": "ぐらんぶる",
         "name_cn": "碧蓝之海",
-        "score": 7.8,
+        "score": 7.9,
         "tags": [
             {
                 "name": "搞笑",
-                "count": 5040
+                "count": 5100
             },
             {
                 "name": "颜艺",
-                "count": 2795
+                "count": 2836
             },
             {
                 "name": "漫改",
-                "count": 2447
+                "count": 2487
             },
             {
                 "name": "A-1Pictures",
-                "count": 1528
+                "count": 1550
             },
             {
                 "name": "日常",
-                "count": 1077
+                "count": 1109
             },
             {
                 "name": "碧蓝之海",
-                "count": 1035
+                "count": 1047
             },
             {
                 "name": "爆笑",
-                "count": 981
+                "count": 988
             },
             {
                 "name": "校园",
-                "count": 821
+                "count": 848
             },
             {
                 "name": "潜水动画(迫真)",
-                "count": 504
+                "count": 509
             },
             {
                 "name": "ZERO-G",
-                "count": 402
+                "count": 407
             },
             {
                 "name": "高松信司",
@@ -340,7 +628,7 @@
             },
             {
                 "name": "青春",
-                "count": 107
+                "count": 108
             },
             {
                 "name": "恋爱",
@@ -348,11 +636,11 @@
             },
             {
                 "name": "青年向",
-                "count": 71
+                "count": 77
             },
             {
                 "name": "运动",
-                "count": 54
+                "count": 56
             },
             {
                 "name": "沙雕",
@@ -371,7 +659,7 @@
                 "count": 26
             },
             {
-                "name": "木村良平",
+                "name": "神作",
                 "count": 20
             }
         ],
@@ -383,6 +671,102 @@
             "common": "https://lain.bgm.tv/r/400/pic/cover/l/1f/13/235130_suy3s.jpg"
         }
     },
+    "240386": {
+        "date": "2019-07-07",
+        "summary": "公元10世纪末期，以战争掠夺为生的最强民族·维京人席卷世界。 被讴歌为最强战士的儿子·托尔芬，自小便生活在战场上，并向往着梦幻大陆“文兰（VINLAND）”—— 这是一个发生在激荡时代的，真正的战士物语。",
+        "name": "ヴィンランド・サガ",
+        "name_cn": "冰海战记",
+        "images": {
+            "small": "https://lain.bgm.tv/r/200/pic/cover/l/31/8f/240386_6Q62q.jpg",
+            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/31/8f/240386_6Q62q.jpg",
+            "large": "https://lain.bgm.tv/pic/cover/l/31/8f/240386_6Q62q.jpg",
+            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/31/8f/240386_6Q62q.jpg",
+            "common": "https://lain.bgm.tv/r/400/pic/cover/l/31/8f/240386_6Q62q.jpg"
+        },
+        "score": 8.3,
+        "tags": [
+            {
+                "name": "WITSTUDIO",
+                "count": 2659
+            },
+            {
+                "name": "历史",
+                "count": 2504
+            },
+            {
+                "name": "战斗",
+                "count": 1975
+            },
+            {
+                "name": "漫改",
+                "count": 1565
+            },
+            {
+                "name": "热血",
+                "count": 1308
+            },
+            {
+                "name": "战争",
+                "count": 1254
+            },
+            {
+                "name": "海盗战记",
+                "count": 1037
+            },
+            {
+                "name": "籔田修平",
+                "count": 253
+            },
+            {
+                "name": "半年番",
+                "count": 188
+            },
+            {
+                "name": "WIT_STUDIO",
+                "count": 143
+            },
+            {
+                "name": "神作",
+                "count": 81
+            },
+            {
+                "name": "WIT",
+                "count": 54
+            },
+            {
+                "name": "剧情",
+                "count": 43
+            },
+            {
+                "name": "史诗",
+                "count": 41
+            },
+            {
+                "name": "薮田修平",
+                "count": 36
+            },
+            {
+                "name": "冰海战记",
+                "count": 36
+            },
+            {
+                "name": "成长",
+                "count": 33
+            },
+            {
+                "name": "冒险",
+                "count": 27
+            },
+            {
+                "name": "濑古浩司",
+                "count": 22
+            },
+            {
+                "name": "上村祐翔",
+                "count": 19
+            }
+        ]
+    },
     "256114": {
         "date": "2019-01-10",
         "summary": "一直过着贫困生活的高中二年级学生·上杉风太郎，找到了一份条件非常好的家庭教师兼职。然而，要教导的学生居然是同级生！而且还是五胞胎！！虽然都是美少女，但同时也是“将要留级”、“讨厌学习”的问题学生们！最开始的任务就是要取得这些女孩们的信任……！？每天都热闹喧嚣！ 中野家的五姐妹所带来的可爱度500%的五个不一样的恋爱喜剧，就此开幕！！",
@@ -392,39 +776,39 @@
         "tags": [
             {
                 "name": "恋爱",
-                "count": 2428
+                "count": 2459
             },
             {
                 "name": "后宫",
-                "count": 2389
+                "count": 2405
             },
             {
                 "name": "漫改",
-                "count": 1463
+                "count": 1478
             },
             {
                 "name": "校园",
-                "count": 1213
+                "count": 1226
             },
             {
                 "name": "手冢Production",
-                "count": 861
+                "count": 868
             },
             {
                 "name": "党争",
-                "count": 547
+                "count": 566
             },
             {
                 "name": "松岡禎丞",
-                "count": 431
+                "count": 435
             },
             {
                 "name": "花泽香菜",
-                "count": 292
+                "count": 295
             },
             {
                 "name": "日常",
-                "count": 184
+                "count": 192
             },
             {
                 "name": "佐仓大法",
@@ -436,11 +820,11 @@
             },
             {
                 "name": "搞笑",
-                "count": 67
+                "count": 66
             },
             {
                 "name": "桑原智",
-                "count": 60
+                "count": 61
             },
             {
                 "name": "五等分的新娘",
@@ -452,7 +836,7 @@
             },
             {
                 "name": "青春",
-                "count": 22
+                "count": 21
             },
             {
                 "name": "水濑祈",
@@ -488,47 +872,47 @@
         "tags": [
             {
                 "name": "京阿尼",
-                "count": 3835
+                "count": 3871
             },
             {
                 "name": "日常",
-                "count": 3186
+                "count": 3227
             },
             {
                 "name": "搞笑",
-                "count": 2449
+                "count": 2486
             },
             {
                 "name": "百合",
-                "count": 1667
+                "count": 1689
             },
             {
                 "name": "小林家的龙女仆",
-                "count": 1162
+                "count": 1178
             },
             {
                 "name": "漫改",
-                "count": 1118
+                "count": 1144
             },
             {
                 "name": "京都动画",
-                "count": 839
+                "count": 842
             },
             {
                 "name": "武本康弘",
-                "count": 463
+                "count": 467
             },
             {
                 "name": "石原立也",
-                "count": 440
+                "count": 444
             },
             {
                 "name": "萌",
-                "count": 259
+                "count": 267
             },
             {
                 "name": "奇幻",
-                "count": 111
+                "count": 116
             },
             {
                 "name": "京都アニメーション",
@@ -544,7 +928,7 @@
             },
             {
                 "name": "续作",
-                "count": 57
+                "count": 59
             },
             {
                 "name": "战斗",
@@ -559,11 +943,11 @@
                 "count": 19
             },
             {
-                "name": "萌系",
+                "name": "山田由香",
                 "count": 18
             },
             {
-                "name": "山田由香",
+                "name": "萌系",
                 "count": 18
             }
         ],
@@ -574,6 +958,102 @@
             "medium": "https://lain.bgm.tv/r/800/pic/cover/l/17/ed/274234_iZ22k.jpg",
             "common": "https://lain.bgm.tv/r/400/pic/cover/l/17/ed/274234_iZ22k.jpg"
         }
+    },
+    "390353": {
+        "date": "2024-01-06",
+        "summary": "连接异次元和现世界的通道“门”突然出现十来年后，世界上出现觉醒了超能力被称为“猎人”之人。 猎人使用力量以攻占门内地下城并获得报酬为生，但在强者齐聚的猎人们中，“水篠旬”作为被称为人类最弱兵器的低等猎人而艰难生活。 某日，水篠旬遭遇某个被隐藏在低等级迷宫中的高等级重迷宫，在身负濒死重伤的水篠旬面前出现了神秘的探索窗口。 他在临死之际，决定接受任务之际，成为唯一能“升级”之人。",
+        "name": "俺だけレベルアップな件",
+        "name_cn": "我独自升级",
+        "images": {
+            "small": "https://lain.bgm.tv/r/200/pic/cover/l/f5/2e/390353_07vz7.jpg",
+            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/f5/2e/390353_07vz7.jpg",
+            "large": "https://lain.bgm.tv/pic/cover/l/f5/2e/390353_07vz7.jpg",
+            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/f5/2e/390353_07vz7.jpg",
+            "common": "https://lain.bgm.tv/r/400/pic/cover/l/f5/2e/390353_07vz7.jpg"
+        },
+        "score": 6.5,
+        "tags": [
+            {
+                "name": "战斗",
+                "count": 1890
+            },
+            {
+                "name": "A-1Pictures",
+                "count": 1429
+            },
+            {
+                "name": "漫改",
+                "count": 1308
+            },
+            {
+                "name": "龙傲天",
+                "count": 1229
+            },
+            {
+                "name": "爽文",
+                "count": 1198
+            },
+            {
+                "name": "韩漫",
+                "count": 1034
+            },
+            {
+                "name": "奇幻",
+                "count": 986
+            },
+            {
+                "name": "韩国",
+                "count": 380
+            },
+            {
+                "name": "热血",
+                "count": 91
+            },
+            {
+                "name": "中重俊祐",
+                "count": 55
+            },
+            {
+                "name": "异世界",
+                "count": 53
+            },
+            {
+                "name": "泽野弘之",
+                "count": 36
+            },
+            {
+                "name": "厕纸",
+                "count": 34
+            },
+            {
+                "name": "我独自升级",
+                "count": 24
+            },
+            {
+                "name": "冒险",
+                "count": 21
+            },
+            {
+                "name": "系统",
+                "count": 16
+            },
+            {
+                "name": "日本动画",
+                "count": 12
+            },
+            {
+                "name": "系统流",
+                "count": 10
+            },
+            {
+                "name": "动画",
+                "count": 10
+            },
+            {
+                "name": "日漫",
+                "count": 9
+            }
+        ]
     },
     "420628": {
         "date": "2023-10-21",
@@ -591,39 +1071,39 @@
         "tags": [
             {
                 "name": "推理",
-                "count": 2126
+                "count": 2172
             },
             {
                 "name": "轻改",
-                "count": 2025
+                "count": 2048
             },
             {
                 "name": "中国风",
-                "count": 1098
+                "count": 1116
             },
             {
                 "name": "悠木碧",
-                "count": 960
+                "count": 971
             },
             {
                 "name": "OLM",
-                "count": 844
+                "count": 851
             },
             {
                 "name": "TOHOanimationSTUDIO",
-                "count": 805
+                "count": 814
             },
             {
                 "name": "悬疑",
-                "count": 612
+                "count": 637
             },
             {
                 "name": "治愈",
-                "count": 564
+                "count": 569
             },
             {
                 "name": "恋爱",
-                "count": 167
+                "count": 178
             },
             {
                 "name": "東宝",
@@ -635,7 +1115,7 @@
             },
             {
                 "name": "日常",
-                "count": 84
+                "count": 86
             },
             {
                 "name": "長沼範裕",
@@ -647,11 +1127,11 @@
             },
             {
                 "name": "长沼范裕",
-                "count": 31
+                "count": 32
             },
             {
                 "name": "药屋少女的呢喃",
-                "count": 27
+                "count": 28
             },
             {
                 "name": "中华风",
@@ -671,6 +1151,102 @@
             }
         ]
     },
+    "424227": {
+        "date": "2023-03-17",
+        "summary": "「かぐや様は告らせたい」の赤坂アカ原作、「クズの本懐」の横槍メンゴ作画による「週刊ヤングジャンプ」連載の人気コミックを原作とする2023年4月放送開始のテレビアニメ「【推しの子】」の第1話（90分拡大版）を放送に先駆けて劇場上映。 とある地方都市の病院に勤める産婦人科医・ゴロー。ある日、ゴローの推しアイドルである「B小町」のアイが彼の診察室に現れる。アイはある秘密を抱えており、ゴローは彼女との“最悪”の出会いをきっかけに数奇な運命に巻き込まれていく。 「可愛いだけじゃない式守さん」などの動画工房がアニメーション制作を手がけ、「私に天使が舞い降りた！」の平牧大輔が監督、「彼女、お借りします」の平山寛菜がキャラクターデザインを担当。",
+        "name": "【推しの子】Mother and Children",
+        "name_cn": "【我推的孩子】Mother and Children",
+        "images": {
+            "small": "https://lain.bgm.tv/r/200/pic/cover/l/69/1e/424227_OhkuW.jpg",
+            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/69/1e/424227_OhkuW.jpg",
+            "large": "https://lain.bgm.tv/pic/cover/l/69/1e/424227_OhkuW.jpg",
+            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/69/1e/424227_OhkuW.jpg",
+            "common": "https://lain.bgm.tv/r/400/pic/cover/l/69/1e/424227_OhkuW.jpg"
+        },
+        "score": 7.7,
+        "tags": [
+            {
+                "name": "剧场版",
+                "count": 1387
+            },
+            {
+                "name": "动画工房",
+                "count": 1302
+            },
+            {
+                "name": "偶像",
+                "count": 963
+            },
+            {
+                "name": "我推的孩子",
+                "count": 847
+            },
+            {
+                "name": "漫改",
+                "count": 615
+            },
+            {
+                "name": "赤坂明",
+                "count": 567
+            },
+            {
+                "name": "高桥李依",
+                "count": 531
+            },
+            {
+                "name": "转生",
+                "count": 245
+            },
+            {
+                "name": "催泪",
+                "count": 159
+            },
+            {
+                "name": "先行放映",
+                "count": 149
+            },
+            {
+                "name": "特别篇",
+                "count": 108
+            },
+            {
+                "name": "悬疑",
+                "count": 56
+            },
+            {
+                "name": "奇幻",
+                "count": 25
+            },
+            {
+                "name": "恋爱",
+                "count": 25
+            },
+            {
+                "name": "平牧大辅",
+                "count": 24
+            },
+            {
+                "name": "動画工房",
+                "count": 18
+            },
+            {
+                "name": "平牧大輔",
+                "count": 12
+            },
+            {
+                "name": "搞笑",
+                "count": 12
+            },
+            {
+                "name": "日本动画",
+                "count": 11
+            },
+            {
+                "name": "日常",
+                "count": 10
+            }
+        ]
+    },
     "515880": {
         "date": "2025-07-07",
         "summary": "我们的夏天不会结束！北原伊织在伊豆开始大学生活已经三个月—— 寄住的潜水商店「Grand Blue」里，他和可爱的表妹古手川千纱同住一个屋檐下。再加上表姊古手川奈奈华、散发成熟魅力令人难以抗拒的滨冈梓，以及同学吉原爱菜，共同度过了顺风顺水的青春校园生活！ ……当然这只是表面，大学生活的大半时光其实是与全裸家伙们的疯狂闹腾！ 因为伊织加入的潜水社团「Peek a Boo」平时潜水马马虎虎，却把健壮男子们全裸对饮的闹腾当成日常；伊织也与帅气却真正御宅族的今村耕平一起，彻底染上了这个社团的风气。 就在此时，完成冲绳潜水执照课程、返回伊豆的伊织收到了妹妹・北原栞寄来的信…… 妹妹来袭、青梅女子大的学园祭、试胆大会、约会、无人岛露营！ 被可爱的全裸家伙们包围的伊织的大学生活再次开始！ ！",
@@ -680,43 +1256,43 @@
         "tags": [
             {
                 "name": "搞笑",
-                "count": 1947
+                "count": 2043
             },
             {
                 "name": "漫改",
-                "count": 1450
+                "count": 1522
             },
             {
                 "name": "喜剧",
-                "count": 1238
+                "count": 1277
             },
             {
                 "name": "日常",
-                "count": 1031
+                "count": 1065
             },
             {
                 "name": "颜艺",
-                "count": 806
+                "count": 849
             },
             {
                 "name": "校园",
-                "count": 776
+                "count": 817
             },
             {
                 "name": "ZERO-G",
-                "count": 568
+                "count": 585
             },
             {
                 "name": "碧蓝之海",
-                "count": 471
+                "count": 493
             },
             {
                 "name": "青年向",
-                "count": 336
+                "count": 345
             },
             {
                 "name": "乌龙茶",
-                "count": 270
+                "count": 277
             },
             {
                 "name": "恋爱",
@@ -724,7 +1300,7 @@
             },
             {
                 "name": "高松信司",
-                "count": 83
+                "count": 84
             },
             {
                 "name": "Liber",
@@ -736,11 +1312,11 @@
             },
             {
                 "name": "青春",
-                "count": 41
+                "count": 39
             },
             {
                 "name": "运动",
-                "count": 18
+                "count": 19
             },
             {
                 "name": "潜水",
@@ -755,7 +1331,7 @@
                 "count": 10
             },
             {
-                "name": "社团",
+                "name": "木村良平",
                 "count": 9
             }
         ],
@@ -783,47 +1359,47 @@
         "tags": [
             {
                 "name": "漫改",
-                "count": 1747
+                "count": 1782
             },
             {
                 "name": "校园",
-                "count": 1625
+                "count": 1660
             },
             {
                 "name": "致郁",
-                "count": 1602
+                "count": 1630
             },
             {
                 "name": "奇幻",
-                "count": 1296
+                "count": 1321
             },
             {
                 "name": "ENISHIYA",
-                "count": 896
+                "count": 916
             },
             {
                 "name": "WEB",
-                "count": 639
+                "count": 650
             },
             {
                 "name": "悬疑",
-                "count": 428
+                "count": 435
             },
             {
                 "name": "少年向",
-                "count": 318
+                "count": 322
             },
             {
                 "name": "饭野慎也",
-                "count": 265
+                "count": 267
             },
             {
                 "name": "青春",
-                "count": 197
+                "count": 198
             },
             {
                 "name": "霸凌",
-                "count": 79
+                "count": 80
             },
             {
                 "name": "轮回",
@@ -835,22 +1411,22 @@
             },
             {
                 "name": "剧场版",
-                "count": 30
+                "count": 31
             },
             {
                 "name": "家庭",
-                "count": 28
+                "count": 29
             },
             {
                 "name": "飯野慎也",
                 "count": 26
             },
             {
-                "name": "搞笑",
-                "count": 18
+                "name": "校园霸凌",
+                "count": 19
             },
             {
-                "name": "校园霸凌",
+                "name": "搞笑",
                 "count": 18
             },
             {
@@ -858,7 +1434,7 @@
                 "count": 17
             },
             {
-                "name": "未定档",
+                "name": "催泪",
                 "count": 11
             }
         ]
