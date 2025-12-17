@@ -4,19 +4,21 @@ import { BgmJSONSaved } from "@/type/bangumi";
 import { getPostdata } from "@/lib/get_post";
 import { fetchBgm } from "./fetch_bgm";
 
-const IDS_FILE = path.join(
-    process.cwd(),
-    "content",
-    "misc",
-    "data",
-    "bangumi_id.json",
-);
-const DATA_FILE = path.join(
+const SAVED_FILE = path.join(
     process.cwd(),
     "content",
     "misc",
     "data",
     "bangumi_subject.json",
+);
+
+const BUFAN_FILE = path.join(
+    process.cwd(),
+    "content",
+    "misc",
+    "anime",
+    "bufan",
+    "index.mdx",
 );
 
 // 读取 JSON
@@ -30,45 +32,40 @@ function loadJson<T>(file: string): T | null {
     }
 }
 
-// 读取 bangumi id json
-const existingIds = loadJson<Record<string, string>>(IDS_FILE);
-if (!existingIds) {
-    console.error("无法找到文件:", IDS_FILE);
-    process.exit(1);
+const IDS: string[] = [];
+
+// 从 bufan.mdx 收集 bgmid
+function bufanIDS() {
+    const content = fs.readFileSync(BUFAN_FILE, "utf-8");
+    const regex = /^\s*<BgmCard\b[^>]*\bbgmid="([^"]+)"[^>]*\/>\s*$/gm;
+    let match: RegExpExecArray | null;
+    while ((match = regex.exec(content)) !== null) {
+        IDS.push(match[1]);
+    }
 }
+bufanIDS();
 
 // 从 post 中提取 bgm_id
 const posts = await getPostdata("misc", "anime");
-const postBgmId: Record<string, string> = {};
 for (const post of posts) {
     const bgmId = post?.bgmid;
     if (!bgmId) continue; // 跳过没有 bgmID 的
-    postBgmId[bgmId] = post.title;
+    // postBgmId[bgmId] = post.title;
+    IDS.push(bgmId.toString());
 }
 
-// 合并
-const mergedIdMap: Record<string, string> = {
-    ...existingIds,
-    ...postBgmId,
-};
-
-const ids = Object.keys(mergedIdMap);
-
-console.log(`抓取 ${ids.length} 个条目...\n`);
-
-// 读取旧数据
-const saved = loadJson<BgmJSONSaved>(DATA_FILE) || {};
-
-//  清理掉不在 ids 里的
+// load saved bgm JSON， 清理掉未出现的
+const saved = loadJson<BgmJSONSaved>(SAVED_FILE) || {};
 for (const id of Object.keys(saved)) {
-    if (!ids.includes(id)) {
+    if (!IDS.includes(id)) {
         delete saved[id];
     }
 }
 
 // 逐个抓取
-for (const id of ids) {
-    console.log("fetch ID:", id, mergedIdMap[id] || "");
+console.log(`抓取 ${IDS.length} 个条目...\n`);
+for (const id of IDS) {
+    console.log("fetch ID:", id);
     const data = await fetchBgm(id.toString());
     if (data) {
         saved[id] = { ...(saved[id] || {}), ...data };
@@ -78,5 +75,5 @@ for (const id of ids) {
     }
 }
 
-fs.writeFileSync(DATA_FILE, JSON.stringify(saved, null, 4), "utf-8");
-console.log(`\n已保存 ${DATA_FILE}`);
+fs.writeFileSync(SAVED_FILE, JSON.stringify(saved, null, 4), "utf-8");
+console.log(`\n已保存 ${SAVED_FILE}`);

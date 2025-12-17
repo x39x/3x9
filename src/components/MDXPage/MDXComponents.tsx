@@ -109,6 +109,7 @@ const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
             <MDXImage id={page_id} alt={props.alt || page_id} {...props} />
         ),
         Image,
+        // id 用于处理本地图片
         BgmCard: (props) => <BgmIntro id={page_id} {...props} />,
         JostDate,
     };
