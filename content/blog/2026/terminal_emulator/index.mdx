@@ -1,0 +1,40 @@
+---
+title: 终端模拟器推荐及配置
+slug: terminal-emulator
+date: 2026-01-08
+---
+
+介绍一些常见的终端模拟器
+
+## alacritty
+
+算是rust早期的明星项目，但作者追求的是速度，只有基本的终端功能，分屏要靠tmux等工具实现，为了速度牺牲了很多，因此配置也很简单，文档十分钟就可以读完
+
+全平台支持，包括BSD，但mac上有很多bug，如闪退、CJK输入法，很久了也没修，目前开发似乎有点停滞，Linux体验还是很好的
+
+## Kitty
+
+Kitty 是 Calibre 作者 Kovid Goyal 开发，各方面都很优秀，Kitty的键盘协议、终端图形显示协调都被其他工具广泛的采用
+
+> 早期终端模拟器只支持ctrl alt两个修饰键，并且无法区分alt/esc，Kitty做到了常见修饰键的全支持
+
+### SSH
+
+终端类型为xterm-kitty时，需要将terminfo复制到ssh remote，[参考](https://sw.kovidgoyal.net/kitty/faq/#i-get-errors-about-the-terminal-being-unknown-or-opening-the-terminal-failing-or-functional-keys-like-arrow-keys-don-t-work)
+
+```
+kitten ssh myserver
+alias s="kitten ssh"
+```
+
+## wezterm
+
+功能最多的一款，配置非常灵活，直接使用lua作为配置文件，作者比较随和，很乐意添加新功能
+
+## Ghostty
+
+功能介于kitty和alacritty之间，作者的理念是无需任何配置开箱即用，且在各个平台要表现的如原生应用一样，macOS的图形界面用swiftUI编写，linux则是GTK4，终端的核心功能在libghostty里实现
+
+在macOS下，ghostty是唯一支持matel渲染的，其他都是OpenGL，很多macOS的原生特性也支持，如三指按压、安全键盘输入
+
+Window支持在计划清单内并且优先级很高
