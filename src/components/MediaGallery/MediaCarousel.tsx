@@ -16,8 +16,7 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
 
         const handleScroll = () => {
             const atLeftEnd = el.scrollLeft <= 5;
-            const atRightEnd =
-                el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
+            const atRightEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
             setShowLeftFade(!atLeftEnd);
             setShowRightFade(!atRightEnd);
         };
@@ -31,7 +30,7 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
             // 转换垂直滚动为横向滚动
             e.preventDefault();
             el.scrollBy({
-                left: e.deltaY * 3.1, // 控制速度
+                left: e.deltaY * 3.9, // 控制速度
                 behavior: "auto",
             });
         };
@@ -59,11 +58,7 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
                 }}
             >
                 {[...data]
-                    .sort(
-                        (a, b) =>
-                            new Date(b.date).getTime() -
-                            new Date(a.date).getTime(),
-                    )
+                    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
                     .map((item, i) => (
                         <MediaCard key={i} {...item} />
                     ))}
@@ -73,7 +68,7 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
             {showLeftFade && (
                 <div
                     className={clsx(
-                        "pointer-events-none absolute left-0 top-0 h-full w-7",
+                        "pointer-events-none absolute left-0 top-0 h-full w-5",
                         "bg-linear-to-r from-white  dark:from-[#141414] to-transparent",
                         "transition-opacity duration-300",
                     )}
@@ -83,7 +78,7 @@ const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {
             {showRightFade && (
                 <div
                     className={clsx(
-                        "pointer-events-none absolute right-0 top-0 h-full w-9",
+                        "pointer-events-none absolute right-0 top-0 h-full w-5",
                         "bg-linear-to-l from-white dark:from-[#141414] to-transparent",
                         "transition-opacity duration-300",
                     )}

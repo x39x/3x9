@@ -16,10 +16,7 @@ const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
         h1: (props) => {
             const id = props.id;
             return (
-                <h1
-                    id={id}
-                    className="group mt-17 mb-9 text-4xl font-medium scroll-mt-24"
-                >
+                <h1 id={id} className="group mt-17 mb-9 text-4xl font-medium scroll-mt-24">
                     {id && <Link href={`#${id}`}>{props.children}</Link>}
                 </h1>
             );
@@ -39,10 +36,7 @@ const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
 
         p: (props) => <p className="text-justify leading-8 my-8" {...props} />,
         hr: (props) => (
-            <hr
-                className="border-t my-20 border-[#D2D2D7] dark:border-[#2E2E2E]"
-                {...props}
-            />
+            <hr className="border-t my-20 border-[#D2D2D7] dark:border-[#2E2E2E]" {...props} />
         ),
         strong: (props) => <strong className="font-bold" {...props} />,
         a: (props) => (
@@ -76,25 +70,16 @@ const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
 
         table: (props) => (
             <div className="my-6 w-full overflow-x-auto ">
-                <table
-                    className="w-full shadow-lg rounded-lg py-1"
-                    {...props}
-                />
+                <table className="w-full shadow-lg rounded-lg py-1" {...props} />
             </div>
         ),
-        tr: (props) => <tr className="" {...props} />,
+        tr: (props) => <tr className="text-center" {...props} />,
         th: (props) => (
-            <th
-                className="font-bold py-7 pl-6 text-left whitespace-nowrap "
-                {...props}
-            />
+            <th className="font-bold py-7 pl-6 text-center whitespace-nowrap " {...props} />
         ),
 
         td: (props) => (
-            <td
-                className="py-6 pl-6  border-t border-gray-200 dark:border-[#292929] "
-                {...props}
-            />
+            <td className="py-6 pl-6  border-t border-gray-200 dark:border-[#292929] " {...props} />
         ),
 
         code: (props) => (
@@ -105,9 +90,7 @@ const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
         ),
         pre: (props) => <MDXCodeBlock {...props} />,
 
-        img: (props) => (
-            <MDXImage id={page_id} alt={props.alt || page_id} {...props} />
-        ),
+        img: (props) => <MDXImage id={page_id} alt={props.alt || page_id} {...props} />,
         Image,
         // id 用于处理本地图片
         BgmCard: (props) => <BgmIntro id={page_id} {...props} />,
