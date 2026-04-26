@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tailwind-scrollbar-hide/v4";
-@tailwind utilities;
+/* @tailwind utilities; */
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* 从右边滑动进入 */
