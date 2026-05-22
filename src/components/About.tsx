@@ -1,10 +1,11 @@
 "use client";
-import ContentContainer from "@/components/ContentContainer";
-import Avatar from "@/components/Avatar";
-import Link from "next/link";
-import localFont from "next/font/local";
-import { RemoveScroll } from "react-remove-scroll";
 import clsx from "clsx";
+import localFont from "next/font/local";
+import Link from "next/link";
+import { RemoveScroll } from "react-remove-scroll";
+
+import Avatar from "@/components/Avatar";
+import ContentContainer from "@/components/ContentContainer";
 
 const Futura = localFont({
     src: "../../public/FuturaMedium.otf",
