@@ -1,7 +1,6 @@
-"use client";
-import { useEffect, useState } from "react";
 import { Sun, createLucideIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 const MySunMoon = createLucideIcon("MySunMoon", [
     ["path", { d: "M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4", key: "1" }],
     ["path", { d: "M12 2v2", key: "2" }],
@@ -14,30 +13,56 @@ const MySunMoon = createLucideIcon("MySunMoon", [
     ["path", { d: "m19.1 4.9-1.4 1.4", key: "9" }],
 ]);
 
-export default function ThemeToggle() {
-    const [theme, setTheme] = useState("light");
+type Theme = "light" | "dark";
 
+export default function ThemeToggle() {
+    const pathname = `/${usePathname()?.split("/")[1]}`;
+
+    // get html class
+    const [theme, setTheme] = useState<Theme>(() => {
+        if (typeof document === "undefined") {
+            return "light";
+        }
+
+        return document.documentElement.classList.contains("dark") ? "dark" : "light";
+    });
+
+    // apply theme
     useEffect(() => {
-        const htmlClassList = document.documentElement.classList;
-        htmlClassList.remove("light", "dark");
-        htmlClassList.add(theme);
+        const html = document.documentElement;
+
+        html.classList.remove("light", "dark");
+        html.classList.add(theme);
     }, [theme]);
 
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
-    const pathname = `/${usePathname()?.split("/")[1]}`;
+    const [mounted, setMounted] = useState(false);
+
+    // fix  hydration
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+    if (!mounted) {
+        return (
+            <div
+                className="cursor-pointer hover:scale-105 transition-transform mr-10 md:mr-0"
+                onClick={toggleTheme}
+            >
+                <Sun size={20} className={pathname === "/about" ? "text-white" : "text-black"} />
+            </div>
+        );
+    }
+
     return (
         <div
-            className={`cursor-pointer hover:scale-105 transition-transform mr-10 md:mr-0`}
+            className="cursor-pointer hover:scale-105 transition-transform mr-10 md:mr-0"
             onClick={toggleTheme}
         >
             {theme === "light" ? (
-                <Sun
-                    size={20}
-                    className={`${pathname == "/about" ? "text-white" : "text-black"}`}
-                />
+                <Sun size={20} className={pathname === "/about" ? "text-white" : "text-black"} />
             ) : (
                 <MySunMoon size={20} className="text-white" />
             )}

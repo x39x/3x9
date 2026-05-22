@@ -1,8 +1,8 @@
-import remarkGfm from "remark-gfm"; //ISSUE: https://github.com/vercel/next.js/issues/71819#issuecomment-2496155399
-import rehypePrettyCode from "rehype-pretty-code";
-import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm"; //ISSUE: https://github.com/vercel/next.js/issues/71819#issuecomment-2496155399
+import remarkMath from "remark-math";
 
 const options = {
     parseFrontmatter: true,
