@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { Josefin_Sans } from "next/font/google";
-import clsx from "clsx";
+import Image from "next/image";
 const Josefin_Font = Josefin_Sans({
     weight: "400",
     subsets: ["latin"],
@@ -17,9 +16,7 @@ const NotFound = () => {
                 height={500}
                 className="w-[39%] md:w-[33%] mb-9"
             />
-            <h1 className={`text-sm  ${Josefin_Font.className.trim()}`}>
-                Not found
-            </h1>
+            <h1 className={`text-sm  ${Josefin_Font.className.trim()}`}>Not found</h1>
         </div>
     );
 };
