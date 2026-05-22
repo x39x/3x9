@@ -28,7 +28,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
                         {text}
                     </a>
                 ) : (
-                    <Link key={href} href={href} prefetch className={baseClasses}>
+                    <Link key={href} href={href} prefetch={false} className={baseClasses}>
                         {text}
                     </Link>
                 );
