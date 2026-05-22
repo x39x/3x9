@@ -1,4 +1,5 @@
 import { Sun, createLucideIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 const MySunMoon = createLucideIcon("MySunMoon", [
@@ -13,35 +14,16 @@ const MySunMoon = createLucideIcon("MySunMoon", [
     ["path", { d: "m19.1 4.9-1.4 1.4", key: "9" }],
 ]);
 
-type Theme = "light" | "dark";
-
 export default function ThemeToggle() {
     const pathname = `/${usePathname()?.split("/")[1]}`;
 
-    // get html class
-    const [theme, setTheme] = useState<Theme>(() => {
-        if (typeof document === "undefined") {
-            return "light";
-        }
-
-        return document.documentElement.classList.contains("dark") ? "dark" : "light";
-    });
-
-    // apply theme
-    useEffect(() => {
-        const html = document.documentElement;
-
-        html.classList.remove("light", "dark");
-        html.classList.add(theme);
-    }, [theme]);
-
+    const { theme, setTheme } = useTheme();
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+        setTheme(theme === "light" ? "dark" : "light");
     };
 
-    const [mounted, setMounted] = useState(false);
-
     // fix  hydration
+    const [mounted, setMounted] = useState(false);
     useEffect(() => {
         setMounted(true);
     }, []);
@@ -62,9 +44,9 @@ export default function ThemeToggle() {
             onClick={toggleTheme}
         >
             {theme === "light" ? (
-                <Sun size={20} className={pathname === "/about" ? "text-white" : "text-black"} />
+                <Sun size={19} className={pathname === "/about" ? "text-white" : "text-black"} />
             ) : (
-                <MySunMoon size={20} className="text-white" />
+                <MySunMoon size={19} className="text-white" />
             )}
         </div>
     );

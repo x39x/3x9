@@ -1,8 +1,10 @@
 "use client";
-import NavBar from "@/components/NavBar";
-import { usePathname } from "next/navigation";
-import Footer from "@/components/Footer";
 import clsx from "clsx";
+import { ThemeProvider } from "next-themes";
+import { usePathname } from "next/navigation";
+
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 
 const LayoutBody = ({ children }: { children: React.ReactNode }) => {
     const pathname = `/${usePathname()?.split("/")[1]}`;
@@ -15,11 +17,13 @@ const LayoutBody = ({ children }: { children: React.ReactNode }) => {
                 "min-h-screen text-autospace",
             )}
         >
-            <div className="flex flex-col min-h-screen">
-                <NavBar />
-                <main className="flex-1">{children}</main>
-                {!["/about", "/"].includes(pathname) && <Footer />}
-            </div>
+            <ThemeProvider defaultTheme="system">
+                <div className="flex flex-col min-h-screen">
+                    <NavBar />
+                    <main className="flex-1">{children}</main>
+                    {!["/about", "/"].includes(pathname) && <Footer />}
+                </div>
+            </ThemeProvider>
         </body>
     );
 };

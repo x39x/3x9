@@ -1,7 +1,8 @@
 "use client";
+import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
+
 import { NavLinksProps } from "@/type/base";
 
 const NavLinks = ({ links }: NavLinksProps) => {
@@ -12,9 +13,9 @@ const NavLinks = ({ links }: NavLinksProps) => {
             {links.map(({ href, text }) => {
                 const isExternal = /^https?:\/\//.test(href);
                 const baseClasses = clsx(
-                    "hidden sm:block transition-transform duration-300",
+                    "hidden sm:flex items-center justify-center transition-transform duration-300",
                     !isAbout &&
-                    "hover:text-[#0066CC]  dark:hover:text-[#2997FF] hover:transition-colors hover:duration-300",
+                        "hover:text-[#0066CC]  dark:hover:text-[#2997FF] hover:transition-colors hover:duration-300",
                 );
                 return isExternal ? (
                     <a
@@ -27,12 +28,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
                         {text}
                     </a>
                 ) : (
-                    <Link
-                        key={href}
-                        href={href}
-                        prefetch
-                        className={baseClasses}
-                    >
+                    <Link key={href} href={href} prefetch className={baseClasses}>
                         {text}
                     </Link>
                 );

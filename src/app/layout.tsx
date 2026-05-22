@@ -8,27 +8,6 @@ import "katex/dist/katex.css";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="zh-Hans" suppressHydrationWarning>
-            <head>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            (function () {
-                            try {
-                            const html = document.documentElement;
-
-                            html.classList.remove('light', 'dark');
-
-                            html.classList.add(
-                            window.matchMedia('(prefers-color-scheme: dark)').matches
-                            ? 'dark'
-                            : 'light'
-                            );
-                            } catch (e) {}
-                            })();
-                        `,
-                    }}
-                />
-            </head>
             <LayoutBody>{children}</LayoutBody>
         </html>
     );

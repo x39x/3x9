@@ -1,15 +1,15 @@
 @import "tailwindcss";
 @import "tailwind-scrollbar-hide/v4";
-/* @tailwind utilities; */
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 /* 从右边滑动进入 */
 @keyframes slide-in-right {
     from {
         /* 变化大小 */
-        transform: translateX(20%); 
+        transform: translateX(20%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -19,9 +19,10 @@
 @layer components {
     .font-hans {
         font-family:
-            "PingFang SC", "Microsoft YaHei", "Heiti SC", "STHeiti",
-            "Noto Sans SC", "WenQuanYi Micro Hei", sans-serif;
+            "PingFang SC", "Microsoft YaHei", "Heiti SC", "STHeiti", "Noto Sans SC",
+            "WenQuanYi Micro Hei", sans-serif;
     }
+
     /* 中英混排 */
     .text-autospace {
         text-autospace: normal;
@@ -40,8 +41,8 @@ code[data-theme] span {
     background-color: var(--shiki-light-bg);
 }
 
-html.dark code[data-theme],
-html.dark code[data-theme] span {
+html[data-theme="dark"] code[data-theme],
+html[data-theme="dark"] code[data-theme] span {
     color: var(--shiki-dark);
     background-color: var(--shiki-dark-bg);
 }

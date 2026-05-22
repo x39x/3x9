@@ -1,12 +1,12 @@
 "use client";
+import clsx from "clsx";
+import { Josefin_Sans } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Josefin_Sans } from "next/font/google";
-import clsx from "clsx";
 
-import ThemeToggle from "./ToogleTheme";
 import Hamburger from "./Hamburger";
 import NavLinks from "./NavLinks";
+import ThemeToggle from "./ToogleTheme";
 
 const Josefin_Font = Josefin_Sans({
     weight: "400",
@@ -45,8 +45,7 @@ const NavBar = () => {
                         prefetch={false}
                         className={clsx(
                             "hover:transition-colors hover:duration-300",
-                            !isAbout &&
-                            "hover:text-[#0066CC]  dark:hover:text-[#2997FF]",
+                            !isAbout && "hover:text-[#0066CC]  dark:hover:text-[#2997FF]",
                         )}
                     >
                         Home
