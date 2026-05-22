@@ -10,7 +10,7 @@ const LayoutBody = ({ children }: { children: React.ReactNode }) => {
     const pathname = `/${usePathname()?.split("/")[1]}`;
     return (
         <body>
-            <ThemeProvider defaultTheme="system">
+            <ThemeProvider defaultTheme="system" scriptProps={{ "data-cfasync": "false" }}>
                 <div
                     className={clsx(
                         pathname == "/about"
