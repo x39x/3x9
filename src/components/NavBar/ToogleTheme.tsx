@@ -44,9 +44,9 @@ export default function ThemeToggle() {
             onClick={toggleTheme}
         >
             {theme === "light" ? (
-                <Sun size={19} className={pathname === "/about" ? "text-white" : "text-black"} />
+                <Sun size={20} className={pathname === "/about" ? "text-white" : "text-black"} />
             ) : (
-                <MySunMoon size={19} className="text-white" />
+                <MySunMoon size={20} className="text-white" />
             )}
         </div>
     );
