@@ -33,7 +33,10 @@ export default function ThemeToggle() {
                 className="cursor-pointer hover:scale-105 transition-transform mr-10 md:mr-0"
                 onClick={toggleTheme}
             >
-                <Sun size={20} className={pathname === "/about" ? "text-white" : "text-black"} />
+                <Sun
+                    size={20}
+                    className={pathname === "/about" ? "text-white" : "text-[#39c5bb]"}
+                />
             </div>
         );
     }
