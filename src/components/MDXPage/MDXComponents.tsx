@@ -73,13 +73,13 @@ const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
                 <table className="w-full shadow-lg rounded-lg py-1" {...props} />
             </div>
         ),
-        tr: (props) => <tr className="text-center" {...props} />,
+        tr: (props) => <tr className="text-left" {...props} />,
         th: (props) => (
-            <th className="font-bold py-7 pl-6 text-center whitespace-nowrap " {...props} />
+            <th className="font-bold py-5 pl-6 text-left whitespace-nowrap " {...props} />
         ),
 
         td: (props) => (
-            <td className="py-6 pl-6  border-t border-gray-200 dark:border-[#292929] " {...props} />
+            <td className="py-5 pl-6  border-t border-gray-200 dark:border-[#292929] " {...props} />
         ),
 
         code: (props) => (

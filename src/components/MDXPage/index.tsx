@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 import ContentContainer from "@/components/ContentContainer";
 import NotFound from "@/components/404";
-import createMDXComponets from "./MDXComponents";
+import createMDXComponents from "./MDXComponents";
 import options from "./MDXRemoteOptions";
 import MDXCover from "./MDXCover";
 import { PostData } from "@/type/base";
@@ -24,7 +24,7 @@ const MDXPage = ({ post }: { post: PostData }) => {
         reading_time,
         word_count,
     } = post;
-    const MDXComponents = createMDXComponets({ page_id: id });
+    const MDXComponents =  createMDXComponents({ page_id: id });
 
     return (
         <ContentContainer>
