@@ -466,11 +466,11 @@
                 "count": 26
             },
             {
-                "name": "伊藤静",
+                "name": "喜剧",
                 "count": 19
             },
             {
-                "name": "喜剧",
+                "name": "伊藤静",
                 "count": 19
             },
             {
@@ -939,11 +939,11 @@
                 "count": 37
             },
             {
-                "name": "潜水",
+                "name": "井上坚二",
                 "count": 31
             },
             {
-                "name": "井上坚二",
+                "name": "潜水",
                 "count": 31
             },
             {
@@ -1127,11 +1127,11 @@
                 "count": 22
             },
             {
-                "name": "竹达彩奈",
+                "name": "水濑祈",
                 "count": 20
             },
             {
-                "name": "水濑祈",
+                "name": "竹达彩奈",
                 "count": 20
             },
             {
@@ -1246,102 +1246,6 @@
             "medium": "https://lain.bgm.tv/r/800/pic/cover/l/17/ed/274234_iZ22k.jpg",
             "common": "https://lain.bgm.tv/r/400/pic/cover/l/17/ed/274234_iZ22k.jpg"
         }
-    },
-    "390353": {
-        "date": "2024-01-06",
-        "summary": "连接异次元和现世界的通道“门”突然出现十来年后，世界上出现觉醒了超能力被称为“猎人”之人。 猎人使用力量以攻占门内地下城并获得报酬为生，但在强者齐聚的猎人们中，“水篠旬”作为被称为人类最弱兵器的低等猎人而艰难生活。 某日，水篠旬遭遇某个被隐藏在低等级迷宫中的高等级重迷宫，在身负濒死重伤的水篠旬面前出现了神秘的探索窗口。 他在临死之际，决定接受任务之际，成为唯一能“升级”之人。",
-        "name": "俺だけレベルアップな件",
-        "name_cn": "我独自升级",
-        "images": {
-            "small": "https://lain.bgm.tv/r/200/pic/cover/l/f5/2e/390353_07vz7.jpg",
-            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/f5/2e/390353_07vz7.jpg",
-            "large": "https://lain.bgm.tv/pic/cover/l/f5/2e/390353_07vz7.jpg",
-            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/f5/2e/390353_07vz7.jpg",
-            "common": "https://lain.bgm.tv/r/400/pic/cover/l/f5/2e/390353_07vz7.jpg"
-        },
-        "score": 6.5,
-        "tags": [
-            {
-                "name": "战斗",
-                "count": 2248
-            },
-            {
-                "name": "A-1Pictures",
-                "count": 1611
-            },
-            {
-                "name": "漫改",
-                "count": 1528
-            },
-            {
-                "name": "龙傲天",
-                "count": 1495
-            },
-            {
-                "name": "爽文",
-                "count": 1419
-            },
-            {
-                "name": "韩漫",
-                "count": 1187
-            },
-            {
-                "name": "奇幻",
-                "count": 1181
-            },
-            {
-                "name": "韩国",
-                "count": 431
-            },
-            {
-                "name": "热血",
-                "count": 182
-            },
-            {
-                "name": "中重俊祐",
-                "count": 68
-            },
-            {
-                "name": "异世界",
-                "count": 62
-            },
-            {
-                "name": "厕纸",
-                "count": 39
-            },
-            {
-                "name": "泽野弘之",
-                "count": 39
-            },
-            {
-                "name": "我独自升级",
-                "count": 30
-            },
-            {
-                "name": "冒险",
-                "count": 23
-            },
-            {
-                "name": "系统",
-                "count": 16
-            },
-            {
-                "name": "日本动画",
-                "count": 12
-            },
-            {
-                "name": "动画",
-                "count": 10
-            },
-            {
-                "name": "系统流",
-                "count": 10
-            },
-            {
-                "name": "装逼",
-                "count": 9
-            }
-        ]
     },
     "420628": {
         "date": "2023-10-21",
@@ -1530,7 +1434,7 @@
                 "count": 11
             },
             {
-                "name": "田中仁",
+                "name": "日常",
                 "count": 10
             }
         ]
@@ -1811,7 +1715,7 @@
                 "count": 12
             },
             {
-                "name": "ゼロジー",
+                "name": "爆笑",
                 "count": 10
             }
         ],
@@ -2134,11 +2038,11 @@
                 "count": 19
             },
             {
-                "name": "Quad",
+                "name": "卖肉",
                 "count": 18
             },
             {
-                "name": "卖肉",
+                "name": "Quad",
                 "count": 18
             },
             {
@@ -2178,11 +2082,7 @@
                 "count": 2
             },
             {
-                "name": "涩涩",
-                "count": 1
-            },
-            {
-                "name": "安藤贵史",
+                "name": "日常",
                 "count": 1
             },
             {
@@ -2190,19 +2090,23 @@
                 "count": 1
             },
             {
+                "name": "搞笑",
+                "count": 1
+            },
+            {
+                "name": "福利",
+                "count": 1
+            },
+            {
+                "name": "安藤贵史",
+                "count": 1
+            },
+            {
                 "name": "牛来",
                 "count": 1
             },
             {
-                "name": "日常",
-                "count": 1
-            },
-            {
-                "name": "背德",
-                "count": 1
-            },
-            {
-                "name": "等BD",
+                "name": "婊子",
                 "count": 1
             }
         ]
