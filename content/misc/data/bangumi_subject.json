@@ -399,7 +399,7 @@
         "tags": [
             {
                 "name": "搞笑",
-                "count": 2124
+                "count": 2125
             },
             {
                 "name": "J.C.STAFF",
@@ -558,11 +558,11 @@
                 "count": 36
             },
             {
-                "name": "运动",
+                "name": "恋爱",
                 "count": 34
             },
             {
-                "name": "恋爱",
+                "name": "运动",
                 "count": 34
             },
             {
@@ -1551,15 +1551,15 @@
         "tags": [
             {
                 "name": "剧场版",
-                "count": 113
+                "count": 114
             },
             {
                 "name": "原创",
-                "count": 71
+                "count": 72
             },
             {
                 "name": "StudioOutrigger",
-                "count": 53
+                "count": 54
             },
             {
                 "name": "四宮義俊",
@@ -1602,19 +1602,7 @@
                 "count": 3
             },
             {
-                "name": "动画",
-                "count": 2
-            },
-            {
-                "name": "古川琴音",
-                "count": 2
-            },
-            {
-                "name": "うつした",
-                "count": 2
-            },
-            {
-                "name": "劇場版",
+                "name": "MiyuProductions",
                 "count": 2
             },
             {
@@ -1622,11 +1610,23 @@
                 "count": 2
             },
             {
-                "name": "MiyuProductions",
+                "name": "未上映",
                 "count": 2
             },
             {
                 "name": "入野自由",
+                "count": 2
+            },
+            {
+                "name": "古川琴音",
+                "count": 2
+            },
+            {
+                "name": "动画",
+                "count": 2
+            },
+            {
+                "name": "劇場版",
                 "count": 2
             }
         ]
@@ -1640,7 +1640,7 @@
         "tags": [
             {
                 "name": "搞笑",
-                "count": 2667
+                "count": 2668
             },
             {
                 "name": "漫改",
@@ -1648,23 +1648,23 @@
             },
             {
                 "name": "喜剧",
-                "count": 1654
+                "count": 1655
             },
             {
                 "name": "日常",
-                "count": 1378
+                "count": 1379
             },
             {
                 "name": "颜艺",
-                "count": 1111
+                "count": 1112
             },
             {
                 "name": "校园",
-                "count": 1043
+                "count": 1044
             },
             {
                 "name": "ZERO-G",
-                "count": 718
+                "count": 719
             },
             {
                 "name": "碧蓝之海",
@@ -1680,7 +1680,7 @@
             },
             {
                 "name": "恋爱",
-                "count": 116
+                "count": 117
             },
             {
                 "name": "高松信司",
@@ -1747,7 +1747,7 @@
             },
             {
                 "name": "致郁",
-                "count": 1999
+                "count": 2000
             },
             {
                 "name": "校园",
@@ -1802,12 +1802,12 @@
                 "count": 31
             },
             {
-                "name": "飯野慎也",
+                "name": "百合",
                 "count": 26
             },
             {
-                "name": "百合",
-                "count": 25
+                "name": "飯野慎也",
+                "count": 26
             },
             {
                 "name": "搞笑",
@@ -1818,7 +1818,7 @@
                 "count": 20
             },
             {
-                "name": "烂尾",
+                "name": "催泪",
                 "count": 14
             }
         ]
@@ -2082,14 +2082,6 @@
                 "count": 2
             },
             {
-                "name": "等BD",
-                "count": 1
-            },
-            {
-                "name": "牛来",
-                "count": 1
-            },
-            {
                 "name": "婊子",
                 "count": 1
             },
@@ -2098,7 +2090,11 @@
                 "count": 1
             },
             {
-                "name": "26秋",
+                "name": "背德",
+                "count": 1
+            },
+            {
+                "name": "安藤貴史",
                 "count": 1
             },
             {
@@ -2106,7 +2102,11 @@
                 "count": 1
             },
             {
-                "name": "福利",
+                "name": "表",
+                "count": 1
+            },
+            {
+                "name": "等BD",
                 "count": 1
             }
         ]
