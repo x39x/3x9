@@ -26,7 +26,7 @@ MacOS下 按 `Command+,` （或地址栏输入 `about:preferences` ）进入设�
 # disable the tab animation
 add ui.prefersReducedMotion number set its value to 1
 
-# Disable Qucik Search
+# Disable Quick Search
 set accessibility.typeaheadfind.manual to false
 
 # don't exit on escap
@@ -42,6 +42,8 @@ set browser.tabs.hoverPreview.showThumbnails to false
 # 美化
 
 Firefox 可定制程度非常高，几乎每个地方都可以使用 css 自定义
+
+首先在`about:config`中将`toolkit.legacyUserProfileCustomizations.stylesheets` 设置为 true
 
 css 文件需要放在 Firefox 配置文件夹，Linux 在 `~/.mozilla/firefox/` 下，MacOS 位于 `~/Library/Application Support/Firefox/`
 具体取决于系统及 Firefox 版本
