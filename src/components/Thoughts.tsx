@@ -1,7 +1,8 @@
-import data from "@/lib/thoughts";
+import clsx from "clsx";
 import { format } from "date-fns";
 import { Tangerine } from "next/font/google";
-import clsx from "clsx";
+
+import data from "@/lib/thoughts";
 
 const TangerineFont = Tangerine({
     weight: "400",
@@ -11,10 +12,7 @@ const TangerineFont = Tangerine({
 const Thoughts = () => (
     <>
         {[...data]
-            .sort(
-                (a, b) =>
-                    new Date(b.date).getTime() - new Date(a.date).getTime(),
-            )
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
             .map((item, i) => (
                 <div key={i} className="mb-13">
                     <div className="text-sm leading-8 tracking-wide text-justify">

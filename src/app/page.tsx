@@ -1,8 +1,9 @@
 "use client";
-import ContentContainer from "@/components/ContentContainer";
-import TypedText from "@/components/TypedText";
 import Image from "next/image";
 import { RemoveScroll } from "react-remove-scroll";
+
+import ContentContainer from "@/components/ContentContainer";
+import TypedText from "@/components/TypedText";
 
 export default function Home() {
     const src = "/home.webp";

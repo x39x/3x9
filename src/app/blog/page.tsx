@@ -1,10 +1,11 @@
-import Link from "next/link";
-import { format } from "date-fns";
-import { getPostdata } from "@/lib/get_post";
-import ContentContainer from "@/components/ContentContainer";
-import { Jost } from "next/font/google";
-import type { Metadata } from "next";
 import clsx from "clsx";
+import { format } from "date-fns";
+import type { Metadata } from "next";
+import { Jost } from "next/font/google";
+import Link from "next/link";
+
+import ContentContainer from "@/components/ContentContainer";
+import { getPostdata } from "@/lib/get_post";
 
 const JostFont = Jost({ subsets: ["latin"] });
 
@@ -33,11 +34,7 @@ export default async function PostList() {
                             "hover:transition-colors hover:duration-300",
                         )}
                     >
-                        <Link
-                            prefetch={false}
-                            href={`/blog/${post.slug}`}
-                            className="flex-1"
-                        >
+                        <Link prefetch={false} href={`/blog/${post.slug}`} className="flex-1">
                             <div className="tracking-wide text-sm content-center ">
                                 {post.title}
                             </div>

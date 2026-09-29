@@ -1,11 +1,8 @@
-import imageMap from "@/../content/imgMap.json";
 import { ImageLoaderProps } from "next/image";
 
-const imageLoader = ({
-    src,
-    width = 500,
-    quality = 75,
-}: ImageLoaderProps): string => {
+import imageMap from "@/../content/imgMap.json";
+
+const imageLoader = ({ src, width = 500, quality = 75 }: ImageLoaderProps): string => {
     const imgId = src.replace(/^\/39img\//, "");
     const mapped = (imageMap as Record<string, string>)[imgId];
 

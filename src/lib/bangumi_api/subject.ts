@@ -1,25 +1,14 @@
 import fs from "fs";
 import path from "path";
-import { BgmJSONSaved } from "@/type/bangumi";
+
 import { getPostdata } from "@/lib/get_post";
+import { BgmJSONSaved } from "@/type/bangumi";
+
 import { fetchBgm } from "./fetch_bgm";
 
-const SAVED_FILE = path.join(
-    process.cwd(),
-    "content",
-    "misc",
-    "data",
-    "bangumi_subject.json",
-);
+const SAVED_FILE = path.join(process.cwd(), "content", "misc", "data", "bangumi_subject.json");
 
-const BUFAN_FILE = path.join(
-    process.cwd(),
-    "content",
-    "misc",
-    "anime",
-    "bufan",
-    "index.mdx",
-);
+const BUFAN_FILE = path.join(process.cwd(), "content", "misc", "anime", "bufan", "index.mdx");
 
 // 读取 JSON
 function loadJson<T>(file: string): T | null {

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { format } from "date-fns";
-import Image from "next/image";
 import { Jost } from "next/font/google";
+import Image from "next/image";
 
 import { MDXCoverProps } from "@/type/base";
 

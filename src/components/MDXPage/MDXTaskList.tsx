@@ -1,21 +1,17 @@
-import React, { ReactNode, ReactElement } from "react";
 import { Circle, CircleCheck } from "lucide-react";
+import React, { ReactNode, ReactElement } from "react";
 
 /**
  * 在 React children 中递归查找 checkbox input 元素
  * @param children ReactNode
  * @returns ReactElement<HTMLInputElement> | null
  */
-const findCheckbox = (
-    children: ReactNode,
-): ReactElement<HTMLInputElement> | null => {
+const findCheckbox = (children: ReactNode): ReactElement<HTMLInputElement> | null => {
     const arrayChildren = React.Children.toArray(children);
 
     for (const child of arrayChildren) {
         // 使用类型守卫：显式声明 child 的 props 类型
-        if (
-            React.isValidElement<{ type?: string; children?: ReactNode }>(child)
-        ) {
+        if (React.isValidElement<{ type?: string; children?: ReactNode }>(child)) {
             if (child.type === "input" && child.props.type === "checkbox") {
                 return child as ReactElement<HTMLInputElement>;
             }

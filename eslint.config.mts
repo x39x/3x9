@@ -1,8 +1,6 @@
 import type { Linter } from "eslint";
-
-import { globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
-
+import { globalIgnores } from "eslint/config";
 
 const eslintConfig: Linter.Config[] = [
     ...nextVitals,

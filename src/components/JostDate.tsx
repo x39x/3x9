@@ -1,20 +1,12 @@
+import clsx from "clsx";
 import { format } from "date-fns";
 import { CheckLine } from "lucide-react";
-import clsx from "clsx";
 import { Jost } from "next/font/google";
 const JostFont = Jost({
     subsets: ["latin"],
 });
 
-const JostDate = ({
-    date,
-    className,
-    text,
-}: {
-    date: Date;
-    className?: string;
-    text?: string;
-}) => (
+const JostDate = ({ date, className, text }: { date: Date; className?: string; text?: string }) => (
     <div
         className={clsx(
             "text-xs font-medium my-13 flex items-center",

@@ -1,10 +1,11 @@
-import { format } from "date-fns";
 import clsx from "clsx";
-import Link from "next/link";
-import { Jost } from "next/font/google";
+import { format } from "date-fns";
 import type { Metadata } from "next";
-import { getPostdata } from "@/lib/get_post";
+import { Jost } from "next/font/google";
+import Link from "next/link";
+
 import ContentContainer from "@/components/ContentContainer";
+import { getPostdata } from "@/lib/get_post";
 
 const JostFont = Jost({ subsets: ["latin"] });
 
@@ -36,18 +37,14 @@ export default async function PostList() {
     );
 
     // 年份排序
-    const years = Object.keys(postsByYear).sort(
-        (a, b) => Number(b) - Number(a),
-    );
+    const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 
     return (
         <ContentContainer className="mt-11">
             {years.map((year) => (
                 <div key={year} className="mb-13 text-sm">
                     {/* 标题 */}
-                    <div className="mb-4 text-[#6E6E73] dark:text-[#868686]">
-                        {year}
-                    </div>
+                    <div className="mb-4 text-[#6E6E73] dark:text-[#868686]">{year}</div>
 
                     {/* post 列表 */}
                     {postsByYear[year].map((post) => (
@@ -61,9 +58,7 @@ export default async function PostList() {
                                 "hover:text-[#0066CC]  dark:hover:text-[#2997FF]",
                             )}
                         >
-                            <div className="tracking-wider content-center">
-                                {post.title}
-                            </div>
+                            <div className="tracking-wider content-center">{post.title}</div>
                             <div
                                 className={clsx(
                                     JostFont.className,

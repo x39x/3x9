@@ -1,6 +1,7 @@
-import AboutBody from "@/components/About";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
+
+import AboutBody from "@/components/About";
 
 export default function About() {
     return <AboutBody />;

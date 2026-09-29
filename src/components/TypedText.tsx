@@ -1,7 +1,7 @@
 "use client";
+import { Josefin_Sans } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
-import { Josefin_Sans } from "next/font/google";
 
 const Josefin_Font = Josefin_Sans({
     weight: "400",
@@ -10,10 +10,7 @@ const Josefin_Font = Josefin_Sans({
 
 const poems = [
     ["Vivamus, atque amemus", "atque amemus"],
-    [
-        "Difficile est longum subito deponere amorem",
-        "dies irae dies illa me necabis",
-    ],
+    ["Difficile est longum subito deponere amorem", "dies irae dies illa me necabis"],
 ];
 
 export default function TypedText() {
@@ -47,8 +44,7 @@ export default function TypedText() {
                 </span>
             </h1>
             <h1 className={`mt-3 text-[1em] ${Josefin_Font.className}`}>
-                Odi et amo. Quare id faciam, nescio. Sed fieri sentio et
-                excrucior
+                Odi et amo. Quare id faciam, nescio. Sed fieri sentio et excrucior
             </h1>
         </div>
     );

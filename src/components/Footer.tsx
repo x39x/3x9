@@ -1,5 +1,5 @@
-import Link from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
 const currentYear = new Date().getFullYear();
 const Footer = () => (
     <footer
@@ -13,9 +13,7 @@ const Footer = () => (
         <div className="sm:flex gap-2 items-center">
             <div className="">
                 Copyright © 2023 - {currentYear}
-                <span className="text-[#1D1D1D] dark:text-[#EFEFEF] mx-1.5">
-                    Matsu.
-                </span>
+                <span className="text-[#1D1D1D] dark:text-[#EFEFEF] mx-1.5">Matsu.</span>
                 All rights reserved.
             </div>
             <Link

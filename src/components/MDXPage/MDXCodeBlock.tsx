@@ -1,7 +1,7 @@
 "use client";
+import { Check, Code } from "lucide-react";
 //BUG: https://github.com/rehype-pretty/rehype-pretty-code/issues/235
 import { DetailedHTMLProps, HTMLAttributes, useRef, useState } from "react";
-import { Check, Code } from "lucide-react";
 
 export default function MDXCodeBlock({
     children,
@@ -38,15 +38,9 @@ export default function MDXCodeBlock({
                 className="absolute right-4 top-5 cursor-pointer"
             >
                 {isCopied ? (
-                    <Check
-                        size={15}
-                        className="stroke-2 text-gray-500 dark:text-[#999999]"
-                    />
+                    <Check size={15} className="stroke-2 text-gray-500 dark:text-[#999999]" />
                 ) : (
-                    <Code
-                        size={15}
-                        className="stroke-2 text-gray-500 dark:text-[#999999]"
-                    />
+                    <Code size={15} className="stroke-2 text-gray-500 dark:text-[#999999]" />
                 )}
             </button>
         </div>

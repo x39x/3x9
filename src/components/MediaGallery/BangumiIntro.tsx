@@ -25,18 +25,14 @@ const BgmIntro = ({ id, bgmid, cover_url = "" }: BgmIntroProps) => {
     // 取 count 最高的前 8 个标签
     const topTags = Array.isArray(data.tags)
         ? data.tags
-            .sort((a, b) => b.count - a.count)
-            .slice(0, 8)
-            .map((tag) => tag.name)
-            .join(" / ")
+              .sort((a, b) => b.count - a.count)
+              .slice(0, 8)
+              .map((tag) => tag.name)
+              .join(" / ")
         : "";
 
     return (
-        <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            href={"https://bgm.tv/subject/" + bgmid}
-        >
+        <Link target="_blank" rel="noopener noreferrer" href={"https://bgm.tv/subject/" + bgmid}>
             <MediaIntro
                 title={data.name}
                 tags={topTags}

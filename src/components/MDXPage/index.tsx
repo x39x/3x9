@@ -1,10 +1,12 @@
 import { MDXRemote } from "next-mdx-remote-client/rsc";
-import ContentContainer from "@/components/ContentContainer";
+
 import NotFound from "@/components/404";
-import createMDXComponents from "./MDXComponents";
-import options from "./MDXRemoteOptions";
-import MDXCover from "./MDXCover";
+import ContentContainer from "@/components/ContentContainer";
 import { PostData } from "@/type/base";
+
+import createMDXComponents from "./MDXComponents";
+import MDXCover from "./MDXCover";
+import options from "./MDXRemoteOptions";
 
 const MDXPage = ({ post }: { post: PostData }) => {
     if (!post) {
@@ -14,17 +16,8 @@ const MDXPage = ({ post }: { post: PostData }) => {
             </ContentContainer>
         );
     }
-    const {
-        id,
-        title,
-        date,
-        cover_url,
-        content,
-        updated_date,
-        reading_time,
-        word_count,
-    } = post;
-    const MDXComponents =  createMDXComponents({ page_id: id });
+    const { id, title, date, cover_url, content, updated_date, reading_time, word_count } = post;
+    const MDXComponents = createMDXComponents({ page_id: id });
 
     return (
         <ContentContainer>
@@ -37,11 +30,7 @@ const MDXPage = ({ post }: { post: PostData }) => {
                 updated_date={updated_date}
             />
             <article>
-                <MDXRemote
-                    source={content}
-                    components={MDXComponents}
-                    options={options as any}
-                />
+                <MDXRemote source={content} components={MDXComponents} options={options as any} />
             </article>
         </ContentContainer>
     );

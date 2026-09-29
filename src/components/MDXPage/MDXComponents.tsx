@@ -1,14 +1,14 @@
-import Link from "next/link";
-import Image from "next/image";
-import type { MDXComponents } from "mdx/types";
 import clsx from "clsx";
+import type { MDXComponents } from "mdx/types";
+import Image from "next/image";
+import Link from "next/link";
 
-import BgmIntro from "@/components/MediaGallery/BangumiIntro";
 import JostDate from "@/components/JostDate";
+import BgmIntro from "@/components/MediaGallery/BangumiIntro";
 
 import MDXCodeBlock from "./MDXCodeBlock";
-import MDXTaskList from "./MDXTaskList";
 import MDXImage from "./MDXImage";
+import MDXTaskList from "./MDXTaskList";
 
 const CreateMDXComponents = (options: { page_id: string }): MDXComponents => {
     const { page_id } = options;

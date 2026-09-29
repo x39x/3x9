@@ -1,8 +1,9 @@
+import { AlignJustify } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { usePathname } from "next/navigation";
+
 import HamburgerMenu from "./HamburgerMenu";
-import { AlignJustify } from "lucide-react";
 
 const Hamburger = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,7 @@ const Hamburger = () => {
                 <AlignJustify size={20} />
             </button>
 
-            {isOpen &&
-                createPortal(
-                    <HamburgerMenu setIsOpen={setIsOpen} />,
-                    document.body,
-                )}
+            {isOpen && createPortal(<HamburgerMenu setIsOpen={setIsOpen} />, document.body)}
         </div>
     );
 };

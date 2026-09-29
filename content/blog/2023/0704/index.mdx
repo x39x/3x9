@@ -11,6 +11,7 @@ keywords: markdown
 　　微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电般，霎时传过荷塘的那边去了。叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉的流水，遮住了，不能见一些颜色；而叶子却更见风致了。
 
 # 代码
+
 ```cpp
 static inline void PrintTo(const EinsumParams& params, ::std::ostream* os) {
     (*os) << "Equation=" << params.equation << " ";
@@ -33,9 +34,8 @@ static inline void PrintTo(const EinsumParams& params, ::std::ostream* os) {
 
 **加粗**
 ~~删除线~~
-*斜体*
-***粗斜体***
-
+_斜体_
+**_粗斜体_**
 
 # 列表
 
@@ -53,26 +53,25 @@ static inline void PrintTo(const EinsumParams& params, ::std::ostream* os) {
 * [ ] 这路上阴森森的，有些怕人
 * [x] 今晚却很好，虽然月光也还是淡淡的
 
-
 # 区块
 
->最外层
->>第一层
->>>第二层
->>>>第四层
-
-
+> 最外层
+>
+> > 第一层
+> >
+> > > 第二层
+> > >
+> > > > 第四层
 
 # 分割线
 
 1. `---`
+
 ---
 
 2. `***`
-***
 
-
-
+---
 
 # 公式
 
@@ -81,9 +80,6 @@ x=y=0
 $$
 
 行内$x_2$公式
-
-
-
 
 # 图片
 
@@ -95,22 +91,18 @@ $$
 
 ![](https://pica.zhimg.com/80/v2-92c7a35b296b54f0d6a06d8ee728bc9c_1440w.webp)
 
-
-
 # 链接
 
 [bilibili](https://bilibili.com)
 
-
-
 # 表格
-| foo | bar | hah |
-|-----|-----|-----|
-| foo | bar | hah |
-| baz | qux | hah |
-| baz | qux | hah |
-| baz | qux | hah |
 
+| foo | bar | hah |
+| --- | --- | --- |
+| foo | bar | hah |
+| baz | qux | hah |
+| baz | qux | hah |
+| baz | qux | hah |
 
 | **id** | **email**           | **name**  |
 | ------ | ------------------- | --------- |

@@ -1,16 +1,15 @@
 import { X } from "lucide-react";
 import { RemoveScroll } from "react-remove-scroll";
-import HamburgerMenuLink from "./HamburgerMenuLink";
+
 import { HamburgerMenuProps } from "@/type/base";
+
+import HamburgerMenuLink from "./HamburgerMenuLink";
 
 const HamburgerMenu = (props: HamburgerMenuProps) => (
     <RemoveScroll>
         <div className="fixed bottom-0 left-0 right-0 top-0 z-100">
             <div className="absolute right-6 py-5 z-101 ">
-                <button
-                    aria-label="Close navigation menu"
-                    onClick={() => props.setIsOpen(false)}
-                >
+                <button aria-label="Close navigation menu" onClick={() => props.setIsOpen(false)}>
                     <X size={20} />
                 </button>
             </div>

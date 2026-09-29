@@ -1,27 +1,15 @@
+import clsx from "clsx";
+import { Josefin_Sans } from "next/font/google";
+import Link from "next/link";
+
 import ContentContainer from "@/components/ContentContainer";
 import AnimeCarousel from "@/components/MediaGallery/AnimeCarousel";
 import Thoughts from "@/components/Thoughts";
-
-import Link from "next/link";
-import { Josefin_Sans } from "next/font/google";
-import clsx from "clsx";
 const Josefin_Font = Josefin_Sans({ weight: "400", subsets: ["latin"] });
 
 // 标题
-const Head = ({
-    children,
-    className,
-}: {
-    children: React.ReactNode;
-    className?: string;
-}) => (
-    <div
-        className={clsx(
-            "text-2xl font-medium",
-            className?.trim(),
-            Josefin_Font.className.trim(),
-        )}
-    >
+const Head = ({ children, className }: { children: React.ReactNode; className?: string }) => (
+    <div className={clsx("text-2xl font-medium", className?.trim(), Josefin_Font.className.trim())}>
         {children}
     </div>
 );

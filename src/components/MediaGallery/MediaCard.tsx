@@ -1,19 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
-import { format } from "date-fns";
 import clsx from "clsx";
+import { format } from "date-fns";
+import Image from "next/image";
+import Link from "next/link";
 
 import RatingStars from "@/components/MediaGallery/Rating";
 import { MediaCardProps } from "@/type/media_gallery";
 
-const MediaCard = ({
-    href,
-    title,
-    comment,
-    rating,
-    date,
-    cover_url,
-}: MediaCardProps) => {
+const MediaCard = ({ href, title, comment, rating, date, cover_url }: MediaCardProps) => {
     return (
         <div className="relative shrink-0 w-[139px] h-[213px]">
             <Link href={href}>
@@ -59,9 +52,7 @@ const MediaCard = ({
             </Link>
 
             {/* 标题 */}
-            <div className="text-xs mt-3 text-center font-bold truncate w-31 m-auto">
-                {title}
-            </div>
+            <div className="text-xs mt-3 text-center font-bold truncate w-31 m-auto">{title}</div>
         </div>
     );
 };

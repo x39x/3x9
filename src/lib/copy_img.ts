@@ -1,8 +1,10 @@
 // 有图片的文件夹路径不得包括'-','-' 作为 id 时将会替换 '/'
 
-import fs from "fs-extra";
 import path from "path";
+
+import fs from "fs-extra";
 import { globSync } from "glob";
+
 import { ImageMappingJSON } from "@/type/base";
 
 const contentDir = path.resolve(process.cwd(), "content");
@@ -61,9 +63,7 @@ function generateNewFileName(relPath: string): string {
     const parsed = path.parse(relPath);
     const dirPart = parsed.dir.replace(/[\\/]/g, "-");
     const ext = parsed.ext.toLowerCase();
-    return dirPart
-        ? `content-${dirPart}-${parsed.name}${ext}`
-        : `content-${parsed.name}${ext}`;
+    return dirPart ? `content-${dirPart}-${parsed.name}${ext}` : `content-${parsed.name}${ext}`;
 }
 
 // === 复制文件并更新映射 ===

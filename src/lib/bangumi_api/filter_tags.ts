@@ -16,9 +16,7 @@ function normalizeName(name: string): string {
         .trim();
 }
 
-export function filterTags(
-    tags: BgmTagItem[],
-): { name: string; count: number }[] {
+export function filterTags(tags: BgmTagItem[]): { name: string; count: number }[] {
     if (!Array.isArray(tags)) return [];
 
     // 1️⃣ 过滤无效标签
@@ -33,8 +31,7 @@ export function filterTags(
 
         // 过滤掉阿拉伯数字或汉字数字的“月”结尾标签
         if (/(1[0-2]|0?[1-9])月$/.test(t.name)) return false;
-        if (/(一|二|三|四|五|六|七|八|九|十|十一|十二)月$/.test(t.name))
-            return false;
+        if (/(一|二|三|四|五|六|七|八|九|十|十一|十二)月$/.test(t.name)) return false;
 
         return true;
     });

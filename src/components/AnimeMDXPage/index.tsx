@@ -1,12 +1,12 @@
+import clsx from "clsx";
+import { format } from "date-fns";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 import { Jost } from "next/font/google";
-import { format } from "date-fns";
-import clsx from "clsx";
 
+import NotFound from "@/components/404";
 import ContentContainer from "@/components/ContentContainer";
 import createMDXComponets from "@/components/MDXPage/MDXComponents";
 import options from "@/components/MDXPage/MDXRemoteOptions";
-import NotFound from "@/components/404";
 import BgmIntro from "@/components/MediaGallery/BangumiIntro";
 import { PostData } from "@/type/base";
 
@@ -62,11 +62,7 @@ const AnimeMDXPage = ({ post }: { post: PostData }) => {
             {bgmid && <BgmIntro id={id} cover_url={cover_url} bgmid={bgmid} />}
 
             <article className="mt-14 text-sm">
-                <MDXRemote
-                    source={content}
-                    components={MDXComponents}
-                    options={options as any}
-                />
+                <MDXRemote source={content} components={MDXComponents} options={options as any} />
             </article>
         </ContentContainer>
     );
