@@ -1,8 +1,8 @@
-import { getPostdata } from "@/lib/get_post";
 import bgmdata from "@/../content/misc/data/bangumi_subject.json";
 import MediaCarousel from "@/components/MediaGallery/MediaCarousel";
-import { MediaCardProps } from "@/type/media_gallery";
+import { getPostdata } from "@/lib/get_post";
 import { BgmJSONSaved } from "@/type/bangumi";
+import { MediaCardProps } from "@/type/media_gallery";
 
 const posts = await getPostdata("misc", "anime");
 
@@ -37,9 +37,7 @@ const a_list = Object.entries(anime_list_map)
             bgmID,
             ...card,
             date: new Date(card.date),
-            cover_url: isInvalidImg
-                ? fallbackImg || card.cover_url
-                : card.cover_url,
+            cover_url: isInvalidImg ? fallbackImg || card.cover_url : card.cover_url,
         };
     })
     .sort((a, b) => b.date.getTime() - a.date.getTime())

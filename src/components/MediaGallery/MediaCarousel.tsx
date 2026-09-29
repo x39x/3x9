@@ -1,8 +1,9 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
 import clsx from "clsx";
+import { useRef, useState, useEffect } from "react";
 
 import { MediaCardProps } from "@/type/media_gallery";
+
 import MediaCard from "./MediaCard";
 
 const MediaCarousel = ({ data }: { data: MediaCardProps[] }) => {

@@ -1160,15 +1160,15 @@
         "tags": [
             {
                 "name": "恋爱",
-                "count": 2785
+                "count": 2786
             },
             {
                 "name": "后宫",
-                "count": 2668
+                "count": 2669
             },
             {
                 "name": "漫改",
-                "count": 1667
+                "count": 1668
             },
             {
                 "name": "校园",
@@ -1180,7 +1180,7 @@
             },
             {
                 "name": "党争",
-                "count": 735
+                "count": 736
             },
             {
                 "name": "松岡禎丞",
@@ -1643,7 +1643,7 @@
             "medium": "https://lain.bgm.tv/r/800/pic/cover/l/35/cc/491656_F6F5F.jpg",
             "common": "https://lain.bgm.tv/r/400/pic/cover/l/35/cc/491656_F6F5F.jpg"
         },
-        "score": 5.7,
+        "score": 5.6,
         "tags": [
             {
                 "name": "剧场版",
@@ -1698,19 +1698,7 @@
                 "count": 3
             },
             {
-                "name": "MiyuProductions",
-                "count": 2
-            },
-            {
-                "name": "Studio_Outrigger",
-                "count": 2
-            },
-            {
-                "name": "未上映",
-                "count": 2
-            },
-            {
-                "name": "入野自由",
+                "name": "动画",
                 "count": 2
             },
             {
@@ -1718,11 +1706,23 @@
                 "count": 2
             },
             {
-                "name": "动画",
+                "name": "うつした",
                 "count": 2
             },
             {
                 "name": "劇場版",
+                "count": 2
+            },
+            {
+                "name": "Studio_Outrigger",
+                "count": 2
+            },
+            {
+                "name": "MiyuProductions",
+                "count": 2
+            },
+            {
+                "name": "入野自由",
                 "count": 2
             }
         ]
@@ -2065,15 +2065,15 @@
                 "count": 5
             },
             {
+                "name": "菅原雪絵",
+                "count": 4
+            },
+            {
                 "name": "崩坏",
                 "count": 4
             },
             {
                 "name": "鈴代紗弓",
-                "count": 4
-            },
-            {
-                "name": "菅原雪絵",
                 "count": 4
             }
         ]
@@ -2193,16 +2193,16 @@
                 "count": 37
             },
             {
-                "name": "卖肉",
-                "count": 23
-            },
-            {
                 "name": "恋爱",
                 "count": 23
             },
             {
+                "name": "卖肉",
+                "count": 23
+            },
+            {
                 "name": "Quad",
-                "count": 21
+                "count": 22
             },
             {
                 "name": "NTR",
@@ -2229,10 +2229,6 @@
                 "count": 3
             },
             {
-                "name": "日本动画",
-                "count": 2
-            },
-            {
                 "name": "白樹伍鋼",
                 "count": 2
             },
@@ -2241,31 +2237,35 @@
                 "count": 2
             },
             {
-                "name": "涩涩",
-                "count": 1
+                "name": "日本动画",
+                "count": 2
             },
             {
-                "name": "日常",
-                "count": 1
-            },
-            {
-                "name": "搞笑",
-                "count": 1
-            },
-            {
-                "name": "短片",
-                "count": 1
-            },
-            {
-                "name": "安藤贵史",
-                "count": 1
-            },
-            {
-                "name": "安藤貴史",
+                "name": "追番",
                 "count": 1
             },
             {
                 "name": "婊子",
+                "count": 1
+            },
+            {
+                "name": "表",
+                "count": 1
+            },
+            {
+                "name": "背德",
+                "count": 1
+            },
+            {
+                "name": "牛来",
+                "count": 1
+            },
+            {
+                "name": "片",
+                "count": 1
+            },
+            {
+                "name": "26秋",
                 "count": 1
             }
         ]
