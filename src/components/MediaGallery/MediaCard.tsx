@@ -44,8 +44,10 @@ const MediaCard = ({ href, title, comment, rating, date, cover_url }: MediaCardP
                             src={cover_url}
                             alt={title}
                             fill
+                            sizes="139px"
                             className="transform transition-transform duration-300 group-hover/card:scale-105"
                             style={{ objectFit: "cover" }}
+                            loading="lazy"
                         />
                     </div>
                 </div>

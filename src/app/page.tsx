@@ -16,8 +16,8 @@ export default function Home() {
                         alt="Avatar"
                         width={300}
                         height={500}
+                        loading="eager"
                         style={{ objectFit: "contain", width: "299px" }}
-                        priority
                     />
                     <TypedText />
                 </div>

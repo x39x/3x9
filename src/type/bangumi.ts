@@ -5,7 +5,7 @@ export type BgmTagItem = {
     total_cont?: number;
 };
 
-type BgmImages = {
+export type BgmImages = {
     small: string;
     grid: string;
     large: string;
@@ -14,13 +14,13 @@ type BgmImages = {
 };
 
 export type BgmSubjectApi = {
-    date: string;
-    summary: string;
-    name: string;
-    name_cn: string;
-    images: BgmImages;
-    rating: { score: number };
-    tags: BgmTagItem[];
+    name?: string;
+    name_cn?: string;
+    images?: BgmImages;
+    date?: string;
+    summary?: string;
+    rating?: { score: number };
+    tags?: BgmTagItem[];
 };
 
 export type BgmSubjectSaved = {

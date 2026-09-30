@@ -14,6 +14,7 @@ const NotFound = () => {
                 alt="404"
                 width={500}
                 height={500}
+                loading="eager"
                 className="w-[39%] md:w-[33%] mb-9"
             />
             <h1 className={`text-sm  ${Josefin_Font.className.trim()}`}>Not found</h1>

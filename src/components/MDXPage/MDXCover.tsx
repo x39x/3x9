@@ -24,8 +24,8 @@ const MDXCover = ({
                     src={cover_url}
                     alt={title + "Page Cover"}
                     style={{ objectFit: "cover" }}
-                    priority
                     fill
+                    loading="eager"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>

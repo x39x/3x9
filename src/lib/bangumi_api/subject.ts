@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 import { getPostdata } from "@/lib/get_post";
-import { BgmJSONSaved } from "@/type/bangumi";
+import { BgmJSONSaved, BgmSubjectSaved, BgmImages } from "@/type/bangumi";
 
 import { fetchBgm } from "./fetch_bgm";
 
@@ -51,16 +51,42 @@ for (const id of Object.keys(saved)) {
     }
 }
 
+const defaultImages: BgmImages = {
+    small: "https://x39x.cc/404.png",
+    grid: "https://x39x.cc/404.png",
+    large: "https://x39x.cc/404.png",
+    medium: "https://x39x.cc/404.png",
+    common: "https://x39x.cc/404.png",
+};
+
+const normalizeSubject = (data: Partial<BgmSubjectSaved>): BgmSubjectSaved => ({
+    name: data.name ?? "unknown",
+    name_cn: data.name_cn ?? "未知",
+    date: data.date ?? "1939-03-09",
+    summary: data.summary ?? "",
+    images: {
+        ...defaultImages,
+        ...(data.images ?? {}),
+    },
+    score: data.score ?? 0,
+    tags: data.tags ?? [],
+});
+
 // 逐个抓取
 console.log(`抓取 ${IDS.length} 个条目...\n`);
 for (const id of IDS) {
     console.log("fetch ID:", id);
     const data = await fetchBgm(id.toString());
+
     if (data) {
-        saved[id] = { ...(saved[id] || {}), ...data };
-        console.log("saved", data.name_cn, "\n");
+        saved[id] = normalizeSubject({
+            ...saved[id],
+            ...data,
+        });
+
+        console.log("saved", saved[id].name_cn, "\n");
     } else {
-        console.log("skip ", id);
+        console.log("skip: ", id);
     }
 }
 

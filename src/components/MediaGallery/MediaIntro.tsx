@@ -26,7 +26,14 @@ const MediaIntro = ({
                         "group-hover:-rotate-3",
                     )}
                 >
-                    <Image src={coverImage} alt={title} fill style={{ objectFit: "cover" }} />
+                    <Image
+                        src={coverImage}
+                        alt={title}
+                        fill
+                        sizes="139px"
+                        style={{ objectFit: "cover" }}
+                        loading="lazy"
+                    />
                 </div>
 
                 {/* 信息部分 */}
@@ -48,7 +55,7 @@ const MediaIntro = ({
                     {/* 放送时间 */}
                     <div className="text-xs truncate flex font">
                         <div className="font-medium">{datePrefix}</div>
-                        <div>{airDate ? format(airDate, "yyyy-M-d") : ""}</div>
+                        <div>{format(airDate, "yyyy-M-d")}</div>
                     </div>
                 </div>
             </div>

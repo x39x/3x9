@@ -7,7 +7,7 @@ const Avatar = ({ size = 50 }: { size?: number }) => {
             className="rounded-full overflow-hidden bg-transparent backdrop-blur-lg"
             style={{ width: size, height: size }}
         >
-            <Image src={src} alt="Avatar" width={500} height={500} priority />
+            <Image src={src} alt="Avatar" width={500} height={500} loading="eager" />
         </div>
     );
 };
