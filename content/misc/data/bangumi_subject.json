@@ -2970,7 +2970,7 @@
                 "count": 30
             },
             {
-                "name": "剧情",
+                "name": "子安武人",
                 "count": 25
             }
         ]
@@ -3834,7 +3834,7 @@
                 "count": 19
             },
             {
-                "name": "炒股",
+                "name": "伊藤美来",
                 "count": 16
             }
         ]
@@ -5051,6 +5051,94 @@
             }
         ]
     },
+    "403551": {
+        "name": "ちえりの恋は8メートル",
+        "name_cn": "智惠梨的恋情高达8公尺",
+        "date": "2023-02-03",
+        "summary": "青梅竹马转校女高中生身高竟达8米…！？超规格的爱情喜剧开幕！！",
+        "images": {
+            "small": "https://lain.bgm.tv/r/200/pic/cover/l/ba/38/403551_9397n.jpg",
+            "grid": "https://lain.bgm.tv/r/100/pic/cover/l/ba/38/403551_9397n.jpg",
+            "large": "https://lain.bgm.tv/pic/cover/l/ba/38/403551_9397n.jpg",
+            "medium": "https://lain.bgm.tv/r/800/pic/cover/l/ba/38/403551_9397n.jpg",
+            "common": "https://lain.bgm.tv/r/400/pic/cover/l/ba/38/403551_9397n.jpg"
+        },
+        "score": 6.1,
+        "tags": [
+            {
+                "name": "漫画",
+                "count": 26
+            },
+            {
+                "name": "恋爱",
+                "count": 19
+            },
+            {
+                "name": "奇幻",
+                "count": 10
+            },
+            {
+                "name": "已完结",
+                "count": 8
+            },
+            {
+                "name": "ミトガワワタル",
+                "count": 7
+            },
+            {
+                "name": "集英社",
+                "count": 7
+            },
+            {
+                "name": "原创",
+                "count": 6
+            },
+            {
+                "name": "巨人娘",
+                "count": 5
+            },
+            {
+                "name": "系列",
+                "count": 5
+            },
+            {
+                "name": "漫画系列",
+                "count": 5
+            },
+            {
+                "name": "搞笑",
+                "count": 4
+            },
+            {
+                "name": "日常",
+                "count": 2
+            },
+            {
+                "name": "校园",
+                "count": 2
+            },
+            {
+                "name": "日漫BG",
+                "count": 1
+            },
+            {
+                "name": "幼驯染",
+                "count": 1
+            },
+            {
+                "name": "7.3",
+                "count": 1
+            },
+            {
+                "name": "巨大娘",
+                "count": 1
+            },
+            {
+                "name": "巨大化",
+                "count": 1
+            }
+        ]
+    },
     "420628": {
         "name": "薬屋のひとりごと",
         "name_cn": "药屋少女的呢喃",
@@ -6154,15 +6242,15 @@
                 "count": 9
             },
             {
+                "name": "炒翻天",
+                "count": 5
+            },
+            {
                 "name": "TV动画",
                 "count": 5
             },
             {
                 "name": "上江洲诚",
-                "count": 5
-            },
-            {
-                "name": "炒翻天",
                 "count": 5
             },
             {
