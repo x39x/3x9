@@ -1,5 +1,6 @@
 import data2024 from "@/../content/misc/thoughts/2024.json";
 import data2025 from "@/../content/misc/thoughts/2025.json";
+import data2026 from "@/../content/misc/thoughts/2026.json";
 
-const allData = [...data2024, ...data2025];
+const allData = [...data2024, ...data2025, ...data2026];
 export default allData;

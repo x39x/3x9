@@ -2991,7 +2991,7 @@
         "tags": [
             {
                 "name": "恋爱",
-                "count": 7011
+                "count": 7012
             },
             {
                 "name": "搞笑",
@@ -2999,15 +2999,15 @@
             },
             {
                 "name": "校园",
-                "count": 4530
+                "count": 4531
             },
             {
                 "name": "A-1Pictures",
-                "count": 4126
+                "count": 4127
             },
             {
                 "name": "漫改",
-                "count": 2821
+                "count": 2822
             },
             {
                 "name": "日常",
@@ -3287,7 +3287,7 @@
             },
             {
                 "name": "轻百合",
-                "count": 820
+                "count": 821
             },
             {
                 "name": "PINEJAM",
@@ -3295,7 +3295,7 @@
             },
             {
                 "name": "百合",
-                "count": 686
+                "count": 687
             },
             {
                 "name": "手工",
@@ -3375,19 +3375,19 @@
         "tags": [
             {
                 "name": "CloverWorks",
-                "count": 2089
+                "count": 2090
             },
             {
                 "name": "日常",
-                "count": 1858
+                "count": 1859
             },
             {
                 "name": "百合",
-                "count": 1771
+                "count": 1772
             },
             {
                 "name": "校园",
-                "count": 1621
+                "count": 1622
             },
             {
                 "name": "漫改",
@@ -3450,7 +3450,7 @@
                 "count": 11
             },
             {
-                "name": "美少女",
+                "name": "TVA",
                 "count": 10
             }
         ]
@@ -3622,15 +3622,11 @@
                 "count": 15
             },
             {
-                "name": "续作",
-                "count": 14
-            },
-            {
-                "name": "サイエンスSARU",
-                "count": 14
-            },
-            {
                 "name": "OVA",
+                "count": 14
+            },
+            {
+                "name": "续作",
                 "count": 14
             },
             {
@@ -3638,11 +3634,15 @@
                 "count": 14
             },
             {
-                "name": "森見登美彦",
-                "count": 9
+                "name": "サイエンスSARU",
+                "count": 14
             },
             {
                 "name": "日常",
+                "count": 9
+            },
+            {
+                "name": "森見登美彦",
                 "count": 9
             }
         ]
@@ -4058,19 +4058,19 @@
                 "count": 17
             },
             {
-                "name": "少年向",
-                "count": 12
-            },
-            {
                 "name": "青之箱",
                 "count": 12
             },
             {
-                "name": "羽毛球",
-                "count": 11
+                "name": "少年向",
+                "count": 12
             },
             {
                 "name": "治愈",
+                "count": 11
+            },
+            {
+                "name": "羽毛球",
                 "count": 11
             },
             {
@@ -4107,7 +4107,7 @@
         "tags": [
             {
                 "name": "搞笑",
-                "count": 1917
+                "count": 1918
             },
             {
                 "name": "WITSTUDIO",
@@ -4131,11 +4131,11 @@
             },
             {
                 "name": "神经",
-                "count": 736
+                "count": 737
             },
             {
                 "name": "百合",
-                "count": 669
+                "count": 670
             },
             {
                 "name": "轻百合",
@@ -4246,23 +4246,15 @@
                 "count": 4
             },
             {
-                "name": "日本动画",
-                "count": 3
-            },
-            {
                 "name": "萩原利久",
                 "count": 3
             },
             {
-                "name": "动画",
-                "count": 2
+                "name": "日本动画",
+                "count": 3
             },
             {
-                "name": "古川琴音",
-                "count": 2
-            },
-            {
-                "name": "うつした",
+                "name": "未上映",
                 "count": 2
             },
             {
@@ -4279,6 +4271,14 @@
             },
             {
                 "name": "入野自由",
+                "count": 2
+            },
+            {
+                "name": "うつした",
+                "count": 2
+            },
+            {
+                "name": "动画",
                 "count": 2
             }
         ]
@@ -4395,7 +4395,7 @@
         "tags": [
             {
                 "name": "京阿尼",
-                "count": 2705
+                "count": 2706
             },
             {
                 "name": "日常",
@@ -4431,7 +4431,7 @@
             },
             {
                 "name": "治愈",
-                "count": 103
+                "count": 104
             },
             {
                 "name": "新井圭一",
@@ -4491,7 +4491,7 @@
         "tags": [
             {
                 "name": "搞笑",
-                "count": 2681
+                "count": 2682
             },
             {
                 "name": "漫改",
@@ -4527,7 +4527,7 @@
             },
             {
                 "name": "乌龙茶",
-                "count": 335
+                "count": 336
             },
             {
                 "name": "恋爱",
@@ -4978,6 +4978,10 @@
                 "count": 4
             },
             {
+                "name": "TVA",
+                "count": 2
+            },
+            {
                 "name": "日本动画",
                 "count": 2
             },
@@ -4990,23 +4994,15 @@
                 "count": 2
             },
             {
-                "name": "TVA",
-                "count": 2
-            },
-            {
-                "name": "福利",
-                "count": 1
-            },
-            {
-                "name": "日本TV",
-                "count": 1
-            },
-            {
                 "name": "等BD",
                 "count": 1
             },
             {
-                "name": "短片",
+                "name": "牛来",
+                "count": 1
+            },
+            {
+                "name": "婊子",
                 "count": 1
             },
             {
@@ -5014,7 +5010,11 @@
                 "count": 1
             },
             {
-                "name": "涩涩",
+                "name": "追番",
+                "count": 1
+            },
+            {
+                "name": "短片",
                 "count": 1
             }
         ]
