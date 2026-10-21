@@ -43,13 +43,18 @@ set browser.urlbar.trimURLs to false
 
 # disable quic(for proxy)
 set network.http.http3.enable to false
+
+# disable fullscreen message
+set full-screen-api.transition-duration.enter to 0 0
+set full-screen-api.transition-duration.leave to 0 0
+set full-screen-api.warning.timeout to 0
 ```
 
 # 美化
 
 Firefox 可定制程度非常高，几乎每个地方都可以使用 css 自定义
 
-首先在`about:config`中将`toolkit.legacyUserProfileCustomizations.stylesheets` 设置为 true
+首先在`about:config`中将`toolkit.legacyUserProfileCustomizations.stylesheets` 设置为 `true`
 
 css 文件需要放在 Firefox 配置文件夹，Linux 在 `~/.mozilla/firefox/` 下，MacOS 位于 `~/Library/Application Support/Firefox/`
 具体取决于系统及 Firefox 版本
@@ -74,32 +79,29 @@ touch userContent.css userChrome.css
 ## Homepage 背景
 
 突然发现 Firefox 已经支持自定义背景图了！终于 (: ，打开新标签，点击右下角 ✏️ 按钮就行，但我希望隐藏掉 Homepage
-一些不必要的元素，比如 Firefox 图标，谷歌搜索框等，依旧采用 userContent.css 自定义
+一些不必要的元素，依旧采用 userContent.css 自定义
 
 ```css
-/* === Apply this style only to Firefox Home, New Tab, and Private Browsing pages === */
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
-    /* === 隐藏 Firefox 图标 === */
-    .logo-and-wordmark {
+    /* === Hide 'customize' button === */
+    .open-customization-button {
         display: none !important;
     }
 
-    /* === 隐藏搜索框 === */
-    .search-inner-wrapper {
+    /* === Private mode === */
+    .showPrivate {
         display: none !important;
     }
 
-    /* === 设置背景图片 ===*/
-    body::before {
-        content: "";
-        z-index: -1;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: no-repeat url(bg.png) center;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
+    /* === Background image === */
+    body {
+        background-image: url("bg.png") !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: fixed !important;
+        overflow: hidden !important;
+        scrollbar-width: none !important;
     }
 }
 ```
@@ -109,36 +111,70 @@ touch userContent.css userChrome.css
 地址栏、toolbar 上有很多不用的按钮，在 userChrome.css 里隐藏他们
 
 ```css
-/* === Remove the "Search with..." suggestion in the address bar === */
+/* urlbar: remove border, shadow, outline, background */
+.urlbar-background {
+    border: none !important;
+    box-shadow: none !important;
+    background: var(--toolbar-background-color) !important;
+    top: 0 !important;
+}
+.urlbar-input-container {
+    outline: none !important;
+}
+
+/* urlbar: remove the "Search with..." */
 #urlbar-input::placeholder {
     color: transparent !important;
 }
 
-/* === Address bar: 去除地址栏不必要的 css 效果 === */
-.urlbar-background {
-    border: none !important;
+/* urlbarView: background */
+.urlbarView-body-outer,
+.urlbarView-background,
+.urlbarView-body-inner,
+.urlbarView {
+    background: var(--toolbar-background-color) !important;
     box-shadow: none !important;
-    outline: none !important;
-    background: var(--toolbar-bgcolor) !important;
 }
 
-/* === 隐藏视频全屏警告 === */
-#fullscreen-warning {
-    display: none !important;
+/* dark mode url bar selected item background */
+@media (prefers-color-scheme: dark) {
+    .urlbarView-button-result-menu,
+    .urlbarView-row[selected] {
+        background-color: #4e4d55 !important;
+    }
 }
 
-/* === 隐藏地址栏和 toolbar  中不用的按钮 === */
-#urlbar-searchmode-switcher,
-#searchmode-switcher-chicklet,
+/* url bar icon */
 #identity-permission-box,
-#star-button-box,
-#alltabs-button,
-#identity-icon-box,
-#picture-in-picture-button,
-#tracking-protection-icon-container,
+#trust-icon-container,
 #reader-mode-button,
-#translations-button {
+#picture-in-picture-button,
+#urlbar-revert-button-container,
+.searchmode-switcher,
+.urlbar-go-button {
     display: none !important;
+}
+
+/* 直接禁止 #star-button 会拦截 bookmark 提示框 */
+image#star-button {
+    display: none !important;
+}
+#star-button-box:hover,
+#star-button-box:active,
+#star-button-box:focus,
+#star-button-box:focus-visible {
+    background: none !important;
+}
+
+/* private mode */
+#nav-bar-overflow-button,
+.private-browsing-indicator-button {
+    display: none !important;
+}
+
+/* tab: outline  */
+.tab-background {
+    outline: none !important;
 }
 ```
 
@@ -150,7 +186,7 @@ touch userContent.css userChrome.css
 
 ## 远程调试
 
-使用远程调试功能可以很方便的查看 Firefox 原生的 CSS 样式，自定义 css 时很有用
+使用远程调试功能可以很方便的查看 Firefox 原生的 css 样式，自定义 css 时很有用
 
 启用步骤：
 
